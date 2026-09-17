@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Une application miroir est-elle sûre ? Ce qu’il faut vérifier avant d’installer</title>
+<meta name="description" content="Une application miroir a besoin de votre caméra — est-ce sûr ? Autorisations et signaux d’alerte à vérifier, et ce que Mirrorly fait de votre caméra.">
+<link rel="canonical" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-sans-danger.html">
+<link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/is-a-mirror-app-safe.html">
+<link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/ist-eine-spiegel-app-sicher.html">
+<link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-sans-danger.html">
+<link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/es-segura-una-app-de-espejo.html">
+<link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-e-sicura.html">
+<link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/kagami-apuri-ha-anzen-ka.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/jingzi-app-anquan-ma.html">
+<link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/is-a-mirror-app-safe.html">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Hubert Kiełkowski">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Une application miroir est-elle sûre ? Ce qu’il faut vérifier avant d’installer">
+<meta property="og:description" content="Une application miroir a besoin de votre caméra — est-ce sûr ? Autorisations et signaux d’alerte à vérifier, et ce que Mirrorly fait de votre caméra.">
+<meta property="og:image" content="https://bashubb.github.io/TheMirrorly/assets/screenshots/fr/get-judged-web.jpg">
+<meta property="og:url" content="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-sans-danger.html">
+<meta property="og:site_name" content="Mirrorly">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Une application miroir est-elle sûre ? Ce qu’il faut vérifier avant d’installer">
+<meta name="twitter:description" content="Une application miroir a besoin de votre caméra — est-ce sûr ? Autorisations et signaux d’alerte à vérifier, et ce que Mirrorly fait de votre caméra.">
+<meta name="twitter:image" content="https://bashubb.github.io/TheMirrorly/assets/screenshots/fr/get-judged-web.jpg">
+<meta name="apple-itunes-app" content="app-id=6792856754">
+<link rel="icon" href="../../assets/icon-512.png">
+<link rel="apple-touch-icon" href="../../assets/icon-512.png">
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Une application miroir est-elle sûre ? Ce qu’il faut vérifier avant d’installer",
+  "description": "Une application miroir a besoin de votre caméra — est-ce sûr ? Autorisations et signaux d’alerte à vérifier, et ce que Mirrorly fait de votre caméra.",
+  "image": "https://bashubb.github.io/TheMirrorly/assets/screenshots/fr/get-judged-web.jpg",
+  "inLanguage": "fr",
+  "datePublished": "2026-09-17",
+  "dateModified": "2026-09-17",
+  "author": {
+    "@type": "Organization",
+    "name": "Mirrorly"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Mirrorly",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://bashubb.github.io/TheMirrorly/assets/icon-512.png"
+    }
+  },
+  "mainEntityOfPage": "https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-sans-danger.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://bashubb.github.io/TheMirrorly/fr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://bashubb.github.io/TheMirrorly/fr/#guides"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Une application miroir est-elle sûre ? Ce qu’il faut vérifier avant d’installer",
+      "item": "https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-sans-danger.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a href="../" class="brand"><img src="../../assets/icon-512.png" alt="Mirrorly app icon" width="32" height="32">Mirrorly</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="../#how-it-works">Comment ça marche</a>
+      <a href="../#guides">Guides</a>
+      <a href="../#faq">FAQ</a>
+    </nav>
+    <a href="https://apps.apple.com/app/id6792856754" class="btn btn-primary btn-sm">Télécharger</a>
+  </div>
+</header>
+<main>
+<article class="article">
+  <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Accueil</a> / <a href="../#guides">Guides</a> / Une application miroir est-elle sûre ? Ce qu’il faut vérifier avant d’installer</nav>
+  <span class="eyebrow">Confidentialité</span>
+  <h1>Une application miroir est-elle sûre ? Ce qu’il faut vérifier avant d’installer</h1>
+  <p class="lede">Confier sa caméra frontale à une application mérite qu’on hésite. La plupart des applications miroir sont inoffensives ; quelques-unes sont des machines à publicité avec une vue caméra collée dessus. Voici comment faire la différence en une minute environ, et ce que Mirrorly fait de votre caméra.</p>
+
+<h2>Signaux d’alerte</h2>
+<ul>
+  <li><strong>Des autorisations sans rapport avec un miroir</strong> — photothèque, contacts, localisation, micro. Un miroir a besoin de la caméra. Point.</li>
+  <li><strong>Un compte ou une inscription.</strong> Aucune raison qu’un miroir sache qui vous êtes.</li>
+  <li><strong>« Données utilisées pour vous suivre »</strong> sur l’étiquette de confidentialité de l’App Store. Ce sont des SDK publicitaires embarqués.</li>
+  <li><strong>Un « essai gratuit » qui est en fait un abonnement hebdomadaire.</strong> Vérifiez le prix sous le bouton Obtenir avant de toucher.</li>
+  <li><strong>Une politique de confidentialité qui ne dit pas ce qu’il advient des images de la caméra.</strong> Le silence n’est pas rassurant.</li>
+</ul>
+<h2>Bons signaux</h2>
+<ul>
+  <li>Autorisation caméra uniquement, demandée à l’ouverture du miroir.</li>
+  <li>Une déclaration claire que le flux de la caméra reste sur l’appareil et que rien n’est capturé, stocké ou envoyé.</li>
+  <li>Pas de pub. Pas de compte. Un prix unique, ou gratuit.</li>
+</ul>
+<h2>Vérifier sur votre propre téléphone</h2>
+<p>Allez dans <strong>Réglages → Confidentialité et sécurité → Appareil photo</strong> pour voir chaque application ayant accès à la caméra et la désactiver. Vous pouvez aussi ouvrir <strong>Réglages → Confidentialité et sécurité → Rapport de confidentialité des apps</strong> pour voir si une application contacte des serveurs qu’elle ne devrait pas.</p>
+<h2>Ce que Mirrorly fait de votre caméra</h2>
+<p>Tout ce qui suit vient de la <a href="../../privacy/">politique de confidentialité</a> de Mirrorly (en anglais), pas d’un texte marketing :</p>
+<ul>
+  <li>Le flux de la caméra et l’analyse d’expression sur l’appareil (qui alimente les commentaires) <strong>restent sur l’appareil</strong>. Mirrorly n’a pas de déclencheur et ne capture, ne stocke ni n’envoie de photos, de vidéos, d’images de la caméra ou de données faciales.</li>
+  <li><strong>Aucun compte.</strong> Il ne demande jamais de nom, d’e-mail ni de profil.</li>
+  <li><strong>Aucune publicité.</strong></li>
+  <li><strong>Aucun abonnement.</strong> Vos trois premières vérifications sont gratuites ; ensuite un seul achat unique, traité par Apple, débloque l’application à vie. Les données d’achat vont à Apple et à RevenueCat sous un identifiant anonyme — jamais reliées à votre identité.</li>
+  <li>L’accès à la caméra n’est demandé que pour le miroir et peut être révoqué à tout moment dans les Réglages iOS.</li>
+</ul>
+
+  <h2>Comment faire dans Mirrorly</h2>
+  <p>Si c’est ce genre d’application miroir que vous cherchiez :</p>
+  <ol>
+  <li>Installez Mirrorly depuis l’App Store et ouvrez-le. Accordez l’accès à la caméra quand il le demande — c’est la seule autorisation qu’il veut.</li>
+  <li>Utilisez le miroir, la lumière et le zoom. Rien de ce que vous voyez n’est enregistré.</li>
+  <li>Envie de vérifier ? Ouvrez Réglages → Confidentialité et sécurité → Appareil photo. Mirrorly y figure, et nulle part ailleurs.</li>
+  </ol>
+  <img class="step-shot" src="../../assets/screenshots/fr/get-judged-web.jpg" alt="Application miroir Mirrorly sur iPhone — le flux de la caméra reste sur l’appareil et aucune photo n’est enregistrée" width="1080" height="2337" loading="lazy">
+  <div class="callout">
+    <p><strong>Mirrorly est gratuit à l’essai sur l’App Store.</strong> Un miroir plein écran pour iPhone avec anneau lumineux, zoom et luminosité maximale. Trois vérifications gratuites, puis un achat unique — sans abonnement, sans photo enregistrée, sans compte, sans publicité.</p>
+    <p><a href="https://apps.apple.com/app/id6792856754" class="btn btn-primary">Télécharger Mirrorly</a></p>
+  </div>
+  <div class="related">
+    <h2>Guides associés</h2>
+    <ul>
+  <li><a href="iphone-application-miroir-integree.html">L’iPhone a-t-il une application miroir intégrée ?</a></li>
+  <li><a href="application-miroir-qui-parle.html">L’application miroir drôle qui vous juge (avec tendresse)</a></li>
+  <li><a href="utiliser-son-iphone-comme-miroir.html">Comment utiliser son iPhone comme miroir</a></li>
+    </ul>
+  </div>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <a href="../" class="brand"><img src="../../assets/icon-512.png" alt="Mirrorly app icon" width="32" height="32">Mirrorly</a>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="../#guides">Guides</a>
+        <a href="../#faq">FAQ</a>
+        <a href="https://apps.apple.com/app/id6792856754">App Store</a>
+        <a href="../../privacy/">Confidentialité</a>
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula">Conditions d’utilisation</a>
+        <a href="mailto:bashubb.dev@gmail.com">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-lang"><span>Langue:</span> <nav class="lang-switch" aria-label="Language"><a href="https://bashubb.github.io/TheMirrorly/guides/is-a-mirror-app-safe.html" lang="en" hreflang="en">English</a> <a href="https://bashubb.github.io/TheMirrorly/de/guides/ist-eine-spiegel-app-sicher.html" lang="de" hreflang="de">Deutsch</a> <a href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-sans-danger.html" lang="fr" hreflang="fr" class="current">Français</a> <a href="https://bashubb.github.io/TheMirrorly/es/guides/es-segura-una-app-de-espejo.html" lang="es" hreflang="es">Español</a> <a href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-e-sicura.html" lang="it" hreflang="it">Italiano</a> <a href="https://bashubb.github.io/TheMirrorly/ja/guides/kagami-apuri-ha-anzen-ka.html" lang="ja" hreflang="ja">日本語</a> <a href="https://bashubb.github.io/TheMirrorly/zh/guides/jingzi-app-anquan-ma.html" lang="zh-Hans" hreflang="zh-Hans">简体中文</a></nav></div>
+    <p class="footer-note">&copy; 2026 Mirrorly. Vérifiez votre apparence avant que quelqu’un d’autre ne le fasse.</p>
+  </div>
+</footer>
+</body>
+</html>

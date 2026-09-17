@@ -1,15 +1,844 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://bashubb.github.io/TheMirrorly/</loc><lastmod>2026-09-17</lastmod><priority>1.0</priority></url>
-  <url><loc>https://bashubb.github.io/TheMirrorly/guides/how-to-use-iphone-as-a-mirror.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
-  <url><loc>https://bashubb.github.io/TheMirrorly/guides/does-iphone-have-a-mirror-app.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
-  <url><loc>https://bashubb.github.io/TheMirrorly/guides/why-front-camera-flips-your-face.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
-  <url><loc>https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-light.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
-  <url><loc>https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-zoom.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
-  <url><loc>https://bashubb.github.io/TheMirrorly/guides/check-teeth-for-food.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
-  <url><loc>https://bashubb.github.io/TheMirrorly/guides/check-your-look-before-a-meeting.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
-  <url><loc>https://bashubb.github.io/TheMirrorly/guides/makeup-mirror-app.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
-  <url><loc>https://bashubb.github.io/TheMirrorly/guides/pocket-mirror-alternative.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
-  <url><loc>https://bashubb.github.io/TheMirrorly/guides/is-a-mirror-app-safe.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
-  <url><loc>https://bashubb.github.io/TheMirrorly/guides/funny-mirror-app.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://bashubb.github.io/TheMirrorly/</loc><lastmod>2026-09-17</lastmod><priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/guides/how-to-use-iphone-as-a-mirror.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/how-to-use-iphone-as-a-mirror.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/handy-als-spiegel-benutzen.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/utiliser-son-iphone-comme-miroir.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/usar-el-iphone-como-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/usare-iphone-come-specchio.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/iphone-wo-kagami-ni-suru.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/iphone-dang-jingzi-yong.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/how-to-use-iphone-as-a-mirror.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/guides/does-iphone-have-a-mirror-app.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/does-iphone-have-a-mirror-app.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/hat-das-iphone-eine-spiegel-app.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/iphone-application-miroir-integree.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/el-iphone-tiene-app-de-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/iphone-ha-app-specchio-integrata.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/iphone-ni-kagami-apuri-ha-aru.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/iphone-zidai-jingzi-app-ma.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/does-iphone-have-a-mirror-app.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/guides/why-front-camera-flips-your-face.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/why-front-camera-flips-your-face.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/warum-spiegelt-die-frontkamera.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/pourquoi-la-camera-frontale-inverse-le-visage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/por-que-la-camara-frontal-invierte-la-cara.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/perche-la-fotocamera-frontale-inverte-il-viso.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/inkamera-ga-hanten-suru-riyuu.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/qianzhi-shexiangtou-weishenme-fanzhuan.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/why-front-camera-flips-your-face.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-light.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-light.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/spiegel-app-mit-licht.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-avec-lumiere.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-con-luz.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-con-luce.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/raito-tsuki-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/dai-deng-jingzi-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-light.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-zoom.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/spiegel-app-mit-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-avec-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-con-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-con-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/zuumu-tsuki-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/dai-fangda-jingzi-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-zoom.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/guides/check-teeth-for-food.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/check-teeth-for-food.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/essen-zwischen-den-zaehnen-pruefen.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/verifier-ses-dents-sans-miroir.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/revisar-los-dientes-sin-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/controllare-i-denti-senza-specchio.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/ha-ni-hasamatta-tabemono-wo-kakunin.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/jiancha-yachi-you-meiyou-shiwu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/check-teeth-for-food.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/guides/check-your-look-before-a-meeting.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/check-your-look-before-a-meeting.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/aussehen-vor-meeting-checken.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/verifier-son-apparence-avant-une-reunion.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/revisar-tu-aspecto-antes-de-una-reunion.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/controllare-il-look-prima-di-una-riunione.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/kaigi-mae-no-midashinami-chekku.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/kaihui-qian-jiancha-yirong.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/check-your-look-before-a-meeting.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/guides/makeup-mirror-app.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/makeup-mirror-app.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/schminkspiegel-app.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-maquillage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-para-maquillaje.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-per-il-trucco.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/meiku-you-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/huazhuang-jing-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/makeup-mirror-app.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/guides/pocket-mirror-alternative.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/pocket-mirror-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/taschenspiegel-vergessen.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/miroir-de-poche-oublie.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/olvide-el-espejo-de-bolsillo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/specchietto-dimenticato.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/tekagami-wo-wasureta.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/wangle-dai-suishen-jing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/pocket-mirror-alternative.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/guides/is-a-mirror-app-safe.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/is-a-mirror-app-safe.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/ist-eine-spiegel-app-sicher.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-sans-danger.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/es-segura-una-app-de-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-e-sicura.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/kagami-apuri-ha-anzen-ka.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/jingzi-app-anquan-ma.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/is-a-mirror-app-safe.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/guides/funny-mirror-app.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/funny-mirror-app.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/lustige-spiegel-app.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-qui-parle.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-divertida.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-divertente.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/omoshiroi-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/youqu-de-jingzi-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/funny-mirror-app.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/de/</loc><lastmod>2026-09-17</lastmod><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/de/guides/handy-als-spiegel-benutzen.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/how-to-use-iphone-as-a-mirror.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/handy-als-spiegel-benutzen.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/utiliser-son-iphone-comme-miroir.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/usar-el-iphone-como-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/usare-iphone-come-specchio.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/iphone-wo-kagami-ni-suru.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/iphone-dang-jingzi-yong.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/how-to-use-iphone-as-a-mirror.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/de/guides/hat-das-iphone-eine-spiegel-app.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/does-iphone-have-a-mirror-app.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/hat-das-iphone-eine-spiegel-app.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/iphone-application-miroir-integree.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/el-iphone-tiene-app-de-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/iphone-ha-app-specchio-integrata.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/iphone-ni-kagami-apuri-ha-aru.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/iphone-zidai-jingzi-app-ma.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/does-iphone-have-a-mirror-app.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/de/guides/warum-spiegelt-die-frontkamera.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/why-front-camera-flips-your-face.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/warum-spiegelt-die-frontkamera.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/pourquoi-la-camera-frontale-inverse-le-visage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/por-que-la-camara-frontal-invierte-la-cara.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/perche-la-fotocamera-frontale-inverte-il-viso.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/inkamera-ga-hanten-suru-riyuu.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/qianzhi-shexiangtou-weishenme-fanzhuan.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/why-front-camera-flips-your-face.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/de/guides/spiegel-app-mit-licht.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-light.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/spiegel-app-mit-licht.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-avec-lumiere.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-con-luz.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-con-luce.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/raito-tsuki-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/dai-deng-jingzi-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-light.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/de/guides/spiegel-app-mit-zoom.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/spiegel-app-mit-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-avec-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-con-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-con-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/zuumu-tsuki-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/dai-fangda-jingzi-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-zoom.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/de/guides/essen-zwischen-den-zaehnen-pruefen.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/check-teeth-for-food.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/essen-zwischen-den-zaehnen-pruefen.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/verifier-ses-dents-sans-miroir.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/revisar-los-dientes-sin-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/controllare-i-denti-senza-specchio.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/ha-ni-hasamatta-tabemono-wo-kakunin.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/jiancha-yachi-you-meiyou-shiwu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/check-teeth-for-food.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/de/guides/aussehen-vor-meeting-checken.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/check-your-look-before-a-meeting.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/aussehen-vor-meeting-checken.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/verifier-son-apparence-avant-une-reunion.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/revisar-tu-aspecto-antes-de-una-reunion.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/controllare-il-look-prima-di-una-riunione.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/kaigi-mae-no-midashinami-chekku.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/kaihui-qian-jiancha-yirong.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/check-your-look-before-a-meeting.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/de/guides/schminkspiegel-app.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/makeup-mirror-app.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/schminkspiegel-app.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-maquillage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-para-maquillaje.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-per-il-trucco.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/meiku-you-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/huazhuang-jing-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/makeup-mirror-app.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/de/guides/taschenspiegel-vergessen.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/pocket-mirror-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/taschenspiegel-vergessen.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/miroir-de-poche-oublie.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/olvide-el-espejo-de-bolsillo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/specchietto-dimenticato.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/tekagami-wo-wasureta.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/wangle-dai-suishen-jing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/pocket-mirror-alternative.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/de/guides/ist-eine-spiegel-app-sicher.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/is-a-mirror-app-safe.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/ist-eine-spiegel-app-sicher.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-sans-danger.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/es-segura-una-app-de-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-e-sicura.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/kagami-apuri-ha-anzen-ka.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/jingzi-app-anquan-ma.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/is-a-mirror-app-safe.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/de/guides/lustige-spiegel-app.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/funny-mirror-app.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/lustige-spiegel-app.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-qui-parle.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-divertida.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-divertente.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/omoshiroi-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/youqu-de-jingzi-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/funny-mirror-app.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/fr/</loc><lastmod>2026-09-17</lastmod><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/fr/guides/utiliser-son-iphone-comme-miroir.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/how-to-use-iphone-as-a-mirror.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/handy-als-spiegel-benutzen.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/utiliser-son-iphone-comme-miroir.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/usar-el-iphone-como-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/usare-iphone-come-specchio.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/iphone-wo-kagami-ni-suru.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/iphone-dang-jingzi-yong.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/how-to-use-iphone-as-a-mirror.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/fr/guides/iphone-application-miroir-integree.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/does-iphone-have-a-mirror-app.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/hat-das-iphone-eine-spiegel-app.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/iphone-application-miroir-integree.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/el-iphone-tiene-app-de-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/iphone-ha-app-specchio-integrata.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/iphone-ni-kagami-apuri-ha-aru.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/iphone-zidai-jingzi-app-ma.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/does-iphone-have-a-mirror-app.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/fr/guides/pourquoi-la-camera-frontale-inverse-le-visage.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/why-front-camera-flips-your-face.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/warum-spiegelt-die-frontkamera.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/pourquoi-la-camera-frontale-inverse-le-visage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/por-que-la-camara-frontal-invierte-la-cara.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/perche-la-fotocamera-frontale-inverte-il-viso.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/inkamera-ga-hanten-suru-riyuu.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/qianzhi-shexiangtou-weishenme-fanzhuan.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/why-front-camera-flips-your-face.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-avec-lumiere.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-light.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/spiegel-app-mit-licht.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-avec-lumiere.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-con-luz.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-con-luce.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/raito-tsuki-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/dai-deng-jingzi-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-light.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-avec-zoom.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/spiegel-app-mit-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-avec-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-con-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-con-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/zuumu-tsuki-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/dai-fangda-jingzi-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-zoom.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/fr/guides/verifier-ses-dents-sans-miroir.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/check-teeth-for-food.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/essen-zwischen-den-zaehnen-pruefen.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/verifier-ses-dents-sans-miroir.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/revisar-los-dientes-sin-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/controllare-i-denti-senza-specchio.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/ha-ni-hasamatta-tabemono-wo-kakunin.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/jiancha-yachi-you-meiyou-shiwu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/check-teeth-for-food.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/fr/guides/verifier-son-apparence-avant-une-reunion.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/check-your-look-before-a-meeting.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/aussehen-vor-meeting-checken.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/verifier-son-apparence-avant-une-reunion.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/revisar-tu-aspecto-antes-de-una-reunion.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/controllare-il-look-prima-di-una-riunione.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/kaigi-mae-no-midashinami-chekku.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/kaihui-qian-jiancha-yirong.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/check-your-look-before-a-meeting.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-maquillage.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/makeup-mirror-app.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/schminkspiegel-app.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-maquillage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-para-maquillaje.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-per-il-trucco.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/meiku-you-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/huazhuang-jing-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/makeup-mirror-app.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/fr/guides/miroir-de-poche-oublie.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/pocket-mirror-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/taschenspiegel-vergessen.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/miroir-de-poche-oublie.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/olvide-el-espejo-de-bolsillo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/specchietto-dimenticato.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/tekagami-wo-wasureta.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/wangle-dai-suishen-jing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/pocket-mirror-alternative.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-sans-danger.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/is-a-mirror-app-safe.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/ist-eine-spiegel-app-sicher.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-sans-danger.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/es-segura-una-app-de-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-e-sicura.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/kagami-apuri-ha-anzen-ka.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/jingzi-app-anquan-ma.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/is-a-mirror-app-safe.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-qui-parle.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/funny-mirror-app.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/lustige-spiegel-app.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-qui-parle.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-divertida.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-divertente.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/omoshiroi-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/youqu-de-jingzi-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/funny-mirror-app.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/es/</loc><lastmod>2026-09-17</lastmod><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/es/guides/usar-el-iphone-como-espejo.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/how-to-use-iphone-as-a-mirror.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/handy-als-spiegel-benutzen.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/utiliser-son-iphone-comme-miroir.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/usar-el-iphone-como-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/usare-iphone-come-specchio.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/iphone-wo-kagami-ni-suru.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/iphone-dang-jingzi-yong.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/how-to-use-iphone-as-a-mirror.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/es/guides/el-iphone-tiene-app-de-espejo.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/does-iphone-have-a-mirror-app.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/hat-das-iphone-eine-spiegel-app.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/iphone-application-miroir-integree.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/el-iphone-tiene-app-de-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/iphone-ha-app-specchio-integrata.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/iphone-ni-kagami-apuri-ha-aru.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/iphone-zidai-jingzi-app-ma.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/does-iphone-have-a-mirror-app.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/es/guides/por-que-la-camara-frontal-invierte-la-cara.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/why-front-camera-flips-your-face.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/warum-spiegelt-die-frontkamera.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/pourquoi-la-camera-frontale-inverse-le-visage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/por-que-la-camara-frontal-invierte-la-cara.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/perche-la-fotocamera-frontale-inverte-il-viso.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/inkamera-ga-hanten-suru-riyuu.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/qianzhi-shexiangtou-weishenme-fanzhuan.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/why-front-camera-flips-your-face.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-con-luz.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-light.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/spiegel-app-mit-licht.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-avec-lumiere.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-con-luz.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-con-luce.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/raito-tsuki-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/dai-deng-jingzi-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-light.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-con-zoom.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/spiegel-app-mit-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-avec-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-con-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-con-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/zuumu-tsuki-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/dai-fangda-jingzi-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-zoom.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/es/guides/revisar-los-dientes-sin-espejo.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/check-teeth-for-food.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/essen-zwischen-den-zaehnen-pruefen.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/verifier-ses-dents-sans-miroir.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/revisar-los-dientes-sin-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/controllare-i-denti-senza-specchio.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/ha-ni-hasamatta-tabemono-wo-kakunin.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/jiancha-yachi-you-meiyou-shiwu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/check-teeth-for-food.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/es/guides/revisar-tu-aspecto-antes-de-una-reunion.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/check-your-look-before-a-meeting.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/aussehen-vor-meeting-checken.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/verifier-son-apparence-avant-une-reunion.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/revisar-tu-aspecto-antes-de-una-reunion.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/controllare-il-look-prima-di-una-riunione.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/kaigi-mae-no-midashinami-chekku.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/kaihui-qian-jiancha-yirong.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/check-your-look-before-a-meeting.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-para-maquillaje.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/makeup-mirror-app.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/schminkspiegel-app.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-maquillage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-para-maquillaje.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-per-il-trucco.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/meiku-you-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/huazhuang-jing-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/makeup-mirror-app.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/es/guides/olvide-el-espejo-de-bolsillo.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/pocket-mirror-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/taschenspiegel-vergessen.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/miroir-de-poche-oublie.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/olvide-el-espejo-de-bolsillo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/specchietto-dimenticato.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/tekagami-wo-wasureta.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/wangle-dai-suishen-jing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/pocket-mirror-alternative.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/es/guides/es-segura-una-app-de-espejo.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/is-a-mirror-app-safe.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/ist-eine-spiegel-app-sicher.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-sans-danger.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/es-segura-una-app-de-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-e-sicura.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/kagami-apuri-ha-anzen-ka.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/jingzi-app-anquan-ma.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/is-a-mirror-app-safe.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-divertida.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/funny-mirror-app.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/lustige-spiegel-app.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-qui-parle.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-divertida.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-divertente.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/omoshiroi-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/youqu-de-jingzi-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/funny-mirror-app.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/it/</loc><lastmod>2026-09-17</lastmod><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/it/guides/usare-iphone-come-specchio.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/how-to-use-iphone-as-a-mirror.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/handy-als-spiegel-benutzen.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/utiliser-son-iphone-comme-miroir.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/usar-el-iphone-como-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/usare-iphone-come-specchio.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/iphone-wo-kagami-ni-suru.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/iphone-dang-jingzi-yong.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/how-to-use-iphone-as-a-mirror.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/it/guides/iphone-ha-app-specchio-integrata.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/does-iphone-have-a-mirror-app.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/hat-das-iphone-eine-spiegel-app.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/iphone-application-miroir-integree.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/el-iphone-tiene-app-de-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/iphone-ha-app-specchio-integrata.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/iphone-ni-kagami-apuri-ha-aru.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/iphone-zidai-jingzi-app-ma.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/does-iphone-have-a-mirror-app.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/it/guides/perche-la-fotocamera-frontale-inverte-il-viso.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/why-front-camera-flips-your-face.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/warum-spiegelt-die-frontkamera.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/pourquoi-la-camera-frontale-inverse-le-visage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/por-que-la-camara-frontal-invierte-la-cara.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/perche-la-fotocamera-frontale-inverte-il-viso.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/inkamera-ga-hanten-suru-riyuu.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/qianzhi-shexiangtou-weishenme-fanzhuan.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/why-front-camera-flips-your-face.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-con-luce.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-light.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/spiegel-app-mit-licht.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-avec-lumiere.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-con-luz.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-con-luce.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/raito-tsuki-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/dai-deng-jingzi-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-light.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-con-zoom.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/spiegel-app-mit-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-avec-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-con-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-con-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/zuumu-tsuki-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/dai-fangda-jingzi-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-zoom.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/it/guides/controllare-i-denti-senza-specchio.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/check-teeth-for-food.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/essen-zwischen-den-zaehnen-pruefen.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/verifier-ses-dents-sans-miroir.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/revisar-los-dientes-sin-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/controllare-i-denti-senza-specchio.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/ha-ni-hasamatta-tabemono-wo-kakunin.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/jiancha-yachi-you-meiyou-shiwu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/check-teeth-for-food.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/it/guides/controllare-il-look-prima-di-una-riunione.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/check-your-look-before-a-meeting.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/aussehen-vor-meeting-checken.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/verifier-son-apparence-avant-une-reunion.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/revisar-tu-aspecto-antes-de-una-reunion.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/controllare-il-look-prima-di-una-riunione.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/kaigi-mae-no-midashinami-chekku.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/kaihui-qian-jiancha-yirong.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/check-your-look-before-a-meeting.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-per-il-trucco.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/makeup-mirror-app.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/schminkspiegel-app.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-maquillage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-para-maquillaje.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-per-il-trucco.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/meiku-you-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/huazhuang-jing-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/makeup-mirror-app.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/it/guides/specchietto-dimenticato.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/pocket-mirror-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/taschenspiegel-vergessen.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/miroir-de-poche-oublie.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/olvide-el-espejo-de-bolsillo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/specchietto-dimenticato.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/tekagami-wo-wasureta.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/wangle-dai-suishen-jing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/pocket-mirror-alternative.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-e-sicura.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/is-a-mirror-app-safe.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/ist-eine-spiegel-app-sicher.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-sans-danger.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/es-segura-una-app-de-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-e-sicura.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/kagami-apuri-ha-anzen-ka.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/jingzi-app-anquan-ma.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/is-a-mirror-app-safe.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-divertente.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/funny-mirror-app.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/lustige-spiegel-app.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-qui-parle.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-divertida.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-divertente.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/omoshiroi-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/youqu-de-jingzi-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/funny-mirror-app.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/ja/</loc><lastmod>2026-09-17</lastmod><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/ja/guides/iphone-wo-kagami-ni-suru.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/how-to-use-iphone-as-a-mirror.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/handy-als-spiegel-benutzen.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/utiliser-son-iphone-comme-miroir.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/usar-el-iphone-como-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/usare-iphone-come-specchio.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/iphone-wo-kagami-ni-suru.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/iphone-dang-jingzi-yong.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/how-to-use-iphone-as-a-mirror.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/ja/guides/iphone-ni-kagami-apuri-ha-aru.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/does-iphone-have-a-mirror-app.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/hat-das-iphone-eine-spiegel-app.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/iphone-application-miroir-integree.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/el-iphone-tiene-app-de-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/iphone-ha-app-specchio-integrata.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/iphone-ni-kagami-apuri-ha-aru.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/iphone-zidai-jingzi-app-ma.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/does-iphone-have-a-mirror-app.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/ja/guides/inkamera-ga-hanten-suru-riyuu.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/why-front-camera-flips-your-face.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/warum-spiegelt-die-frontkamera.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/pourquoi-la-camera-frontale-inverse-le-visage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/por-que-la-camara-frontal-invierte-la-cara.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/perche-la-fotocamera-frontale-inverte-il-viso.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/inkamera-ga-hanten-suru-riyuu.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/qianzhi-shexiangtou-weishenme-fanzhuan.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/why-front-camera-flips-your-face.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/ja/guides/raito-tsuki-kagami-apuri.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-light.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/spiegel-app-mit-licht.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-avec-lumiere.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-con-luz.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-con-luce.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/raito-tsuki-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/dai-deng-jingzi-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-light.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/ja/guides/zuumu-tsuki-kagami-apuri.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/spiegel-app-mit-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-avec-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-con-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-con-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/zuumu-tsuki-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/dai-fangda-jingzi-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-zoom.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/ja/guides/ha-ni-hasamatta-tabemono-wo-kakunin.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/check-teeth-for-food.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/essen-zwischen-den-zaehnen-pruefen.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/verifier-ses-dents-sans-miroir.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/revisar-los-dientes-sin-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/controllare-i-denti-senza-specchio.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/ha-ni-hasamatta-tabemono-wo-kakunin.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/jiancha-yachi-you-meiyou-shiwu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/check-teeth-for-food.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/ja/guides/kaigi-mae-no-midashinami-chekku.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/check-your-look-before-a-meeting.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/aussehen-vor-meeting-checken.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/verifier-son-apparence-avant-une-reunion.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/revisar-tu-aspecto-antes-de-una-reunion.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/controllare-il-look-prima-di-una-riunione.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/kaigi-mae-no-midashinami-chekku.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/kaihui-qian-jiancha-yirong.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/check-your-look-before-a-meeting.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/ja/guides/meiku-you-kagami-apuri.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/makeup-mirror-app.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/schminkspiegel-app.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-maquillage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-para-maquillaje.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-per-il-trucco.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/meiku-you-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/huazhuang-jing-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/makeup-mirror-app.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/ja/guides/tekagami-wo-wasureta.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/pocket-mirror-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/taschenspiegel-vergessen.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/miroir-de-poche-oublie.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/olvide-el-espejo-de-bolsillo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/specchietto-dimenticato.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/tekagami-wo-wasureta.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/wangle-dai-suishen-jing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/pocket-mirror-alternative.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/ja/guides/kagami-apuri-ha-anzen-ka.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/is-a-mirror-app-safe.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/ist-eine-spiegel-app-sicher.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-sans-danger.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/es-segura-una-app-de-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-e-sicura.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/kagami-apuri-ha-anzen-ka.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/jingzi-app-anquan-ma.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/is-a-mirror-app-safe.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/ja/guides/omoshiroi-kagami-apuri.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/funny-mirror-app.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/lustige-spiegel-app.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-qui-parle.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-divertida.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-divertente.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/omoshiroi-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/youqu-de-jingzi-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/funny-mirror-app.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/zh/</loc><lastmod>2026-09-17</lastmod><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/zh/guides/iphone-dang-jingzi-yong.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/how-to-use-iphone-as-a-mirror.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/handy-als-spiegel-benutzen.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/utiliser-son-iphone-comme-miroir.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/usar-el-iphone-como-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/usare-iphone-come-specchio.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/iphone-wo-kagami-ni-suru.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/iphone-dang-jingzi-yong.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/how-to-use-iphone-as-a-mirror.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/zh/guides/iphone-zidai-jingzi-app-ma.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/does-iphone-have-a-mirror-app.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/hat-das-iphone-eine-spiegel-app.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/iphone-application-miroir-integree.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/el-iphone-tiene-app-de-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/iphone-ha-app-specchio-integrata.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/iphone-ni-kagami-apuri-ha-aru.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/iphone-zidai-jingzi-app-ma.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/does-iphone-have-a-mirror-app.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/zh/guides/qianzhi-shexiangtou-weishenme-fanzhuan.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/why-front-camera-flips-your-face.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/warum-spiegelt-die-frontkamera.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/pourquoi-la-camera-frontale-inverse-le-visage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/por-que-la-camara-frontal-invierte-la-cara.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/perche-la-fotocamera-frontale-inverte-il-viso.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/inkamera-ga-hanten-suru-riyuu.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/qianzhi-shexiangtou-weishenme-fanzhuan.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/why-front-camera-flips-your-face.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/zh/guides/dai-deng-jingzi-app.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-light.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/spiegel-app-mit-licht.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-avec-lumiere.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-con-luz.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-con-luce.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/raito-tsuki-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/dai-deng-jingzi-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-light.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/zh/guides/dai-fangda-jingzi-app.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/spiegel-app-mit-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-avec-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-con-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-con-zoom.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/zuumu-tsuki-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/dai-fangda-jingzi-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/mirror-app-with-zoom.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/zh/guides/jiancha-yachi-you-meiyou-shiwu.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/check-teeth-for-food.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/essen-zwischen-den-zaehnen-pruefen.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/verifier-ses-dents-sans-miroir.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/revisar-los-dientes-sin-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/controllare-i-denti-senza-specchio.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/ha-ni-hasamatta-tabemono-wo-kakunin.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/jiancha-yachi-you-meiyou-shiwu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/check-teeth-for-food.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/zh/guides/kaihui-qian-jiancha-yirong.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/check-your-look-before-a-meeting.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/aussehen-vor-meeting-checken.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/verifier-son-apparence-avant-une-reunion.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/revisar-tu-aspecto-antes-de-una-reunion.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/controllare-il-look-prima-di-una-riunione.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/kaigi-mae-no-midashinami-chekku.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/kaihui-qian-jiancha-yirong.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/check-your-look-before-a-meeting.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/zh/guides/huazhuang-jing-app.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/makeup-mirror-app.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/schminkspiegel-app.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-maquillage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-para-maquillaje.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-per-il-trucco.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/meiku-you-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/huazhuang-jing-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/makeup-mirror-app.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/zh/guides/wangle-dai-suishen-jing.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/pocket-mirror-alternative.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/taschenspiegel-vergessen.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/miroir-de-poche-oublie.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/olvide-el-espejo-de-bolsillo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/specchietto-dimenticato.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/tekagami-wo-wasureta.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/wangle-dai-suishen-jing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/pocket-mirror-alternative.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/zh/guides/jingzi-app-anquan-ma.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/is-a-mirror-app-safe.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/ist-eine-spiegel-app-sicher.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-sans-danger.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/es-segura-una-app-de-espejo.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-e-sicura.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/kagami-apuri-ha-anzen-ka.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/jingzi-app-anquan-ma.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/is-a-mirror-app-safe.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/zh/guides/youqu-de-jingzi-app.html</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/guides/funny-mirror-app.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/guides/lustige-spiegel-app.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/guides/application-miroir-qui-parle.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/guides/app-de-espejo-divertida.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/guides/app-specchio-divertente.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/guides/omoshiroi-kagami-apuri.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/guides/youqu-de-jingzi-app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/guides/funny-mirror-app.html"/>
+  </url>
+  <url><loc>https://bashubb.github.io/TheMirrorly/privacy/</loc><lastmod>2026-09-17</lastmod><priority>0.3</priority></url>
 </urlset>
