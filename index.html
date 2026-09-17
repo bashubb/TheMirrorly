@@ -1,209 +1,343 @@
 <!doctype html>
-<html lang="en" data-light-theme="light" data-dark-theme="dark">
-  <head>
-    <base href="./" />
-    <meta property="og:site_name" content="Mirrorly - the best mirror You've ever had" />
-    <meta property="og:title" content="Mirrorly - the best mirror You've ever had" />
-    <meta name="twitter:title" content="Mirrorly - the best mirror You've ever had" />
-    <meta property="og:url" content="https://example.com/" />
-    <meta name="twitter:domain" content="example.com" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:dnt" content="on" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Hubert Kiełkowski" />
-    <meta name="generator" content="Ignite v0.6.0" />
-    <title>Mirrorly - the best mirror You've ever had</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/bootstrap-icons.min.css" rel="stylesheet" />
-    <link href="css/ignite-core.min.css" rel="stylesheet" />
-    <link href="https://example.com/" rel="canonical" />
-    <link href="images/favicon.png" rel="icon" />
-    <link href="css/styles.css" rel="stylesheet" />
-    <style>
-:root {
-    --primary-color: #5e234d;
-    --primary-rgb: 94, 35, 77;
-    --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    color-scheme: dark;
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mirror App for iPhone With Light &amp; Zoom | Mirrorly</title>
+<meta name="description" content="Mirrorly is a phone mirror app for iPhone: full-screen mirror, built-in light for dark rooms, zoom for teeth and brows. No photos saved, no account, no ads. Free.">
+<link rel="canonical" href="https://bashubb.github.io/TheMirrorly/">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Hubert Kiełkowski">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mirrorly — the phone mirror app that actually works like a mirror">
+<meta property="og:description" content="Full-screen iPhone mirror with a built-in light, zoom and max brightness. Check your hair, makeup and teeth before anyone else does. No photos saved, no account, no ads.">
+<meta property="og:image" content="https://bashubb.github.io/TheMirrorly/assets/screenshots/check-before-anyone-web.jpg">
+<meta property="og:url" content="https://bashubb.github.io/TheMirrorly/">
+<meta property="og:site_name" content="Mirrorly">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mirrorly — the phone mirror app that actually works like a mirror">
+<meta name="twitter:description" content="Full-screen iPhone mirror with a built-in light, zoom and max brightness. No photos saved, no account, no ads.">
+<meta name="twitter:image" content="https://bashubb.github.io/TheMirrorly/assets/screenshots/check-before-anyone-web.jpg">
+
+<meta name="apple-itunes-app" content="app-id=6792856754">
+<link rel="icon" href="assets/icon-512.png">
+<link rel="apple-touch-icon" href="assets/icon-512.png">
+<link rel="stylesheet" href="assets/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Mirrorly",
+  "operatingSystem": "iOS",
+  "applicationCategory": "UtilitiesApplication",
+  "description": "A phone mirror app for iPhone: full-screen front-camera mirror with a built-in light, zoom and maximum brightness. No photos saved, no account, no ads.",
+  "image": "https://bashubb.github.io/TheMirrorly/assets/icon-1024.png",
+  "url": "https://bashubb.github.io/TheMirrorly/",
+  "installUrl": "https://apps.apple.com/app/id6792856754",
+  "author": { "@type": "Person", "name": "Hubert Kiełkowski" },
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
 }
-</style>
-    <meta name="apple-itunes-app" content="app-id=6792856754" />
-  </head>
-  <body data-site-classes="site-shell dark-mode density-spacious" data-bs-theme="dark">
-    <header>
-      <nav class="site-header navbar navbar-expand-md">
-        <div class="container flex-wrap flex-lg-nowrap">
-          <div class="me-2 me-md-auto">
-            <a href="./" class="brand-link d-inline-flex align-items-center navbar-brand"><span class="brand-name">Mirrorly - the best mirror You've ever had</span></a>
-          </div>
-          <button type="button" class="navbar-toggler btn" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-          <div id="navbarCollapse" class="collapse navbar-collapse">
-            <ul class="navbar-nav mb-2 mb-md-0 col justify-content-end">
-              <li class="nav-item"><a href="#screenshots" class="nav-link text-nowrap">Screenshots</a></li>
-              <li class="nav-item"><a href="#features" class="nav-link text-nowrap">Features</a></li>
-              <li class="nav-item"><a href="https://apps.apple.com/app/id6792856754" class="text-nowrap btn btn-sm btn-primary">Download</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main class="site-main">
-      <div class="ig-main-content">
-        <div id="hero" class="hero hero-centered">
-          <div class="container">
-            <div class="hero-content">
-              <img src="images/app-icon.png" alt="App Icon" class="hero-app-icon" />
-              <h1 class="hero-title">Quick Mirror Check</h1>
-              <p class="hero-subtitle">Streamline your routine with a fun and efficient tool.</p>
-              <div class="hero-cta">
-                <a href="https://apps.apple.com/app/id6792856754" class="cta-button cta-button-primary btn btn-primary">Download Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="screenshots" class="screenshots-section screenshots-carousel">
-          <div class="container">
-            <div class="section-header"></div>
-            <div class="screenshots-container">
-              <div class="screenshots-scroll">
-                <div class="screenshot-card">
-                  <button type="button" class="screenshot-trigger btn" data-bs-toggle="modal" data-bs-target="#screenshot-modal-0"><img src="images/screenshots/01-check-before-anyone.jpg" alt="check before anyone else does" class="screenshot-image" /></button>
-                </div>
-                <div class="screenshot-card">
-                  <button type="button" class="screenshot-trigger btn" data-bs-toggle="modal" data-bs-target="#screenshot-modal-1"><img src="images/screenshots/02-see-in-the-dark.jpg" alt="see yourself in the dark" class="screenshot-image" /></button>
-                </div>
-                <div class="screenshot-card">
-                  <button type="button" class="screenshot-trigger btn" data-bs-toggle="modal" data-bs-target="#screenshot-modal-2"><img src="images/screenshots/03-catch-in-your-teeth.jpg" alt="catch what's in your teeth" class="screenshot-image" /></button>
-                </div>
-                <div class="screenshot-card">
-                  <button type="button" class="screenshot-trigger btn" data-bs-toggle="modal" data-bs-target="#screenshot-modal-3"><img src="images/screenshots/04-get-judged.jpg" alt="get judged by your mirror" class="screenshot-image" /></button>
-                </div>
-              </div>
-            </div>
-            <div id="screenshot-modal-0" tabindex="-1" class="modal fade screenshot-modal" aria-labelledby="screenshotModalLabel0" aria-hidden="true">
-              <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h4>Screenshot 1</h4>
-                    <button type="button" class="btn btn-close" data-bs-dismiss="modal" label="Close"></button>
-                  </div>
-                  <div class="modal-body text-center">
-                    <img src="images/screenshots/01-check-before-anyone.jpg" alt="check before anyone else does" class="img-fluid screenshot-lightbox-image" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="screenshot-modal-1" tabindex="-1" class="modal fade screenshot-modal" aria-labelledby="screenshotModalLabel1" aria-hidden="true">
-              <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h4>Screenshot 2</h4>
-                    <button type="button" class="btn btn-close" data-bs-dismiss="modal" label="Close"></button>
-                  </div>
-                  <div class="modal-body text-center">
-                    <img src="images/screenshots/02-see-in-the-dark.jpg" alt="see yourself in the dark" class="img-fluid screenshot-lightbox-image" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="screenshot-modal-2" tabindex="-1" class="modal fade screenshot-modal" aria-labelledby="screenshotModalLabel2" aria-hidden="true">
-              <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h4>Screenshot 3</h4>
-                    <button type="button" class="btn btn-close" data-bs-dismiss="modal" label="Close"></button>
-                  </div>
-                  <div class="modal-body text-center">
-                    <img src="images/screenshots/03-catch-in-your-teeth.jpg" alt="catch what's in your teeth" class="img-fluid screenshot-lightbox-image" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="screenshot-modal-3" tabindex="-1" class="modal fade screenshot-modal" aria-labelledby="screenshotModalLabel3" aria-hidden="true">
-              <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h4>Screenshot 4</h4>
-                    <button type="button" class="btn btn-close" data-bs-dismiss="modal" label="Close"></button>
-                  </div>
-                  <div class="modal-body text-center">
-                    <img src="images/screenshots/04-get-judged.jpg" alt="get judged by your mirror" class="img-fluid screenshot-lightbox-image" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="features" class="features-section features-grid-layout features-grid-multiple-of-two">
-          <div class="container">
-            <div class="section-header">
-              <h2>Powerful Features</h2>
-              <p class="section-description">Everything you need to get things done.</p>
-            </div>
-            <div class="features-grid">
-              <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="feature-icon-image bi-lightning-charge-fill"></i>
-                </div>
-                <h4 class="feature-title">Quick Appearance Check</h4>
-                <p class="feature-description">Get a quick and easy look at your hair, makeup, and teeth before any occasion.</p>
-              </div>
-              <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="feature-icon-image bi-graph-up-arrow"></i>
-                </div>
-                <h4 class="feature-title">Maximum Screen Brightness</h4>
-                <p class="feature-description">Enjoy a bright and clear view with maximum screen brightness.</p>
-              </div>
-              <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="feature-icon-image bi-star-fill"></i>
-                </div>
-                <h4 class="feature-title">Built-in Light</h4>
-                <p class="feature-description">Access a built-in light for clear visibility in dark environments.</p>
-              </div>
-              <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="feature-icon-image bi-star-fill"></i>
-                </div>
-                <h4 class="feature-title">Humorous Mirror Personality</h4>
-                <p class="feature-description">Experience a fun and playful interaction with the app's humorous</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="download" class="download-section">
-          <div class="container">
-            <div class="download-content">
-              <h2>Mirror Your Confidence!</h2>
-              <p class="download-description">Quick and easy appearance check on your phone!</p>
-              <div class="store-badges">
-                <a href="https://apps.apple.com/app/id6792856754" class="store-badge-link"><img src="images/app-store-download-black.svg" alt="Download on the App Store" class="store-badge store-badge-light-mode" /><img src="images/app-store-download-white.svg" alt="Download on the App Store" class="store-badge store-badge-dark-mode" /></a>
-              </div>
-            </div>
-          </div>
-        </div>
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Is Mirrorly free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Mirrorly is free to download from the App Store. There is an optional one-time purchase for lifetime access — no subscription, and no ads either way." } },
+    { "@type": "Question", "name": "Does iPhone have a built-in mirror app?", "acceptedAnswer": { "@type": "Answer", "text": "No. iOS has no mirror app. People use the Camera app instead, but it's built to take photos — the shutter is under your thumb, brightness isn't maxed, and there's no front light. Mirrorly turns the front camera into a real mirror." } },
+    { "@type": "Question", "name": "Does Mirrorly save or upload my photos?", "acceptedAnswer": { "@type": "Answer", "text": "No. Mirrorly never captures, stores or uploads photos, video, camera frames or face data. The camera feed and the on-device face analysis stay on your iPhone. There's no account, either." } },
+    { "@type": "Question", "name": "Does Mirrorly work in the dark?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Tap the light-bulb button and the edges of the screen turn bright white at maximum brightness, lighting your face like a small ring light — useful in a car at night, a dim bathroom or a hotel room." } },
+    { "@type": "Question", "name": "Can I zoom in to check my teeth or eyebrows?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Drag the zoom slider or pinch the screen to magnify. Around 2× is enough to spot food between teeth, seat a contact lens or tweeze a stray hair." } },
+    { "@type": "Question", "name": "Is this the same as screen mirroring?", "acceptedAnswer": { "@type": "Answer", "text": "No. Screen mirroring (AirPlay) sends your iPhone's display to a TV. Mirrorly is a mirror — it shows your face using the front camera, the way glass does." } },
+    { "@type": "Question", "name": "Why do I look different in Mirrorly than in my selfies?", "acceptedAnswer": { "@type": "Answer", "text": "Mirrorly always shows you mirrored, like real glass — the version of your face you're used to. Selfies are saved un-mirrored, the way other people see you, which is why photos can look subtly 'off'." } },
+    { "@type": "Question", "name": "Why is the mirror talking to me?", "acceptedAnswer": { "@type": "Answer", "text": "That's Mirrorly's personality. On-device face analysis reads your expression and replies with a dry one-liner like 'okay, smug.' or 'step back, detective.' Nothing about your face leaves the phone." } },
+    { "@type": "Question", "name": "Does Mirrorly work on Android?", "acceptedAnswer": { "@type": "Answer", "text": "No. Mirrorly is an iOS app for iPhone, available on the App Store." } }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="./" class="brand"><img src="assets/icon-512.png" alt="Mirrorly app icon" width="32" height="32">Mirrorly</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#how-it-works">How it works</a>
+      <a href="#guides">Guides</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="https://apps.apple.com/app/id6792856754" class="btn btn-primary btn-sm">Download</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Free on the App Store</span>
+      <h1>The mirror app for iPhone that actually works like a mirror</h1>
+      <p class="hero-sub">A full-screen phone mirror with a built-in light, zoom and maximum brightness. Check your hair, makeup and teeth before anyone else does.</p>
+      <div class="hero-ctas">
+        <a href="https://apps.apple.com/app/id6792856754" class="btn btn-primary">Download Mirrorly</a>
+        <a href="#how-it-works" class="btn btn-secondary">See how it works</a>
       </div>
-    </main>
-    <div class="site-footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-brand">
-            <p class="footer-tagline">Check how you look before someone else does</p>
-          </div>
-        </div>
-        <div class="footer-copyright">
-          <div class="footer-links">
-            <a href="privacy/" class="footer-privacy-link">Privacy Policy</a>
-            <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula" class="footer-privacy-link">Terms of Service</a>
-            <a href="mailto:bashubb.dev@gmail.com" class="footer-email">bashubb.dev@gmail.com</a>
-          </div>
-          <p>Copyright 2026 Mirrorly . All rights reserved.</p>
-        </div>
+      <div class="trust-row">
+        <span>No photos saved</span>
+        <span>No account</span>
+        <span>No ads</span>
+        <span>No subscription</span>
+      </div>
+      <p class="disambig" style="margin-top:16px">Not screen mirroring — a real mirror using your front camera.</p>
+    </div>
+    <div class="hero-visual">
+      <img src="assets/screenshots/check-before-anyone-web.jpg" alt="Mirrorly phone mirror app on iPhone: a man checking his tie in a full-screen mirror view" width="1080" height="2337" fetchpriority="high">
+    </div>
+  </div>
+</section>
+
+<section class="section-alt" id="download">
+  <div class="wrap">
+    <div class="download-inner">
+      <div>
+        <h2>Get the pocket mirror you can't leave at home</h2>
+        <p>Free for iPhone. Opens straight into a mirror — no sign-up, no menus.</p>
+      </div>
+      <a href="https://apps.apple.com/app/id6792856754" aria-label="Download Mirrorly on the App Store">
+        <img class="badge-store" src="assets/app-store-badge-black.svg" alt="Download on the App Store" width="160" height="52">
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="screenshots">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">What it does</span>
+      <h2>A mirror with light, zoom — and opinions</h2>
+      <p>Everything a compact does, plus the things a compact can't.</p>
+    </div>
+    <div class="screens-grid">
+      <div class="screen-card">
+        <img src="assets/screenshots/check-before-anyone-web.jpg" alt="Quick appearance check in Mirrorly: man in an office adjusting his tie in the iPhone mirror" width="1080" height="2337" loading="lazy">
+        <h3>Check before anyone else does</h3>
+        <p>Full-screen, always mirrored, brightness at maximum. Hair, collar, teeth — ten seconds.</p>
+      </div>
+      <div class="screen-card">
+        <img src="assets/screenshots/see-in-the-dark-web.jpg" alt="Mirrorly's built-in light: iPhone screen edges glow white to light a woman applying eyeliner in the dark" width="1080" height="2337" loading="lazy">
+        <h3>See yourself in the dark</h3>
+        <p>Tap the bulb and the screen edges become a ring light. Cars, dim bathrooms, 6am hotel rooms.</p>
+      </div>
+      <div class="screen-card">
+        <img src="assets/screenshots/catch-in-your-teeth-web.jpg" alt="Mirrorly zoom slider at 1.7× magnifying a woman's teeth to spot food" width="1080" height="2337" loading="lazy">
+        <h3>Catch what's in your teeth</h3>
+        <p>Pinch or slide to zoom. Spinach, poppy seeds, a stray brow hair — nothing hides at 2×.</p>
+      </div>
+      <div class="screen-card">
+        <img src="assets/screenshots/get-judged-web.jpg" alt="Mirrorly's humorous caption 'okay, smug.' under a smiling man in the iPhone mirror app" width="1080" height="2337" loading="lazy">
+        <h3>Get judged by your mirror</h3>
+        <p>It reads your expression and answers back. "okay, smug." Nothing about your face leaves the phone.</p>
       </div>
     </div>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/ignite-core.js"></script>
-  </body>
+  </div>
+</section>
+
+<section class="section-alt" id="how-it-works">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">How it works</span>
+      <h2>Open. Look. Close. That's the whole app.</h2>
+    </div>
+    <div class="steps">
+      <div>
+        <div class="step-num">1</div>
+        <h3>Open Mirrorly</h3>
+        <p>The front camera comes on instantly, full-screen and mirrored like glass. Brightness jumps to maximum on its own.</p>
+      </div>
+      <div>
+        <div class="step-num">2</div>
+        <h3>Tap the bulb if it's dark</h3>
+        <p>The screen border turns bright white and lights your face evenly — no flash, no torch, no shadows.</p>
+      </div>
+      <div>
+        <div class="step-num">3</div>
+        <h3>Zoom for the details</h3>
+        <p>Drag the slider or pinch to magnify teeth, brows and contact lenses. Around 2× is the sweet spot.</p>
+      </div>
+      <div>
+        <div class="step-num">4</div>
+        <h3>Close it and go</h3>
+        <p>Nothing was photographed, recorded or uploaded. Expect a comment from the mirror on your way out.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="guides">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Guides</span>
+      <h2>Everything people ask about using a phone as a mirror</h2>
+      <p>Straight answers first, then how to do it in Mirrorly.</p>
+    </div>
+    <div class="guides-grid">
+      <a class="guide-card" href="guides/how-to-use-iphone-as-a-mirror.html">
+        <span class="eyebrow">How-to</span>
+        <h3>How to Use Your iPhone as a Mirror</h3>
+        <p>Three methods ranked — the black-screen trick, the Camera app, and a proper mirror app.</p>
+        <span class="read-more">Read the guide &rarr;</span>
+      </a>
+      <a class="guide-card" href="guides/does-iphone-have-a-mirror-app.html">
+        <span class="eyebrow">Question</span>
+        <h3>Does iPhone Have a Built-in Mirror App?</h3>
+        <p>No — and here's why Camera, FaceTime and Magnifier don't really count.</p>
+        <span class="read-more">Read the guide &rarr;</span>
+      </a>
+      <a class="guide-card" href="guides/why-front-camera-flips-your-face.html">
+        <span class="eyebrow">Explainer</span>
+        <h3>Why Does Your iPhone Front Camera Flip Your Face?</h3>
+        <p>Preview is mirrored, the saved selfie isn't. What's going on and the setting that changes it.</p>
+        <span class="read-more">Read the guide &rarr;</span>
+      </a>
+      <a class="guide-card" href="guides/mirror-app-with-light.html">
+        <span class="eyebrow">Feature guide</span>
+        <h3>A Mirror App With Light for Dark Rooms</h3>
+        <p>Why the flashlight can't help with the front camera, and how the screen becomes a ring light.</p>
+        <span class="read-more">Read the guide &rarr;</span>
+      </a>
+      <a class="guide-card" href="guides/mirror-app-with-zoom.html">
+        <span class="eyebrow">Feature guide</span>
+        <h3>A Mirror App With Zoom for Tiny Details</h3>
+        <p>Eyebrows, contacts, teeth — how far to push magnification and how to keep it sharp.</p>
+        <span class="read-more">Read the guide &rarr;</span>
+      </a>
+      <a class="guide-card" href="guides/check-teeth-for-food.html">
+        <span class="eyebrow">How-to</span>
+        <h3>How to Check Your Teeth for Food Without a Mirror</h3>
+        <p>Tongue sweep, water swish, or the reliable ten-second method with your phone.</p>
+        <span class="read-more">Read the guide &rarr;</span>
+      </a>
+      <a class="guide-card" href="guides/check-your-look-before-a-meeting.html">
+        <span class="eyebrow">How-to</span>
+        <h3>How to Check How You Look Before a Meeting</h3>
+        <p>The 10-second checklist — hair, face, teeth, glasses, collar, shoulders — from your desk or the car park.</p>
+        <span class="read-more">Read the guide &rarr;</span>
+      </a>
+      <a class="guide-card" href="guides/makeup-mirror-app.html">
+        <span class="eyebrow">For makeup</span>
+        <h3>The Makeup Mirror App for Touch-Ups Anywhere</h3>
+        <p>Front light, neutral colour, magnification, hands-free — what a makeup mirror needs and how to get it from a phone.</p>
+        <span class="read-more">Read the guide &rarr;</span>
+      </a>
+      <a class="guide-card" href="guides/pocket-mirror-alternative.html">
+        <span class="eyebrow">Situational</span>
+        <h3>Forgot Your Compact Mirror?</h3>
+        <p>Improvised mirrors ranked from desperate to good — and the one already in your pocket.</p>
+        <span class="read-more">Read the guide &rarr;</span>
+      </a>
+      <a class="guide-card" href="guides/is-a-mirror-app-safe.html">
+        <span class="eyebrow">Privacy</span>
+        <h3>Is a Mirror App Safe?</h3>
+        <p>Permissions and red flags to check before installing any camera app, and exactly what Mirrorly does with yours.</p>
+        <span class="read-more">Read the guide &rarr;</span>
+      </a>
+      <a class="guide-card" href="guides/funny-mirror-app.html">
+        <span class="eyebrow">Personality</span>
+        <h3>The Funny Mirror App That Judges You</h3>
+        <p>"easy there, inspector." Meet the mirror with opinions — and how the face analysis stays on your phone.</p>
+        <span class="read-more">Read the guide &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">FAQ</span>
+      <h2>Questions people ask before installing a mirror app</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>Is Mirrorly free?</h3>
+        <p>Yes. Mirrorly is free to download from the App Store. There is an optional one-time purchase for lifetime access — no subscription, and no ads either way.</p>
+        <a class="learn-more" href="guides/is-a-mirror-app-safe.html">Learn more &rarr;</a>
+      </div>
+      <div class="faq-item">
+        <h3>Does iPhone have a built-in mirror app?</h3>
+        <p>No. iOS has no mirror app. People use the Camera app instead, but it's built to take photos — the shutter is under your thumb, brightness isn't maxed, and there's no front light. Mirrorly turns the front camera into a real mirror.</p>
+        <a class="learn-more" href="guides/does-iphone-have-a-mirror-app.html">Learn more &rarr;</a>
+      </div>
+      <div class="faq-item">
+        <h3>Does Mirrorly save or upload my photos?</h3>
+        <p>No. Mirrorly never captures, stores or uploads photos, video, camera frames or face data. The camera feed and the on-device face analysis stay on your iPhone. There's no account, either.</p>
+        <a class="learn-more" href="guides/is-a-mirror-app-safe.html">Learn more &rarr;</a>
+      </div>
+      <div class="faq-item">
+        <h3>Does Mirrorly work in the dark?</h3>
+        <p>Yes. Tap the light-bulb button and the edges of the screen turn bright white at maximum brightness, lighting your face like a small ring light — useful in a car at night, a dim bathroom or a hotel room.</p>
+        <a class="learn-more" href="guides/mirror-app-with-light.html">Learn more &rarr;</a>
+      </div>
+      <div class="faq-item">
+        <h3>Can I zoom in to check my teeth or eyebrows?</h3>
+        <p>Yes. Drag the zoom slider or pinch the screen to magnify. Around 2× is enough to spot food between teeth, seat a contact lens or tweeze a stray hair.</p>
+        <a class="learn-more" href="guides/mirror-app-with-zoom.html">Learn more &rarr;</a>
+      </div>
+      <div class="faq-item">
+        <h3>Is this the same as screen mirroring?</h3>
+        <p>No. Screen mirroring (AirPlay) sends your iPhone's display to a TV. Mirrorly is a mirror — it shows your face using the front camera, the way glass does.</p>
+        <a class="learn-more" href="guides/how-to-use-iphone-as-a-mirror.html">Learn more &rarr;</a>
+      </div>
+      <div class="faq-item">
+        <h3>Why do I look different in Mirrorly than in my selfies?</h3>
+        <p>Mirrorly always shows you mirrored, like real glass — the version of your face you're used to. Selfies are saved un-mirrored, the way other people see you, which is why photos can look subtly "off".</p>
+        <a class="learn-more" href="guides/why-front-camera-flips-your-face.html">Learn more &rarr;</a>
+      </div>
+      <div class="faq-item">
+        <h3>Why is the mirror talking to me?</h3>
+        <p>That's Mirrorly's personality. On-device face analysis reads your expression and replies with a dry one-liner like "okay, smug." or "step back, detective." Nothing about your face leaves the phone.</p>
+        <a class="learn-more" href="guides/funny-mirror-app.html">Learn more &rarr;</a>
+      </div>
+      <div class="faq-item">
+        <h3>Does Mirrorly work on Android?</h3>
+        <p>No. Mirrorly is an iOS app for iPhone, available on the App Store.</p>
+        <a class="learn-more" href="#download">Learn more &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="wrap">
+    <div class="cta-band">
+      <h2>Mirror your confidence</h2>
+      <p>Quick and easy appearance check on your phone. Free on the App Store.</p>
+      <a href="https://apps.apple.com/app/id6792856754" class="btn btn-primary">Download Mirrorly</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <a href="./" class="brand"><img src="assets/icon-512.png" alt="Mirrorly app icon" width="32" height="32">Mirrorly</a>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#guides">Guides</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://apps.apple.com/app/id6792856754">App Store</a>
+        <a href="privacy/">Privacy Policy</a>
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula">Terms of Service</a>
+        <a href="mailto:bashubb.dev@gmail.com">Contact</a>
+      </nav>
+    </div>
+    <p class="footer-note">&copy; 2026 Mirrorly. Check how you look before someone else does.</p>
+  </div>
+</footer>
+
+</body>
 </html>
