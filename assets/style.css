@@ -1,3 +1,4 @@
+:root { color-scheme: only light; }
 /*
   Starter stylesheet for app-store-seo-landing-page.
   Copy into website/assets/style.css and customize the CSS variables below
@@ -297,7 +298,7 @@ section { padding: 72px 0; }
 .related ul { list-style: none; padding: 0; }
 .disambig { font-size: 0.9rem; }
 
-@media (prefers-color-scheme: dark) {
+@media not all {
   :root {
     --text: #f4eef2;
     --text-muted: #c2b5bd;
