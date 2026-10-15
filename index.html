@@ -246,12 +246,23 @@
 
   // 0. The film: full screen; its colours light the page around it; scrolling pulls it back
   const film = $("film"), screen = $("screen"), amb = $("ambient"), bar = $("opener-bar"), ft = $("film-toggle");
-  if (matchMedia("(max-aspect-ratio: 4/5)").matches) {
-    film.poster = "assets/media/mirror-film-tall-poster.jpg";
-    film.querySelector("source").src = "assets/media/mirror-film-tall.mp4"; film.load();
-    amb.width = 36; amb.height = 64;
-  }
+  // pick the cut whose shape is closest to the window; switch on resize
+  let cut = "";
+  const pickCut = () => {
+    const want = innerWidth / innerHeight < 1 ? "tall" : "wide";
+    if (want === cut) return;
+    cut = want;
+    const t = film.currentTime || 0;
+    film.poster = `assets/media/mirror-film-${cut}-poster.jpg`;
+    film.querySelector("source").src = `assets/media/mirror-film-${cut}.mp4`;
+    film.load();
+    film.addEventListener("loadedmetadata", () => { film.currentTime = t; if (!userPaused) film.play().catch(() => {}); }, { once: true });
+    screen.style.setProperty("--ar", cut === "tall" ? 9 / 16 : 16 / 9);
+    amb.width = cut === "tall" ? 36 : 64; amb.height = cut === "tall" ? 64 : 36;
+  };
+  let rz = 0; addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(pickCut, 200); });
   let userPaused = reduce;
+  pickCut();
   if (reduce) { film.removeAttribute("autoplay"); film.pause(); }
   const fIcon = () => { ft.querySelector("use").setAttribute("href", film.paused ? "#i-play" : "#i-pause"); ft.setAttribute("aria-label", film.paused ? "Play film" : "Pause film"); };
   ["play", "playing", "pause", "timeupdate"].forEach((ev) => film.addEventListener(ev, fIcon)); fIcon();
@@ -262,12 +273,9 @@
   film.addEventListener("playing", () => requestAnimationFrame(paint)); film.addEventListener("seeked", paint);
   L.scene("opener", (p) => {
     const t = L.ease(L.range(p, 0.05, 0.85));
-    const narrow = innerWidth < 720;
-    const inset = t * (narrow ? 16 : 7);              // vw
-    const r = t * (narrow ? 28 : 40);
-    if (!reduce) screen.style.transform = `translateZ(0) rotateX(${t * 10}deg) scale(${1 - t * 0.22})`;
-    screen.style.clipPath = `inset(${inset * 0.6}vh ${inset}vw round ${r}px)`;
-    amb.style.opacity = (0.9 - 0.55 * t).toFixed(3);
+    if (!reduce) screen.style.transform = `translate(-50%, -50%) rotateX(${t * 10}deg) scale(${1 - t * 0.24})`;
+    screen.style.borderRadius = `${t * 32}px`;
+    amb.style.opacity = (0.95 - 0.55 * t).toFixed(3);
     bar.style.opacity = (1 - L.range(p, 0.05, 0.3)).toFixed(3);
     bar.style.transform = `translateY(${L.range(p, 0.05, 0.3) * 24}px)`;
   });
