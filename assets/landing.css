@@ -287,11 +287,6 @@ h3 { font-size: 20px; line-height: 28px; letter-spacing: -0.01em; }
 .iphone[data-side="back"] > .front { visibility: hidden; }
 
 
-/* On scroll the pill slides up and becomes a full-width bar under the status bar */
-.island.docked { top: 0; left: 0; right: 0; transform: none; width: auto; max-width: none; border-radius: 0; border-width: 0;
-  padding: calc(env(safe-area-inset-top, 0px) + var(--s-75)) max(var(--gutter), (100vw - var(--wrap)) / 2) var(--s-75);
-  justify-content: space-between; box-shadow: 0 1px 0 var(--glass-line); background: var(--bg); -webkit-backdrop-filter: none; backdrop-filter: none; }
-.island.docked .links { margin-left: auto; }
 
 /* iOS Safari's floating toolbar covers the bottom of the screen on touch devices */
 :root { --ui-bottom: 0px; }
@@ -301,19 +296,37 @@ h3 { font-size: 20px; line-height: 28px; letter-spacing: -0.01em; }
 @media (pointer: coarse) {
   .reveal { filter: none !important; transform: translateY(32px); transition: opacity 700ms var(--ease), transform 700ms var(--ease); }
   .reveal.in { transform: none; }
-  .island { -webkit-backdrop-filter: none; backdrop-filter: none; background: var(--bg); }
   .menu { -webkit-backdrop-filter: none; backdrop-filter: none; background: var(--bg); }
   .iphone > .layer:nth-child(odd):not(.shadow) { display: none; }
 }
 
-/* Phones get their own simple page: desktop-only scenes are swapped for plain stacked blocks */
-.m-only { display: none; }
-@media (max-width: 720px) {
-  .d-only { display: none !important; }
-  .m-only { display: block; }
+
+/* ===== Nav: a pill that morphs into a full-width bar =====
+   The background is one full-width layer clipped to the pill's shape; on scroll the clip opens to the
+   whole bar (clip-path animates smoothly) and the content row widens with it. */
+.island:not(.solid) {
+  --island-bg: var(--surface); --pill-t: 24px; --pill-s: 40vw; --pill-b: 0px; --row-w: auto;
+  top: 0; left: 0; right: 0; transform: none; width: auto; max-width: none; border: 0; border-radius: 0; background: none;
+  -webkit-backdrop-filter: none; backdrop-filter: none; box-shadow: none;
+  display: flex; justify-content: center; padding: calc(env(safe-area-inset-top, 0px) + var(--s-300)) 0 0;
+  pointer-events: none; transition: padding 700ms var(--ease);
 }
-.m-rail { display: flex; gap: var(--s-200); overflow-x: auto; scroll-snap-type: x mandatory; padding: var(--s-300) var(--gutter) var(--s-100); scrollbar-width: none; overscroll-behavior-x: contain; }
-.m-rail::-webkit-scrollbar { display: none; }
-.m-rail > * { flex: none; scroll-snap-align: center; }
-.m-phone { width: min(56vw, 240px); margin: 0 auto; }
-.m-phone img { display: block; width: 100%; height: auto; filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.35)); }
+.island:not(.solid)::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; background: var(--island-bg);
+  clip-path: inset(var(--pill-t) var(--pill-s) var(--pill-b) var(--pill-s) round 9999px);
+  transition: clip-path 700ms var(--ease);
+}
+.island:not(.solid)::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--glass-line); opacity: 0; transition: opacity 700ms var(--ease);
+}
+.island-row { pointer-events: auto; display: flex; align-items: center; gap: var(--s-75); width: var(--row-w); max-width: calc(100vw - 2 * var(--gutter));
+  padding: var(--s-75) var(--s-75) var(--s-75) var(--s-200); transition: width 700ms var(--ease), padding 700ms var(--ease); box-sizing: border-box; }
+.island-row .links { transition: margin 700ms var(--ease); }
+.island.docked:not(.solid) { padding-top: env(safe-area-inset-top, 0px); }
+.island.docked:not(.solid)::before { clip-path: inset(0 0 0 0 round 0); }
+.island.docked:not(.solid)::after { opacity: 1; }
+.island.docked .island-row { padding-left: 0; padding-right: 0; }
+.island.docked .island-row .links { margin-left: auto; }
+@media (max-width: 820px) { .island.docked .island-row .burger { margin-left: auto; } }
+@media (prefers-reduced-motion: reduce) { .island:not(.solid), .island:not(.solid)::before, .island-row { transition: none; } }
+@media (max-width: 720px) { .island:not(.solid), .island:not(.solid)::before, .island-row { transition: none; } }

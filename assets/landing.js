@@ -24,11 +24,37 @@
     addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
   }
 
-  // The nav pill docks into a full-width bar once the page scrolls
+  // Nav: a pill that morphs into a full-width bar once the page scrolls
   const island = document.querySelector(".island");
   if (island && !island.classList.contains("solid")) {
-    let docked = false;
-    const dock = () => { const d = scrollY > 24; if (d !== docked) { docked = d; island.classList.toggle("docked", d); } };
+    const row = document.createElement("div");
+    row.className = "island-row";
+    while (island.firstChild) row.append(island.firstChild);
+    island.append(row);
+    let docked = false, pillW = 0;
+    const geometry = () => {
+      island.classList.remove("docked"); row.style.setProperty("--row-w", "auto"); row.style.width = "auto";
+      pillW = row.getBoundingClientRect().width;
+      row.style.width = "";
+      const barW = Math.min(innerWidth - 2 * parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--gutter") || 24), 1120);
+      const r = row.getBoundingClientRect(), ir = island.getBoundingClientRect();
+      island.style.setProperty("--pill-t", (r.top - ir.top) + "px");
+      island.style.setProperty("--pill-s", Math.max(0, (innerWidth - pillW) / 2) + "px");
+      island.style.setProperty("--pill-b", Math.max(0, ir.bottom - r.bottom) + "px");
+      island.dataset.pill = pillW; island.dataset.bar = barW;
+      island.classList.toggle("docked", docked);
+      row.style.setProperty("--row-w", (docked ? barW : pillW) + "px");
+    };
+    const dock = () => {
+      const d = scrollY > 24 || innerWidth <= 720;   // phones: always the bar, never the pill
+      if (d === docked) return;
+      docked = d;
+      island.classList.toggle("docked", d);
+      row.style.setProperty("--row-w", (d ? +island.dataset.bar : +island.dataset.pill) + "px");
+    };
+    geometry();
+    if (document.fonts) document.fonts.ready.then(geometry);
+    addEventListener("resize", () => { requestAnimationFrame(() => { geometry(); docked = !docked; dock(); }); });
     addEventListener("scroll", dock, { passive: true }); dock();
   }
 
