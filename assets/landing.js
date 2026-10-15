@@ -46,7 +46,8 @@
       row.style.setProperty("--row-w", (docked ? barW : pillW) + "px");
     };
     const dock = () => {
-      const d = scrollY > 24 || innerWidth <= 720;   // phones: always the bar, never the pill
+      const keep = island.classList.contains("keep-pill");   // a site can keep the pill on desktop
+      const d = innerWidth <= 720 || (!keep && scrollY > 24);   // phones: always the bar, never the pill
       if (d === docked) return;
       docked = d;
       island.classList.toggle("docked", d);
@@ -57,6 +58,13 @@
     addEventListener("resize", () => { requestAnimationFrame(() => { geometry(); docked = !docked; dock(); }); });
     addEventListener("scroll", dock, { passive: true }); dock();
   }
+
+  // Card mockups: once a phone has stood up, drop the perspective so it is perfectly flat
+  document.addEventListener("transitionend", (e) => {
+    if (e.propertyName !== "transform" || !e.target.classList || !e.target.classList.contains("iphone")) return;
+    const box = e.target.parentElement;
+    if (box && box.closest(".in")) box.classList.add("settled");
+  });
 
   // Scroll reveal
   const revealIO = new IntersectionObserver((entries) => {

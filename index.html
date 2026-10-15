@@ -20,8 +20,8 @@
 <link rel="icon" href="assets/fav/favicon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="assets/fav/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/landing.css?v=9">
-<link rel="stylesheet" href="assets/mirrorly.css?v=12">
+<link rel="stylesheet" href="assets/landing.css?v=10">
+<link rel="stylesheet" href="assets/mirrorly.css?v=14">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -53,7 +53,7 @@
 
 <a class="skip" href="#main">Skip to content</a>
 
-<nav class="island" aria-label="Main navigation">
+<nav class="island keep-pill" aria-label="Main navigation">
   <a class="brand" href="./"><img src="assets/icon-512.png" alt="" width="36" height="36">Mirrorly</a>
   <div class="links">
     <a href="#show">The mirror</a>
@@ -179,25 +179,23 @@
 <section class="scene talks" id="talks" data-scene="talks" aria-labelledby="talks-title">
   <div class="scene-pin">
     <div class="wrap talks-grid">
-      <div class="lines">
-        <span class="eyebrow" id="talks-title">And then it talks</span>
-        <p class="joke on"><span class="j1">the lighting did all that.</span><span class="j2">sadly.</span></p>
-        <p class="joke"><span class="j1">your eyebrows</span><span class="j2">filed a complaint.</span></p>
-        <p class="joke"><span class="j1">that pore</span><span class="j2">has representation.</span></p>
-        <p class="talk-note">It reads your expression on your iPhone and says what a good friend would only think. Switch it off in Settings if it gets personal.</p>
+      <div class="talks-intro">
+        <span class="eyebrow">It has a personality</span>
+        <h2 class="m-h" id="talks-title">Your mirror<br>has opinions.</h2>
+        <p class="lead">Mirrorly reads your expression and, every now and then, says what a good friend would only think. Switch it off in Settings if it gets personal.</p>
       </div>
-      <div class="stage small" role="img" aria-label="Mirrorly reacting to expressions with dry one liners">
-        <div class="iphone mphone" id="tphone" data-finish="pro-silver">
-          <img class="front" id="t0" src="assets/media/m-joke-a.webp" alt="" width="780" height="1608">
-          <img class="front alt" id="t1" src="assets/media/m-joke-b.webp" alt="" width="780" height="1608">
-          <img class="front alt" id="t2" src="assets/media/m-joke-c.webp" alt="" width="780" height="1608">
+      <div class="talks-stage" aria-live="off">
+        <img class="talks-face" id="talks-face" src="assets/media/mirror-face.webp" alt="The Mirrorly mirror, winking" width="512" height="512">
+        <div class="lines">
+          <p class="joke on"><span class="j1">the lighting did all that.</span> <span class="j2">sadly.</span></p>
+          <p class="joke"><span class="j1">your eyebrows</span> <span class="j2">filed a complaint.</span></p>
+          <p class="joke"><span class="j1">that pore</span> <span class="j2">has representation.</span></p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Phones: a separate, simple page. No pinned scenes. -->
 <section class="pad" id="faq" aria-labelledby="faq-title">
   <div class="wrap">
     <h2 class="m-h center" id="faq-title">Questions</h2>
@@ -221,6 +219,21 @@
   </div>
 </section>
 
+<section class="pad m-story" aria-labelledby="story-title">
+  <div class="wrap story-split">
+    <div class="reveal">
+      <span class="eyebrow">One rainy evening</span>
+      <h2 class="m-h" id="story-title">Too dark to see yourself?<br>Not anymore.</h2>
+    </div>
+    <figure class="story-film reveal d1">
+      <video id="story" muted loop playsinline preload="none" poster="assets/media/story-poster.jpg" aria-label="Animated story: caught in the rain, too dark to see her reflection, she finds Mirrorly, the phone lights her up and she walks off like a superhero">
+        <source src="assets/media/story.mp4" type="video/mp4">
+      </video>
+      <button class="play" type="button" id="story-toggle" aria-label="Play film"><svg aria-hidden="true"><use href="#i-play"/></svg></button>
+    </figure>
+  </div>
+</section>
+
 </main>
 
 <span class="ringframe" id="ringframe" aria-hidden="true"></span>
@@ -238,7 +251,7 @@
   </div>
 </footer>
 
-<script src="assets/landing.js?v=9"></script>
+<script src="assets/landing.js?v=11"></script>
 <script>
 (() => {
   const L = window.Landing;
@@ -285,15 +298,20 @@
   ft.addEventListener("click", () => { if (film.paused) { userPaused = false; film.play(); } else { userPaused = true; film.pause(); } });
   new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting && !userPaused) film.play().catch(() => {}); else if (!e.isIntersecting) film.pause(); }), { threshold: 0.2 }).observe(screen);
   const actx = amb.getContext("2d");
-  const paint = () => { if (film.readyState >= 2) actx.drawImage(film, 0, 0, amb.width, amb.height); if (!film.paused) requestAnimationFrame(paint); };
+  // the ambient light only needs a few frames a second, and none while the opener is off screen
+  let ambOn = true, lastPaint = 0;
+  new IntersectionObserver((es) => es.forEach((e) => { ambOn = e.isIntersecting; if (ambOn) requestAnimationFrame(paint); })).observe(screen);
+  const paint = (now = 0) => {
+    if (now - lastPaint > 160 && film.readyState >= 2) { actx.drawImage(film, 0, 0, amb.width, amb.height); lastPaint = now; }
+    if (!film.paused && ambOn) requestAnimationFrame(paint);
+  };
   film.addEventListener("playing", () => requestAnimationFrame(paint)); film.addEventListener("seeked", paint);
   L.scene("opener", (p) => {
     const t = L.ease(L.range(p, 0.05, 0.85));
-    if (!reduce) screen.style.transform = `translate(-50%, -50%) rotateX(${t * 10}deg) scale(${1 - t * 0.24})`;
-    screen.style.borderRadius = `${24 + t * 8}px`;
+    if (!reduce) screen.style.transform = `translate3d(-50%, -50%, 0) rotateX(${t * 10}deg) scale(${1 - t * 0.24})`;
     amb.style.opacity = (0.8 - 0.45 * t).toFixed(3);
     bar.style.opacity = (1 - L.range(p, 0.05, 0.3)).toFixed(3);
-    bar.style.transform = `translateY(${L.range(p, 0.05, 0.3) * 24}px)`;
+    bar.style.transform = `translate3d(0, ${L.range(p, 0.05, 0.3) * 24}px, 0)`;
   });
 
   // 1. Light, zoom, not the Camera app
@@ -304,7 +322,7 @@
     beatsBox.style.setProperty("--beats-h", h + "px");
     // each pinned phone on one-column layouts: as big as its stage allows
     requestAnimationFrame(() => {
-      [["mphone", ".show .stage"], ["tphone", ".talks .stage"]].forEach(([id, sel]) => {
+      [["mphone", ".show .stage"]].forEach(([id, sel]) => {
         const ph = $(id), st = document.querySelector(sel);
         if (innerWidth <= 900) ph.style.setProperty("--phone-w", Math.max(60, Math.min(st.clientHeight * 0.46 * 0.94, innerWidth * 0.62)) + "px");
         else ph.style.removeProperty("--phone-w");
@@ -340,20 +358,28 @@
     track.style.transform = `translateX(${-L.ease(L.range(p, 0.05, 0.95)) * Math.max(0, max)}px)`;
   });
 
-  // 3. The comedy: the setup, a beat, then the punchline
+  // 3. The comedy: the setup, a beat, then the punchline; the mirror reacts
   const jokes = [...document.querySelectorAll(".joke")];
-  const shots = [$("t0"), $("t1"), $("t2")];
+  const face = $("talks-face");
+  let lastJ = -1;
   L.scene("talks", (p) => {
-    const j = p < 0.5 ? 0 : p < 0.75 ? 1 : 2;
+    const j = p < 0.4 ? 0 : p < 0.7 ? 1 : 2;
     jokes.forEach((el, i) => {
       el.classList.toggle("on", i === j);
-      const start = [0.08, 0.52, 0.77][i];
-      el.classList.toggle("punch", p > start + (i === 0 ? 0.18 : 0.08));
+      el.classList.toggle("punch", p > [0.1, 0.48, 0.78][i]);
     });
-    shots.forEach((s, i) => { if (i) s.style.opacity = i === j ? 1 : 0; });
+    if (j !== lastJ) { lastJ = j; face.classList.remove("nod"); void face.offsetWidth; face.classList.add("nod"); }
   });
 
 
+
+  // The story film at the bottom: plays while on screen
+  const sv = $("story"), st = $("story-toggle");
+  let sPaused = reduce;
+  const sIcon = () => { st.querySelector("use").setAttribute("href", sv.paused ? "#i-play" : "#i-pause"); st.setAttribute("aria-label", sv.paused ? "Play film" : "Pause film"); };
+  ["play", "playing", "pause"].forEach((ev) => sv.addEventListener(ev, sIcon));
+  st.addEventListener("click", () => { if (sv.paused) { sPaused = false; sv.play(); } else { sPaused = true; sv.pause(); } });
+  new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting && !sPaused) sv.play().catch(() => {}); else if (!e.isIntersecting) sv.pause(); }), { threshold: 0.4 }).observe(sv);
 })();
 </script>
 </body>
