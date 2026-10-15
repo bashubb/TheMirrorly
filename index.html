@@ -6,7 +6,7 @@
 <title>Mirrorly: Mirror App for iPhone with Ring Light and Zoom</title>
 <meta name="description" content="Mirrorly turns your iPhone into a real mirror with a ring light, zoom and a dry sense of humor. No photos saved, no account, no ads. Coming soon for iPhone.">
 <link rel="canonical" href="https://bashubb.com/TheMirrorly/">
-<meta name="theme-color" content="#1a0b18">
+<meta name="theme-color" content="#f7f1ec">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Mirrorly">
@@ -19,9 +19,9 @@
 <link rel="icon" href="assets/fav/favicon-48.png" type="image/png" sizes="48x48">
 <link rel="icon" href="assets/fav/favicon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="assets/fav/apple-touch-icon.png">
-<link rel="preload" href="assets/fonts/poppins-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/landing.css?v=21">
-<link rel="stylesheet" href="assets/mirrorly.css?v=32">
+<link rel="stylesheet" href="assets/mirrorly.css?v=41">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -358,7 +358,22 @@
 
   // 2. Moments: a horizontal track
   const track = $("track");
+  const cards = [...track.children];
   L.scene("moments", (p) => {
+    if (innerWidth < innerHeight) {
+      // portrait: a stack of cards, each slides up over the previous one; the ones underneath step back
+      track.style.transform = "";
+      const n = cards.length, c = L.clamp((p - 0.04) / 0.9) * (n - 1);
+      cards.forEach((el, i) => {
+        const enter = L.ease(L.clamp(c - (i - 1)));          // 0 below the screen → 1 in place
+        const under = L.clamp(c - i);                          // how far the next card has covered it
+        const y = i === 0 ? 0 : (1 - enter) * 120;
+        el.style.transform = `translate3d(0, ${y}%, 0) scale(${1 - under * 0.06})`;
+        el.style.opacity = ((i === 0 ? 1 : Math.min(1, enter * 4)) * (1 - under * 0.5)).toFixed(3);
+      });
+      return;
+    }
+    cards.forEach((el) => { el.style.transform = ""; el.style.opacity = ""; });
     const last = track.lastElementChild; const max = last.offsetLeft + last.offsetWidth - innerWidth + Math.max(24, (innerWidth - 1120) / 2);
     track.style.transform = `translateX(${-L.ease(L.range(p, 0.05, 0.95)) * Math.max(0, max)}px)`;
   });

@@ -1,34 +1,34 @@
 /* Mirrorly theme (dark room, warm ring light) + page sections. Shared system: landing.css */
 :root {
-  /* from the app icon: plum tile, orange frame, cyan glass */
-  --bg: #1a0b18;
-  --bg-2: #22101f;
-  --surface: #2b1428;
-  --surface-2: #3a1d36;
-  --text: #fff4ee;
-  --muted: #cdb0c4;
-  --line: #3a1d36;
-  --accent: #f08c5c;
-  --on-accent: #1a0b18;
-  --accent-text: #f4a27a;
+  /* a vanity mirror: warm cream page, plum from the icon, cyan glass for the mirror's voice */
+  --bg: #f7f1ec;
+  --bg-2: #efe5de;
+  --surface: #ffffff;
+  --surface-2: #f1e8e2;
+  --text: #24141f;
+  --muted: #6e5c67;
+  --line: #e7dbd3;
+  --accent: #5a1e52;
+  --on-accent: #ffffff;
+  --accent-text: #8a3a5c;
   --glass-c: #caf5f7;
-  --h-from: #ffffff;
-  --h-to: #f4c3a8;
-  --glass: rgba(26, 11, 24, 0.78);
-  --glass-line: rgba(255, 255, 255, 0.1);
-  --glass-hover: rgba(255, 255, 255, 0.08);
-  --menu-bg: rgba(26, 11, 24, 0.92);
-  --btn-bg: #f08c5c;
-  --btn-fg: #1a0b18;
-  --soon-bg: #f08c5c;
-  --soon-fg: #1a0b18;
-  --glow: #ffd9b8;
-  color-scheme: dark;
+  --h-from: #24141f;
+  --h-to: #6e5c67;
+  --glass: rgba(247, 241, 236, 0.86);
+  --glass-line: rgba(36, 20, 31, 0.08);
+  --glass-hover: rgba(36, 20, 31, 0.06);
+  --menu-bg: rgba(247, 241, 236, 0.94);
+  --btn-bg: #5a1e52;
+  --btn-fg: #ffffff;
+  --soon-bg: #5a1e52;
+  --soon-fg: #ffffff;
+  --glow: #ffe2c4;
+  color-scheme: light;
 }
-@font-face { font-family: "Poppins"; src: url("fonts/poppins-400-latin.woff2") format("woff2"); font-weight: 400; font-display: swap; }
-@font-face { font-family: "Poppins"; src: url("fonts/poppins-600-latin.woff2") format("woff2"); font-weight: 600; font-display: swap; }
-@font-face { font-family: "Poppins"; src: url("fonts/poppins-700-latin.woff2") format("woff2"); font-weight: 700; font-display: swap; }
-body { font-family: "Poppins", ui-rounded, system-ui, sans-serif; }
+/* the light scenes are a dark stage inside the cream page */
+.opener, .show, .ringframe { --bg: #151012; --bg-2: #1d1619; --surface: #241b1f; --surface-2: #30252a; --text: #fbf3ee; --muted: #c7b8b2; --line: #30252a;
+  --h-from: #ffffff; --h-to: #c7b8b2; --accent: #f3c3a4; --on-accent: #24141f; --accent-text: #f3c3a4; --btn-bg: #f3c3a4; --btn-fg: #24141f; --soon-bg: #f3c3a4; --soon-fg: #24141f; color: var(--text); }
+.opener .scene-pin, .show .scene-pin { background: #151012; }
 .eyebrow { text-transform: uppercase; letter-spacing: 0.08em; font-size: 12px; line-height: 16px; }
 
 /* Calm, editorial type */
@@ -276,9 +276,9 @@ body { font-family: "Poppins", ui-rounded, system-ui, sans-serif; }
 .eyebrow { color: var(--accent-text); font-weight: 600; }
 .m-title, .m-h, .word { letter-spacing: -0.03em; }
 .word.small { font-weight: 700; }
-.room { background: #120712 !important; }
-.btn[aria-disabled="true"] { background: var(--accent); color: var(--on-accent); }
-.island .cta[aria-disabled="true"] { background: var(--accent); color: var(--on-accent); }
+.room { background: #0e0a0b !important; }
+.btn[aria-disabled="true"] { background: var(--soon-bg); color: var(--soon-fg); }
+.island .cta[aria-disabled="true"] { background: var(--accent); color: #fff; }
 
 /* mascot */
 .mascot { display: inline-block; width: 72px; aspect-ratio: 704 / 940; }
@@ -335,3 +335,36 @@ body { font-family: "Poppins", ui-rounded, system-ui, sans-serif; }
 .moments { background: var(--bg-2) !important; }
 .m-story { background: var(--bg-2) !important; }
 @media (max-width: 720px) { .moments .scene-pin { align-content: center; } .moments-head { margin-bottom: var(--s-300); } }
+
+/* cream sections */
+.moment { background: var(--surface) !important; border: 1px solid var(--line) !important; box-shadow: 0 24px 48px -32px rgba(36, 20, 31, 0.35); }
+.moments { background: var(--bg-2) !important; }
+.m-story { background: var(--bg-2) !important; }
+.talks { background: var(--bg); }
+.talks-mascot { filter: drop-shadow(0 24px 30px rgba(90, 30, 82, 0.25)); }
+.joke .bubble-in { box-shadow: 0 16px 32px -20px rgba(36, 20, 31, 0.45); }
+.joke .j1 { color: #24141f !important; }
+.joke .j2 { color: #a23a5b !important; }
+.talks-cta { color: var(--accent); }
+.m-end .m-title { background: none; color: var(--text); }
+
+/* ===== Portrait (phones): built for a tall screen ===== */
+@media (max-width: 720px) and (orientation: portrait) {
+  /* the main scene: the phone is the hero, the text is short */
+  .vs em { display: none; }
+  .vs { gap: var(--s-75); margin-top: var(--s-200); }
+  .vs span { font-size: 16px; line-height: 24px; }
+  .word.small { font-size: 30px; line-height: 36px; }
+  .beat .lead { font-size: 14px; line-height: 20px; margin-top: var(--s-100); }
+  .show .stage { margin-top: var(--s-100); }
+  /* moments: a stack of cards */
+  .moments .scene-pin { display: grid; grid-template-rows: auto 1fr; align-content: stretch; padding-bottom: calc(var(--s-400) + var(--ui-bottom)); }
+  .moments-head { margin-bottom: var(--s-300); }
+  .track { position: relative; display: block; padding: 0 var(--gutter); height: 100%; transform: none !important; }
+  .moment { position: absolute; left: var(--gutter); right: var(--gutter); top: 0; bottom: 0; width: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+    padding: var(--s-300); gap: var(--s-200); border-radius: 32px; transform-origin: 50% 0; will-change: transform, opacity; }
+  .moment .iphone { --w: min(46vw, calc((100svh - 420px) * 0.46)); }
+  .moment .time { font-size: 36px; line-height: 40px; }
+  .moment h3 { font-size: 20px; line-height: 28px; margin-top: var(--s-50); }
+  .moment p { font-size: 14px; line-height: 20px; }
+}
