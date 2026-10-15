@@ -194,3 +194,13 @@
   .beat .lead { margin-top: var(--s-100); font-size: 14px; line-height: 20px; }
   .beat .cta-row { margin-top: var(--s-200); }
 }
+
+/* iOS Safari's floating toolbar sits over the bottom of the page: keep pinned scenes clear of it */
+:root { --ui-bottom: 0px; }
+@media (pointer: coarse) { :root { --ui-bottom: calc(env(safe-area-inset-bottom, 0px) + 64px); } }
+.opener-bar { bottom: calc(var(--s-400) + var(--ui-bottom)); }
+@media (max-width: 900px) {
+  .show-grid { height: calc(100svh - 96px - var(--s-300) - var(--ui-bottom)); }
+  .talks-grid { height: calc(100svh - 96px - var(--ui-bottom)); }
+  .moments .scene-pin { padding-bottom: var(--ui-bottom); }
+}
