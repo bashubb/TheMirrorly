@@ -338,7 +338,6 @@ h3 { font-size: 20px; line-height: 28px; letter-spacing: -0.01em; }
 @media (max-width: 720px) {
   .d-only { display: none !important; }
   .m-only { display: block; }
-  body { padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 96px); }
   .reveal { transform: translateY(16px); filter: none; transition: opacity 500ms var(--ease), transform 500ms var(--ease); }
 }
 .m-sec { padding: var(--s-700) 0; }
@@ -349,6 +348,7 @@ h3 { font-size: 20px; line-height: 28px; letter-spacing: -0.01em; }
 .m-hero h1 { font-size: 36px; line-height: 40px; letter-spacing: -0.035em; font-weight: 700; text-wrap: balance;
   background: linear-gradient(90deg, var(--h-from), var(--h-to)); -webkit-background-clip: text; background-clip: text; color: transparent; padding-bottom: 0.1em; }
 .m-hero .m-p { font-size: 16px; line-height: 24px; }
+.m-cta { margin-top: var(--s-300); }
 .m-media { margin-top: var(--s-400); border-radius: 24px; overflow: hidden; background: var(--bg-2); }
 .m-media video, .m-media img { display: block; width: 100%; height: auto; }
 .m-rail { display: flex; gap: var(--s-100); overflow-x: auto; scroll-snap-type: x mandatory; padding: var(--s-300) var(--gutter) var(--s-100); margin: 0; list-style: none; scrollbar-width: none; overscroll-behavior-x: contain; }
