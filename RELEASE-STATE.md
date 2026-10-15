@@ -7,3 +7,7 @@ The root landing page now presents Coming soon, with the owner's exact 20-second
 To prepare launch, restore the previous homepage into a review branch using `git restore --source=mirrorly-before-coming-soon-2026-09-25 -- index.html`. Its CSS and other assets remain in place. Before publishing that restored version, migrate its old bashubb.github.io canonical, social and hreflang URLs to bashubb.com, verify live App Store availability and pricing, and reconcile translated pages and sitemap URLs. Do not restore the entire repository over unrelated later work.
 
 Hero asset copied unchanged from /Users/hubert/Desktop/Apps/PromoVideos/Mirrorly/mirrorly/movie_onboarding/la_linea_promo/v11_storm_emotion/exports/mirrorly_storm_superhero_v11_20s.mp4. H.264/AAC, 1080×1920, 20 seconds. Muted playback with native controls; reduced motion disables automatic playback.
+
+## 2026-10-15 — redesign (not published)
+
+`index.html` rebuilt on the shared bashubb landing system (`assets/landing.css`, `landing.js`, Manrope, Phosphor icons inline) with `assets/mirrorly.css`: a 3D iPhone 17 Pro (Apple bezel flattened with the app screens in `assets/media/iphone-*.webp`) whose ring light switches on, then four checks; the 20 s film kept in its own section. `<html data-store="soon">` — switch to `"live"` at launch to show the App Store badge (link uses id6792856754; verify it before launch). Translations, guides and privacy pages are untouched.
