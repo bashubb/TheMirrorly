@@ -40,12 +40,12 @@
 .opener { height: 190vh; }
 .opener .scene-pin { perspective: 1400px; background: #000; }
 .ambient { position: absolute; inset: -15%; width: 130%; height: 130%; filter: blur(120px) saturate(1.3) brightness(0.7); opacity: 0.8; transform: translateZ(0); }
-.screen { --ar: 1.7778; position: absolute; left: 50%; top: 50%; aspect-ratio: var(--ar); width: min(100vw, 100svh * var(--ar)); transform: translate(-50%, -50%); transform-origin: 50% 50%; overflow: hidden; will-change: transform; }
+.opener .scene-pin { --top: 96px; --bottom: 140px; }
+@media (max-width: 720px) { .opener .scene-pin { --top: 84px; --bottom: 196px; } }
+.screen { --ar: 1.7778; position: absolute; left: 50%; top: calc(var(--top) + (100svh - var(--top) - var(--bottom)) / 2); aspect-ratio: var(--ar); width: min(100vw - 2 * var(--gutter), (100svh - var(--top) - var(--bottom)) * var(--ar)); transform: translate(-50%, -50%); transform-origin: 50% 50%; overflow: hidden; border-radius: 24px; box-shadow: 0 40px 120px -30px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.06); will-change: transform; }
 .screen video { display: block; width: 100%; height: 100%; object-fit: cover; transition: opacity 400ms var(--ease); }
 .screen video.switching { opacity: 0; }
-/* soft edges: the film melts into its own light instead of ending in a hard line */
-.screen { -webkit-mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent), linear-gradient(to bottom, transparent, #000 7%, #000 93%, transparent); -webkit-mask-composite: source-in; mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent), linear-gradient(to bottom, transparent, #000 7%, #000 93%, transparent); mask-composite: intersect; }
-.opener-bar { position: absolute; left: 0; right: 0; bottom: var(--s-500); margin-inline: auto; display: flex; align-items: flex-end; justify-content: space-between; gap: var(--s-300); z-index: 2; }
+.opener-bar { position: absolute; left: 0; right: 0; bottom: var(--s-400); margin-inline: auto; display: flex; align-items: flex-end; justify-content: space-between; gap: var(--s-300); z-index: 2; }
 .opener-title { font-size: 48px; line-height: 1; font-weight: 700; letter-spacing: -0.04em; text-shadow: 0 2px 24px rgba(0, 0, 0, 0.5); }
 .opener-line { margin-top: var(--s-75); font-size: 16px; line-height: 24px; color: rgba(244, 241, 235, 0.8); text-shadow: 0 1px 12px rgba(0, 0, 0, 0.6); }
 .opener-actions { display: flex; align-items: center; gap: var(--s-200); }

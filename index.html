@@ -280,7 +280,7 @@
   L.scene("opener", (p) => {
     const t = L.ease(L.range(p, 0.05, 0.85));
     if (!reduce) screen.style.transform = `translate(-50%, -50%) rotateX(${t * 10}deg) scale(${1 - t * 0.24})`;
-    screen.style.borderRadius = `${t * 32}px`;
+    screen.style.borderRadius = `${24 + t * 8}px`;
     amb.style.opacity = (0.8 - 0.45 * t).toFixed(3);
     bar.style.opacity = (1 - L.range(p, 0.05, 0.3)).toFixed(3);
     bar.style.transform = `translateY(${L.range(p, 0.05, 0.3) * 24}px)`;
