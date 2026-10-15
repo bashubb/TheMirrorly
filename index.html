@@ -74,82 +74,8 @@
 </div>
 
 <main id="main">
-<!-- ===== Phone page ===== -->
-<div class="m-only">
-  <section class="m-hero" aria-labelledby="m-title">
-    <div class="wrap">
-      <span class="eyebrow">Mirrorly · coming soon for iPhone</span>
-      <h1 id="m-title">Your iPhone, but a mirror.</h1>
-      <p class="m-p">With a ring light, zoom and a little attitude.</p>
-      <div class="cta-row m-cta">
-        <span class="btn when-soon" aria-disabled="true"><svg aria-hidden="true"><use href="#i-apple-logo"/></svg>Coming soon to the App Store</span>
-        <a class="store-badge when-live" href="https://apps.apple.com/app/id6792856754" data-store-link><img src="assets/app-store-badge-white.svg" alt="Download on the App Store" width="156" height="52"></a>
-      </div>
-      <figure class="mm-film"><video id="mm-film" autoplay muted loop playsinline preload="metadata" poster="assets/media/mirror-film-tall-poster.jpg" aria-label="Animated film: the Mirrorly mirror lights up, zooms in and makes dry comments"><source src="assets/media/mirror-film-tall.mp4" type="video/mp4"></video></figure>
-    </div>
-  </section>
-
-  <section class="m-sec mm-try" aria-labelledby="m-try">
-    <div class="wrap">
-      <h2 class="m-h2" id="m-try">Light and zoom, one tap each.</h2>
-      <p class="m-p">Try the buttons.</p>
-      <div class="mm-dev" id="mm-dev" data-light="0" data-zoom="0">
-        <div class="mm-screens">
-          <img data-s="dark" src="assets/media/m-light-off.webp" alt="" width="780" height="1608" loading="lazy">
-          <img data-s="lit" src="assets/media/m-light-on.webp" alt="" width="780" height="1608" loading="lazy">
-          <img data-s="z1" src="assets/media/m-zoom-1.webp" alt="" width="780" height="1608" loading="lazy">
-          <img data-s="z2" src="assets/media/m-zoom-2.webp" alt="" width="780" height="1608" loading="lazy">
-        </div>
-      </div>
-      <div class="mm-ctl">
-        <button type="button" id="mm-light" aria-pressed="false"><svg aria-hidden="true"><use href="#i-lightbulb"/></svg>Ring light</button>
-        <button type="button" id="mm-zoom" aria-pressed="false"><svg aria-hidden="true"><use href="#i-magnifying-glass-plus"/></svg>Zoom 2×</button>
-      </div>
-    </div>
-  </section>
-
-  <section class="m-sec tight" style="background:var(--bg-2)" aria-labelledby="m-cam">
-    <div class="wrap">
-      <h2 class="m-h2" id="m-cam">Made for looking, not for shooting.</h2>
-      <ul class="vs on-all mm-vs">
-        <li><span>Brightness at maximum</span></li>
-        <li><span>No shutter to slip on</span></li>
-        <li><span>Nothing saved, ever</span></li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="m-sec tight" aria-labelledby="m-moments">
-    <div class="wrap"><h2 class="m-h2" id="m-moments">For the moments people see you.</h2></div>
-    <ul class="m-rail mm-rail">
-      <li><img src="assets/media/m-moment-interview.webp" alt="Checking a tie before an interview" width="780" height="1608" loading="lazy"><b>8:52</b><span>Before the interview</span></li>
-      <li><img src="assets/media/m-moment-date.webp" alt="A closer look before a lunch date" width="780" height="1608" loading="lazy"><b>13:40</b><span>Lunch date</span></li>
-      <li><img src="assets/media/m-moment-mechanic.webp" alt="A mechanic spotting grease on his cheek" width="780" height="1608" loading="lazy"><b>17:45</b><span>Straight from the garage</span></li>
-      <li><img src="assets/media/m-moment-party.webp" alt="Eyeliner by ring light in the dark" width="780" height="1608" loading="lazy"><b>22:15</b><span>Getting ready in the dark</span></li>
-    </ul>
-  </section>
-
-  <section class="m-sec mm-talk" aria-labelledby="m-talk">
-    <div class="wrap">
-      <img class="talks-face" id="mm-face" src="assets/media/mirror-face.webp" alt="The Mirrorly mirror, winking" width="512" height="512" loading="lazy">
-      <h2 class="m-h2" id="m-talk">Most mirrors keep quiet. This one doesn’t.</h2>
-      <div class="lines mm-lines" aria-live="polite">
-        <p class="joke on punch"><span class="j1">the lighting did all that.</span> <span class="j2">sadly.</span></p>
-        <p class="joke"><span class="j1">your eyebrows</span> <span class="j2">filed a complaint.</span></p>
-        <p class="joke"><span class="j1">that pore</span> <span class="j2">has representation.</span></p>
-      </div>
-      <p class="talks-cta">Make a face. See for yourself.</p>
-    </div>
-  </section>
-
-  <section class="m-sec tight" aria-label="The story">
-    <figure class="story-film mm-story"><video muted loop playsinline autoplay preload="none" poster="assets/media/story-poster.jpg" aria-label="Animated story: too dark to see her reflection, she finds Mirrorly and walks off lit up"><source src="assets/media/story.mp4" type="video/mp4"></video></figure>
-  </section>
-</div>
-
-
 <!-- 0. The film first: full screen, its own light spilling around it -->
-<section class="scene opener d-only" data-scene="opener" aria-labelledby="hero-title">
+<section class="scene opener" data-scene="opener" aria-labelledby="hero-title">
   <div class="scene-pin">
     <canvas class="ambient" id="ambient" width="64" height="36" aria-hidden="true"></canvas>
     <div class="screen" id="screen">
@@ -173,7 +99,7 @@
 
 
 <!-- 1. Light, zoom, better than the Camera app -->
-<section class="scene show d-only" id="show" data-scene="show" aria-label="The mirror">
+<section class="scene show" id="show" data-scene="show" aria-label="The mirror">
   <div class="scene-pin">
     <span class="room" id="room" aria-hidden="true"></span>
     <span class="glow" id="glow" aria-hidden="true"></span>
@@ -221,7 +147,7 @@
 </section>
 
 <!-- 2. Why you need it: other people -->
-<section class="scene moments d-only" id="moments" data-scene="moments" aria-labelledby="moments-title">
+<section class="scene moments" id="moments" data-scene="moments" aria-labelledby="moments-title">
   <div class="scene-pin">
     <div class="wrap moments-head">
       <span class="eyebrow">Why</span>
@@ -249,7 +175,7 @@
 </section>
 
 <!-- 3. The comedy -->
-<section class="scene talks d-only" id="talks" data-scene="talks" aria-labelledby="talks-title">
+<section class="scene talks" id="talks" data-scene="talks" aria-labelledby="talks-title">
   <div class="scene-pin">
     <div class="wrap talks-grid">
       <div class="talks-intro">
@@ -282,7 +208,7 @@
   </div>
 </section>
 
-<section class="pad m-end d-only" aria-labelledby="final-title">
+<section class="pad m-end" aria-labelledby="final-title">
   <div class="wrap center reveal">
     <img class="m-icon" src="assets/icon-512.png" alt="" width="112" height="112">
     <h2 class="m-title" id="final-title">A little light.<br>A closer look.</h2>
@@ -293,7 +219,7 @@
   </div>
 </section>
 
-<section class="pad m-story d-only" aria-labelledby="story-title">
+<section class="pad m-story" aria-labelledby="story-title">
   <div class="wrap story-split">
     <div class="reveal">
       <span class="eyebrow">One rainy evening</span>
@@ -455,30 +381,6 @@
   st.addEventListener("click", () => { if (sv.paused) { sPaused = false; sv.play(); } else { sPaused = true; sv.pause(); } });
   new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting && !sPaused) sv.play().catch(() => {}); else if (!e.isIntersecting) sv.pause(); }), { threshold: 0.4 }).observe(sv);
 
-  // Phone: light and zoom buttons work like the app; the light comes on by itself the first time
-  const dev = $("mm-dev");
-  if (dev && matchMedia("(max-width: 720px)").matches) {
-    const lb = $("mm-light"), zb = $("mm-zoom");
-    const show = () => {
-      const z = dev.dataset.zoom === "1", l = dev.dataset.light === "1";
-      const k = z ? (l ? "z2" : "z1") : (l ? "lit" : "dark");
-      dev.querySelectorAll("[data-s]").forEach((im) => im.classList.toggle("on", im.dataset.s === (z ? (zb.getAttribute("aria-pressed") === "true" ? "z2" : "z1") : k)));
-      dev.classList.toggle("lit", l);
-    };
-    lb.addEventListener("click", () => { const on = dev.dataset.light !== "1"; dev.dataset.light = on ? "1" : "0"; lb.setAttribute("aria-pressed", String(on)); show(); });
-    zb.addEventListener("click", () => { const on = zb.getAttribute("aria-pressed") !== "true"; zb.setAttribute("aria-pressed", String(on)); dev.dataset.zoom = on ? "1" : "0"; show(); });
-    show();
-    new IntersectionObserver((es, o) => es.forEach((e) => { if (e.isIntersecting) { o.disconnect(); setTimeout(() => { if (dev.dataset.light !== "1") lb.click(); }, 700); } }), { threshold: 0.6 }).observe(dev);
-    // the mirror's lines take turns while on screen
-    const lines = [...document.querySelectorAll(".mm-lines .joke")], mface = $("mm-face");
-    let li = 0, timer = 0;
-    const next = () => {
-      lines[li].classList.remove("on", "punch"); li = (li + 1) % lines.length;
-      lines[li].classList.add("on"); setTimeout(() => lines[li].classList.add("punch"), 600);
-      mface.classList.remove("nod"); void mface.offsetWidth; mface.classList.add("nod");
-    };
-    new IntersectionObserver((es) => es.forEach((e) => { clearInterval(timer); if (e.isIntersecting && !reduce) timer = setInterval(next, 3200); })).observe(mface);
-  }
 })();
 </script>
 </body>
