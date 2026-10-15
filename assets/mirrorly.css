@@ -368,3 +368,5 @@
   .moment h3 { font-size: 20px; line-height: 28px; margin-top: var(--s-50); }
   .moment p { font-size: 14px; line-height: 20px; }
 }
+
+.ambient { display: none !important; }
