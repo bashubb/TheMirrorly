@@ -88,11 +88,11 @@
 .mphone { --w: calc(min(78vh, 720px) * 0.44); transform-origin: 50% 55%; }
 @media (max-width: 900px) {
   .show .scene-pin { align-items: start; padding-top: 96px; }
-  .show-grid { grid-template-columns: 1fr; grid-template-rows: auto 1fr; gap: var(--s-200); height: calc(100% - 96px); }
-  .stage { height: 50vh; order: -1; }
-  .mphone { --w: calc(50vh * 0.46); }
+  .show-grid { display: flex; flex-direction: column; align-items: stretch; gap: var(--s-200); height: calc(100svh - 96px - var(--s-300)); }
+  .stage { flex: 1 1 auto; height: auto; min-height: 0; order: -1; }
+  .mphone { --w: var(--phone-w, 200px); }
+  .beats { flex: none; height: var(--beats-h, 260px); }
   .glow { left: 50%; top: 32%; }
-  .beats { min-height: 0; height: 100%; }
   .beat { inset: 0 0 auto 0; transform: translateY(16px); text-align: center; }
   .beat.on { transform: none; }
   .beat .m-title, .beat .lead { margin-inline: auto; }
@@ -101,8 +101,11 @@
   .word { font-size: 72px; }
   .word.small { font-size: 36px; line-height: 40px; }
   .cue { display: none; }
-  .vs { margin-top: var(--s-200); gap: var(--s-100); text-align: left; margin-inline: auto; }
+  .vs { margin-top: var(--s-200); gap: var(--s-75); text-align: left; margin-inline: auto; padding-inline: var(--s-50); max-width: 360px; }
+  .vs li { padding-left: var(--s-400); }
+  .vs li::after, .vs li::before { width: 20px; height: 20px; font-size: 12px; }
   .vs span { font-size: 16px; line-height: 24px; }
+  .vs em { font-size: 12px; line-height: 16px; }
   .zoomer { margin-top: var(--s-200); }
 }
 
@@ -182,3 +185,12 @@
 @media (max-width: 640px) { .ringframe { box-shadow: inset 0 0 0 6px #f6e6d1, inset 0 0 28px 10px rgba(246, 226, 200, 0.5); } }
 @media (prefers-reduced-motion: reduce) { .ringframe { display: none; } }
 
+
+/* Short phones (iPhone SE): keep the phone and the text apart */
+@media (max-width: 900px) and (max-height: 720px) {
+  .vs em { display: none; }
+  .vs { gap: var(--s-50); margin-top: var(--s-100); }
+  .word.small { font-size: 30px; line-height: 36px; }
+  .beat .lead { margin-top: var(--s-100); font-size: 14px; line-height: 20px; }
+  .beat .cta-row { margin-top: var(--s-200); }
+}

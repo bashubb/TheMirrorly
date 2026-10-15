@@ -21,7 +21,7 @@
 <link rel="apple-touch-icon" href="assets/fav/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/landing.css?v=4">
-<link rel="stylesheet" href="assets/mirrorly.css?v=4">
+<link rel="stylesheet" href="assets/mirrorly.css?v=6">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -296,6 +296,20 @@
   });
 
   // 1. Light, zoom, not the Camera app
+  // on one column layouts the text block sits under the phone: reserve its real height, the phone gets the rest
+  const beatsBox = document.querySelector(".beats");
+  const sizeBeats = () => {
+    const h = Math.max(...[...document.querySelectorAll(".beat")].map((b) => b.offsetHeight));
+    beatsBox.style.setProperty("--beats-h", h + "px");
+    const stage = document.querySelector(".show .stage");
+    if (innerWidth <= 900) {
+      requestAnimationFrame(() => {
+        const w = Math.max(60, Math.min(stage.clientHeight * 0.46 * 0.94, innerWidth * 0.62));
+        $("mphone").style.setProperty("--phone-w", w + "px");
+      });
+    } else $("mphone").style.removeProperty("--phone-w");
+  };
+  sizeBeats(); document.fonts.ready.then(sizeBeats); addEventListener("resize", sizeBeats);
   const beats = [...document.querySelectorAll(".beat")];
   const rows = [...document.querySelectorAll(".vs li")];
   const phone = $("mphone");
