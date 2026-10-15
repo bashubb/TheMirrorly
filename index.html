@@ -253,10 +253,16 @@
     if (want === cut) return;
     cut = want;
     const t = film.currentTime || 0;
+    const mine = cut;
     film.poster = `assets/media/mirror-film-${cut}-poster.jpg`;
-    film.querySelector("source").src = `assets/media/mirror-film-${cut}.mp4`;
-    film.load();
-    film.addEventListener("loadedmetadata", () => { film.currentTime = t; if (!userPaused) film.play().catch(() => {}); }, { once: true });
+    film.classList.add("switching");
+    // whole clip in memory: the new cut continues from the same moment on any server
+    fetch(`assets/media/mirror-film-${cut}.mp4`).then((r) => r.blob()).then((blob) => {
+      if (mine !== cut) return;
+      if (film.src.startsWith("blob:")) URL.revokeObjectURL(film.src);
+      film.src = URL.createObjectURL(blob);
+      film.addEventListener("loadeddata", () => { film.currentTime = t; film.classList.remove("switching"); if (!userPaused) film.play().catch(() => {}); }, { once: true });
+    }).catch(() => { film.querySelector("source").src = `assets/media/mirror-film-${cut}.mp4`; film.load(); film.classList.remove("switching"); });
     screen.style.setProperty("--ar", cut === "tall" ? 9 / 16 : 16 / 9);
     amb.width = cut === "tall" ? 36 : 64; amb.height = cut === "tall" ? 64 : 36;
   };
@@ -275,7 +281,7 @@
     const t = L.ease(L.range(p, 0.05, 0.85));
     if (!reduce) screen.style.transform = `translate(-50%, -50%) rotateX(${t * 10}deg) scale(${1 - t * 0.24})`;
     screen.style.borderRadius = `${t * 32}px`;
-    amb.style.opacity = (0.95 - 0.55 * t).toFixed(3);
+    amb.style.opacity = (0.8 - 0.45 * t).toFixed(3);
     bar.style.opacity = (1 - L.range(p, 0.05, 0.3)).toFixed(3);
     bar.style.transform = `translateY(${L.range(p, 0.05, 0.3) * 24}px)`;
   });
