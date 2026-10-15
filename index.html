@@ -21,7 +21,7 @@
 <link rel="apple-touch-icon" href="assets/fav/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/landing.css?v=6">
-<link rel="stylesheet" href="assets/mirrorly.css?v=10">
+<link rel="stylesheet" href="assets/mirrorly.css?v=11">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -76,7 +76,7 @@
 <main id="main">
 
 <!-- 0. The film first: full screen, its own light spilling around it -->
-<section class="scene opener" data-scene="opener" aria-labelledby="hero-title">
+<section class="scene opener d-only" data-scene="opener" aria-labelledby="hero-title">
   <div class="scene-pin">
     <canvas class="ambient" id="ambient" width="64" height="36" aria-hidden="true"></canvas>
     <div class="screen" id="screen">
@@ -100,7 +100,7 @@
 
 
 <!-- 1. Light, zoom, better than the Camera app -->
-<section class="scene show" id="show" data-scene="show" aria-label="The mirror">
+<section class="scene show d-only" id="show" data-scene="show" aria-label="The mirror">
   <div class="scene-pin">
     <span class="room" id="room" aria-hidden="true"></span>
     <span class="glow" id="glow" aria-hidden="true"></span>
@@ -148,7 +148,7 @@
 </section>
 
 <!-- 2. Why you need it: other people -->
-<section class="scene moments" id="moments" data-scene="moments" aria-labelledby="moments-title">
+<section class="scene moments d-only" id="moments" data-scene="moments" aria-labelledby="moments-title">
   <div class="scene-pin">
     <div class="wrap moments-head">
       <span class="eyebrow">Why</span>
@@ -176,7 +176,7 @@
 </section>
 
 <!-- 3. The comedy -->
-<section class="scene talks" id="talks" data-scene="talks" aria-labelledby="talks-title">
+<section class="scene talks d-only" id="talks" data-scene="talks" aria-labelledby="talks-title">
   <div class="scene-pin">
     <div class="wrap talks-grid">
       <div class="lines">
@@ -196,6 +196,66 @@
     </div>
   </div>
 </section>
+
+<!-- Phones: a separate, simple page. No pinned scenes. -->
+<div class="m-only">
+  <section class="mm-hero" aria-labelledby="m-title">
+    <figure class="mm-film">
+      <video id="m-film" autoplay muted loop playsinline preload="metadata" poster="assets/media/mirror-film-tall-poster.jpg" aria-label="Animated film: the Mirrorly mirror wakes up in the dark, lights up like a ring light, zooms in and makes dry comments">
+        <source src="assets/media/mirror-film-tall.mp4" type="video/mp4">
+      </video>
+      <button class="play" type="button" id="m-film-toggle" aria-label="Pause film"><svg aria-hidden="true"><use href="#i-pause"/></svg></button>
+    </figure>
+    <div class="wrap mm-copy">
+      <h1 class="m-title" id="m-title">Your iPhone,<br>but a mirror.</h1>
+      <p class="lead">With a ring light, zoom and a little attitude.</p>
+      <div class="cta-row">
+        <span class="btn when-soon" aria-disabled="true"><svg aria-hidden="true"><use href="#i-apple-logo"/></svg>Coming soon to the App Store</span>
+        <a class="store-badge when-live" href="https://apps.apple.com/app/id6792856754" data-store-link><img src="assets/app-store-badge-white.svg" alt="Download on the App Store" width="156" height="52"></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mm-feature" aria-labelledby="m-f1">
+    <div class="mm-phone"><img src="assets/media/m-light-on.webp" alt="Mirrorly with the ring light on: the screen edges glow around a woman doing her eyeliner" width="780" height="1608" loading="lazy"></div>
+    <div class="wrap"><h2 class="m-h" id="m-f1">Good light,<br>wherever you are.</h2><p class="lead">Tap the bulb and the screen glows around you. A dark car, a dim bathroom, a hotel room at midnight.</p></div>
+  </section>
+
+  <section class="mm-feature" aria-labelledby="m-f2">
+    <div class="mm-phone"><img src="assets/media/m-zoom-2.webp" alt="Mirrorly zoomed in at 1.6× on a woman's brows and skin" width="780" height="1608" loading="lazy"></div>
+    <div class="wrap"><h2 class="m-h" id="m-f2">Closer than<br>a compact.</h2><p class="lead">Pinch in for brows, lashes and the last bit of highlighter.</p></div>
+  </section>
+
+  <section class="mm-feature" aria-labelledby="m-f3">
+    <div class="wrap">
+      <h2 class="m-h" id="m-f3">Made for looking,<br>not for shooting.</h2>
+      <ul class="vs on-all">
+        <li><span>A ring light, whenever you want</span><em>Camera: flash only when you shoot</em></li>
+        <li><span>Brightness at maximum</span><em>Camera: whatever it was</em></li>
+        <li><span>No shutter to slip on</span><em>Camera: one slip, one photo</em></li>
+        <li><span>Nothing saved, ever</span><em>Camera: it’s in your library now</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="mm-moments" aria-labelledby="m-moments">
+    <div class="wrap"><span class="eyebrow">Why</span><h2 class="m-h" id="m-moments">For the moments<br>people see you.</h2></div>
+    <div class="mm-rail">
+      <article><img src="assets/media/m-moment-interview.webp" alt="A man checking his face and tie before an interview" width="780" height="1608" loading="lazy"><span class="time">8:52</span><h3>Before the interview.</h3></article>
+      <article><img src="assets/media/m-moment-date.webp" alt="A young woman checking her face before a lunch date" width="780" height="1608" loading="lazy"><span class="time">13:40</span><h3>Lunch date.</h3></article>
+      <article><img src="assets/media/m-moment-mechanic.webp" alt="A mechanic checking a grease smudge on his cheek" width="780" height="1608" loading="lazy"><span class="time">17:45</span><h3>Straight from the garage.</h3></article>
+      <article><img src="assets/media/m-moment-party.webp" alt="A woman doing her eyeliner in the dark with the ring light on" width="780" height="1608" loading="lazy"><span class="time">22:15</span><h3>Getting ready in the dark.</h3></article>
+    </div>
+  </section>
+
+  <section class="mm-talks" aria-labelledby="m-talks">
+    <div class="wrap"><span class="eyebrow">And then it talks</span><h2 class="sr" id="m-talks">Mirror reactions</h2></div>
+    <article class="mm-joke"><div class="mm-phone small"><img src="assets/media/m-joke-a.webp" alt="Mirrorly showing: the lighting did all that. sadly." width="780" height="1608" loading="lazy"></div><p class="wrap"><span>the lighting did all that.</span> <b>sadly.</b></p></article>
+    <article class="mm-joke"><div class="mm-phone small"><img src="assets/media/m-joke-b.webp" alt="Mirrorly showing: your eyebrows filed a complaint." width="780" height="1608" loading="lazy"></div><p class="wrap"><span>your eyebrows</span> <b>filed a complaint.</b></p></article>
+    <article class="mm-joke"><div class="mm-phone small"><img src="assets/media/m-joke-c.webp" alt="Mirrorly showing: that pore has representation." width="780" height="1608" loading="lazy"></div><p class="wrap"><span>that pore</span> <b>has representation.</b></p></article>
+    <p class="wrap small mm-note">It reads your expression on your iPhone and says what a good friend would only think. Switch it off in Settings if it gets personal.</p>
+  </section>
+</div>
 
 <section class="pad" id="faq" aria-labelledby="faq-title">
   <div class="wrap">
@@ -277,7 +337,8 @@
   fitRoom(); document.fonts.ready.then(fitRoom);
   let rz = 0; addEventListener("resize", () => { fitRoom(); clearTimeout(rz); rz = setTimeout(pickCut, 200); });
   let userPaused = reduce;
-  pickCut();
+  const MOBILE = matchMedia("(max-width: 720px)").matches;
+  if (!MOBILE) pickCut(); else { film.removeAttribute("autoplay"); film.preload = "none"; }
   if (reduce) { film.removeAttribute("autoplay"); film.pause(); }
   const fIcon = () => { ft.querySelector("use").setAttribute("href", film.paused ? "#i-play" : "#i-pause"); ft.setAttribute("aria-label", film.paused ? "Play film" : "Pause film"); };
   ["play", "playing", "pause", "timeupdate"].forEach((ev) => film.addEventListener(ev, fIcon)); fIcon();
@@ -352,6 +413,17 @@
     shots.forEach((s, i) => { if (i) s.style.opacity = i === j ? 1 : 0; });
   });
 
+
+  // Phones: the film plays on its own, with a pause button
+  const mf = $("m-film"), mt = $("m-film-toggle");
+  if (mf) {
+    let mPaused = reduce;
+    if (reduce) { mf.removeAttribute("autoplay"); mf.pause(); }
+    const icon = () => { mt.querySelector("use").setAttribute("href", mf.paused ? "#i-play" : "#i-pause"); mt.setAttribute("aria-label", mf.paused ? "Play film" : "Pause film"); };
+    ["play", "playing", "pause"].forEach((ev) => mf.addEventListener(ev, icon)); icon();
+    mt.addEventListener("click", () => { if (mf.paused) { mPaused = false; mf.play(); } else { mPaused = true; mf.pause(); } });
+    new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting && !mPaused) mf.play().catch(() => {}); else if (!e.isIntersecting) mf.pause(); }), { threshold: 0.3 }).observe(mf);
+  }
 })();
 </script>
 </body>
