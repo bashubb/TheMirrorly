@@ -305,3 +305,15 @@ h3 { font-size: 20px; line-height: 28px; letter-spacing: -0.01em; }
   .menu { -webkit-backdrop-filter: none; backdrop-filter: none; background: var(--bg); }
   .iphone > .layer:nth-child(odd):not(.shadow) { display: none; }
 }
+
+/* Phones get their own simple page: desktop-only scenes are swapped for plain stacked blocks */
+.m-only { display: none; }
+@media (max-width: 720px) {
+  .d-only { display: none !important; }
+  .m-only { display: block; }
+}
+.m-rail { display: flex; gap: var(--s-200); overflow-x: auto; scroll-snap-type: x mandatory; padding: var(--s-300) var(--gutter) var(--s-100); scrollbar-width: none; overscroll-behavior-x: contain; }
+.m-rail::-webkit-scrollbar { display: none; }
+.m-rail > * { flex: none; scroll-snap-align: center; }
+.m-phone { width: min(56vw, 240px); margin: 0 auto; }
+.m-phone img { display: block; width: 100%; height: auto; filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.35)); }
