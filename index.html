@@ -20,8 +20,8 @@
 <link rel="icon" href="assets/fav/favicon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="assets/fav/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/landing.css?v=3">
-<link rel="stylesheet" href="assets/mirrorly.css?v=3">
+<link rel="stylesheet" href="assets/landing.css?v=4">
+<link rel="stylesheet" href="assets/mirrorly.css?v=4">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -266,7 +266,16 @@
     screen.style.setProperty("--ar", cut === "tall" ? 9 / 16 : 16 / 9);
     amb.width = cut === "tall" ? 36 : 64; amb.height = cut === "tall" ? 64 : 36;
   };
-  let rz = 0; addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(pickCut, 200); });
+  // reserve exactly the space the nav and the caption bar take, so the film never sits under text
+  const pin = screen.parentElement, nav = document.querySelector(".island");
+  const fitRoom = () => {
+    const top = nav.getBoundingClientRect().bottom + 16;
+    const bottom = bar.offsetHeight + parseFloat(getComputedStyle(bar).bottom) + 24;
+    pin.style.setProperty("--top", top + "px");
+    pin.style.setProperty("--bottom", bottom + "px");
+  };
+  fitRoom(); document.fonts.ready.then(fitRoom);
+  let rz = 0; addEventListener("resize", () => { fitRoom(); clearTimeout(rz); rz = setTimeout(pickCut, 200); });
   let userPaused = reduce;
   pickCut();
   if (reduce) { film.removeAttribute("autoplay"); film.pause(); }
