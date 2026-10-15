@@ -331,3 +331,52 @@ h3 { font-size: 20px; line-height: 28px; letter-spacing: -0.01em; }
 @media (prefers-reduced-motion: reduce) { .island:not(.solid), .island:not(.solid)::before, .island-row { transition: none; } }
 @media (max-width: 720px) { .island:not(.solid), .island:not(.solid)::before, .island-row { transition: none; } }
 .settled { perspective: none !important; }
+
+/* ===== Phones: a page cut for the phone =====
+   .d-only scenes are desktop only; .m-only blocks are the phone layout. */
+.m-only { display: none; }
+@media (max-width: 720px) {
+  .d-only { display: none !important; }
+  .m-only { display: block; }
+  body { padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 96px); }
+  .reveal { transform: translateY(16px); filter: none; transition: opacity 500ms var(--ease), transform 500ms var(--ease); }
+}
+.m-sec { padding: var(--s-700) 0; }
+.m-sec.tight { padding: var(--s-500) 0; }
+.m-h2 { font-size: 30px; line-height: 36px; letter-spacing: -0.03em; font-weight: 700; text-wrap: balance; }
+.m-p { margin-top: var(--s-100); color: var(--muted); }
+.m-hero { padding: calc(88px + env(safe-area-inset-top, 0px)) 0 var(--s-500); }
+.m-hero h1 { font-size: 36px; line-height: 40px; letter-spacing: -0.035em; font-weight: 700; text-wrap: balance;
+  background: linear-gradient(90deg, var(--h-from), var(--h-to)); -webkit-background-clip: text; background-clip: text; color: transparent; padding-bottom: 0.1em; }
+.m-hero .m-p { font-size: 16px; line-height: 24px; }
+.m-media { margin-top: var(--s-400); border-radius: 24px; overflow: hidden; background: var(--bg-2); }
+.m-media video, .m-media img { display: block; width: 100%; height: auto; }
+.m-rail { display: flex; gap: var(--s-100); overflow-x: auto; scroll-snap-type: x mandatory; padding: var(--s-300) var(--gutter) var(--s-100); margin: 0; list-style: none; scrollbar-width: none; overscroll-behavior-x: contain; }
+.m-rail::-webkit-scrollbar { display: none; }
+.m-rail > * { flex: none; scroll-snap-align: center; }
+.m-shot { width: min(46vw, 200px); margin: 0 auto; }
+.m-shot img { display: block; width: 100%; height: auto; }
+
+/* Segmented control, iOS style */
+.seg-ctl { position: relative; display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; padding: 2px; border-radius: 12px; background: var(--bg-2); margin-top: var(--s-300); }
+.seg-ctl::before { content: ""; position: absolute; top: 2px; bottom: 2px; left: 2px; width: calc((100% - 4px) / var(--seg-n, 2)); border-radius: 10px; background: var(--surface);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06); transform: translateX(calc(var(--seg-i, 0) * 100%)); transition: transform 380ms var(--ease); }
+.seg-ctl button { position: relative; z-index: 1; min-height: 40px; border: 0; background: none; font-size: 14px; line-height: 20px; font-weight: 600; color: var(--muted); cursor: pointer; }
+.seg-ctl button[aria-selected="true"] { color: var(--text); }
+[data-pane] { display: none; }
+[data-pane].on { display: block; animation: pane-in 380ms var(--ease); }
+@keyframes pane-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+/* The download button stays in reach: a dock above the bottom edge (and above Safari's toolbar) */
+.m-dock { display: none; }
+@media (max-width: 720px) {
+  .m-dock { position: fixed; z-index: 60; left: var(--gutter); right: var(--gutter); bottom: calc(env(safe-area-inset-bottom, 0px) + var(--s-200));
+    display: flex; align-items: center; gap: var(--s-100); padding: var(--s-75) var(--s-75) var(--s-75) var(--s-100); border-radius: 20px;
+    background: var(--surface); box-shadow: 0 0 0 1px var(--glass-line), 0 16px 40px -12px rgba(0, 0, 0, 0.35); }
+  .m-dock img { width: 40px; height: 40px; border-radius: 10px; }
+  .m-dock .t { flex: 1; min-width: 0; font-size: 14px; line-height: 20px; }
+  .m-dock .t b { display: block; font-size: 16px; line-height: 24px; color: var(--text); }
+  .m-dock .t span { color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
+  .m-dock .btn { flex: none; }
+  .m-dock .store-badge img { width: auto; height: 40px; border-radius: 0; }
+}

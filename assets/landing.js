@@ -47,7 +47,7 @@
     };
     const dock = () => {
       const keep = island.classList.contains("keep-pill");   // a site can keep the pill on desktop
-      const d = innerWidth <= 720 || (!keep && scrollY > 24);   // phones: always the bar, never the pill
+      const d = innerWidth <= 720 || !keep;   // a fixed bar everywhere; only "keep-pill" sites keep the pill on desktop
       if (d === docked) return;
       docked = d;
       island.classList.toggle("docked", d);
@@ -64,6 +64,18 @@
     if (e.propertyName !== "transform" || !e.target.classList || !e.target.classList.contains("iphone")) return;
     const box = e.target.parentElement;
     if (box && box.closest(".in")) box.classList.add("settled");
+  });
+
+  // Segmented controls (phones): [data-seg] buttons switch [data-pane] panels in the same [data-segs] group
+  document.querySelectorAll("[data-segs]").forEach((g) => {
+    const btns = [...g.querySelectorAll("[data-seg]")], panes = [...g.querySelectorAll("[data-pane]")];
+    const pick = (k) => {
+      btns.forEach((b) => b.setAttribute("aria-selected", String(b.dataset.seg === k)));
+      panes.forEach((p) => p.classList.toggle("on", p.dataset.pane === k));
+      g.style.setProperty("--seg-i", btns.findIndex((b) => b.dataset.seg === k));
+    };
+    btns.forEach((b) => b.addEventListener("click", () => pick(b.dataset.seg)));
+    pick(btns[0].dataset.seg);
   });
 
   // Scroll reveal
