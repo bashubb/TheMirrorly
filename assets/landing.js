@@ -24,6 +24,14 @@
     addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
   }
 
+  // The nav pill docks into a full-width bar once the page scrolls
+  const island = document.querySelector(".island");
+  if (island && !island.classList.contains("solid")) {
+    let docked = false;
+    const dock = () => { const d = scrollY > 24; if (d !== docked) { docked = d; island.classList.toggle("docked", d); } };
+    addEventListener("scroll", dock, { passive: true }); dock();
+  }
+
   // Scroll reveal
   const revealIO = new IntersectionObserver((entries) => {
     for (const e of entries) if (e.isIntersecting) { e.target.classList.add("in"); revealIO.unobserve(e.target); }

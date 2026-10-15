@@ -20,8 +20,8 @@
 <link rel="icon" href="assets/fav/favicon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="assets/fav/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/landing.css?v=4">
-<link rel="stylesheet" href="assets/mirrorly.css?v=7">
+<link rel="stylesheet" href="assets/landing.css?v=6">
+<link rel="stylesheet" href="assets/mirrorly.css?v=10">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -237,7 +237,7 @@
   </div>
 </footer>
 
-<script src="assets/landing.js?v=2"></script>
+<script src="assets/landing.js?v=6"></script>
 <script>
 (() => {
   const L = window.Landing;
@@ -301,13 +301,14 @@
   const sizeBeats = () => {
     const h = Math.max(...[...document.querySelectorAll(".beat")].map((b) => b.offsetHeight));
     beatsBox.style.setProperty("--beats-h", h + "px");
-    const stage = document.querySelector(".show .stage");
-    if (innerWidth <= 900) {
-      requestAnimationFrame(() => {
-        const w = Math.max(60, Math.min(stage.clientHeight * 0.46 * 0.94, innerWidth * 0.62));
-        $("mphone").style.setProperty("--phone-w", w + "px");
+    // each pinned phone on one-column layouts: as big as its stage allows
+    requestAnimationFrame(() => {
+      [["mphone", ".show .stage"], ["tphone", ".talks .stage"]].forEach(([id, sel]) => {
+        const ph = $(id), st = document.querySelector(sel);
+        if (innerWidth <= 900) ph.style.setProperty("--phone-w", Math.max(60, Math.min(st.clientHeight * 0.46 * 0.94, innerWidth * 0.62)) + "px");
+        else ph.style.removeProperty("--phone-w");
       });
-    } else $("mphone").style.removeProperty("--phone-w");
+    });
   };
   sizeBeats(); document.fonts.ready.then(sizeBeats); addEventListener("resize", sizeBeats);
   const beats = [...document.querySelectorAll(".beat")];

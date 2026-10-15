@@ -115,17 +115,19 @@
 .moments-head { margin-bottom: var(--s-500); }
 .track { display: flex; gap: var(--s-400); padding-left: max(var(--gutter), (100vw - var(--wrap)) / 2); will-change: transform; align-items: center; }
 .moment { flex: none; display: grid; grid-template-columns: auto 1fr; gap: var(--s-500); align-items: center; width: min(760px, 86vw); padding: var(--s-400); border-radius: 32px; background: var(--bg); border: 1px solid var(--line); }
-.moment .iphone { --w: min(220px, 26vh); }
+.moment .iphone { --w: min(220px, calc((100svh - 330px - var(--ui-bottom)) * 0.46)); }
 .moment .time { display: block; font-size: 60px; line-height: 1; font-weight: 700; letter-spacing: -0.04em; color: var(--accent); font-variant-numeric: tabular-nums; }
 .moment h3 { margin-top: var(--s-200); font-size: 30px; line-height: 36px; letter-spacing: -0.02em; font-weight: 600; }
 .moment p { margin-top: var(--s-100); color: var(--muted); }
 @media (max-width: 720px) {
   .moments .scene-pin { padding-top: 96px; }
-  .moments-head { margin-bottom: var(--s-300); }
-  .moment { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: var(--s-200); padding: var(--s-300); }
-  .moment .iphone { --w: min(150px, 24vh); }
-  .moment .time { font-size: 36px; }
-  .moment h3 { font-size: 20px; line-height: 28px; margin-top: var(--s-75); }
+  .moments-head { margin-bottom: var(--s-200); }
+  .moments .scene-pin { align-content: start; }
+  .moment { grid-template-columns: auto 1fr; gap: var(--s-200); padding: var(--s-200); width: 86vw; border-radius: 24px; }
+  .moment .iphone { --w: min(118px, calc((100svh - 96px - 140px - var(--ui-bottom)) * 0.4)); }
+  .moment .time { font-size: 30px; }
+  .moment h3 { font-size: 18px; line-height: 24px; margin-top: var(--s-75); }
+  .moment p { font-size: 14px; line-height: 20px; }
 }
 
 /* 3. The comedy */
@@ -196,11 +198,28 @@
 }
 
 /* iOS Safari's floating toolbar sits over the bottom of the page: keep pinned scenes clear of it */
-:root { --ui-bottom: 0px; }
-@media (pointer: coarse) { :root { --ui-bottom: calc(env(safe-area-inset-bottom, 0px) + 64px); } }
 .opener-bar { bottom: calc(var(--s-400) + var(--ui-bottom)); }
 @media (max-width: 900px) {
   .show-grid { height: calc(100svh - 96px - var(--s-300) - var(--ui-bottom)); }
   .talks-grid { height: calc(100svh - 96px - var(--ui-bottom)); }
-  .moments .scene-pin { padding-bottom: var(--ui-bottom); }
+  .moments .scene-pin { padding-bottom: var(--ui-bottom); grid-template-rows: auto auto; }
+}
+
+/* Phones: stack the chapters in one grid cell so the box is exactly as tall as the tallest one;
+   the phone takes whatever is left (sized in JS from its stage) */
+@media (max-width: 900px) {
+  .beats { display: grid; height: auto !important; min-height: 0; }
+  .beat { position: relative; inset: auto; grid-area: 1 / 1; transform: translateY(16px); }
+  .beat.on { transform: none; }
+  .talks-grid { display: flex; flex-direction: column; align-items: stretch; gap: var(--s-200); height: calc(100svh - 96px - var(--s-300) - var(--ui-bottom)); }
+  .lines { display: grid; min-height: 0; flex: none; align-content: start; }
+  .lines .eyebrow { position: static; transform: none; margin-bottom: var(--s-100); text-align: center; }
+  .joke { position: relative; top: auto; left: auto; right: auto; transform: none; grid-area: 2 / 1; }
+  .talks .stage.small { flex: 1 1 auto; height: auto; min-height: 0; }
+  #tphone { --w: var(--phone-w, 160px); }
+}
+
+@media (pointer: coarse) {
+  .ambient { filter: blur(60px) saturate(1.3) brightness(0.7); }
+  .glow { filter: blur(60px); }
 }
