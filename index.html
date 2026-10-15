@@ -6,7 +6,7 @@
 <title>Mirrorly: Mirror App for iPhone with Ring Light and Zoom</title>
 <meta name="description" content="Mirrorly turns your iPhone into a real mirror with a ring light, zoom and a dry sense of humor. No photos saved, no account, no ads. Coming soon for iPhone.">
 <link rel="canonical" href="https://bashubb.com/TheMirrorly/">
-<meta name="theme-color" content="#080808">
+<meta name="theme-color" content="#1a0b18">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Mirrorly">
@@ -19,9 +19,9 @@
 <link rel="icon" href="assets/fav/favicon-48.png" type="image/png" sizes="48x48">
 <link rel="icon" href="assets/fav/favicon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="assets/fav/apple-touch-icon.png">
-<link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/poppins-600-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/landing.css?v=21">
-<link rel="stylesheet" href="assets/mirrorly.css?v=22">
+<link rel="stylesheet" href="assets/mirrorly.css?v=32">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -105,6 +105,7 @@
     <span class="glow" id="glow" aria-hidden="true"></span>
     <div class="wrap show-grid">
       <div class="beats">
+        <span class="mascot beat-mascot" id="beat-mascot" data-face="wink" aria-hidden="true"></span>
         <div class="beat on">
           <span class="eyebrow">The mirror</span>
           <h2 class="m-title">Your iPhone,<br>but a mirror.</h2>
@@ -185,11 +186,11 @@
         <p class="talks-cta">Make a face. See for yourself.</p>
       </div>
       <div class="talks-stage" aria-live="off">
-        <img class="talks-face" id="talks-face" src="assets/media/mirror-face.webp" alt="The Mirrorly mirror, winking" width="512" height="512">
+        <span class="mascot talks-mascot" id="talks-face" data-face="wink" role="img" aria-label="The Mirrorly mirror"></span>
         <div class="lines">
-          <p class="joke on"><span class="j1">the lighting did all that.</span> <span class="j2">sadly.</span></p>
-          <p class="joke"><span class="j1">your eyebrows</span> <span class="j2">filed a complaint.</span></p>
-          <p class="joke"><span class="j1">that pore</span> <span class="j2">has representation.</span></p>
+          <p class="joke on"><span class="bubble-in"><span class="j1">the lighting did all that.</span> <span class="j2">sadly.</span></span></p>
+          <p class="joke"><span class="bubble-in"><span class="j1">your eyebrows</span> <span class="j2">filed a complaint.</span></span></p>
+          <p class="joke"><span class="bubble-in"><span class="j1">that pore</span> <span class="j2">has representation.</span></span></p>
         </div>
       </div>
     </div>
@@ -251,6 +252,7 @@
   </div>
 </footer>
 
+<script src="assets/mascot.js?v=1"></script>
 <script src="assets/landing.js?v=20"></script>
 <script>
 (() => {
@@ -349,6 +351,9 @@
     const sc = beat === 2 ? 1 + 0.16 * zoom : 1;
     if (!reduce) phone.style.transform = `rotateY(${-10 + 10 * L.ease(L.range(p, 0, 0.3))}deg) rotateX(${4 - 4 * L.ease(L.range(p, 0, 0.3))}deg) scale(${sc})`;
     rows.forEach((r, i) => r.classList.toggle("on", beat === 3 && p > 0.7 + i * 0.05));
+    const bm = $("beat-mascot"), bf = ["wink", lit > 0.5 ? "happy" : "dark", "squint", p > 0.85 ? "smug" : "frown"][beat];
+    if (bm.dataset.face !== bf) { Mascot.set(bm, bf); bm.classList.remove("bounce"); void bm.offsetWidth; bm.classList.add("bounce"); }
+    bm.classList.toggle("lit", beat === 1 && lit > 0.5);
   });
 
   // 2. Moments: a horizontal track
@@ -368,7 +373,7 @@
       el.classList.toggle("on", i === j);
       el.classList.toggle("punch", p > [0.1, 0.48, 0.78][i]);
     });
-    if (j !== lastJ) { lastJ = j; face.classList.remove("nod"); void face.offsetWidth; face.classList.add("nod"); }
+    if (j !== lastJ) { lastJ = j; Mascot.set(face, ["oo", "squint", "smug"][j]); face.classList.remove("bounce"); void face.offsetWidth; face.classList.add("bounce"); }
   });
 
 
