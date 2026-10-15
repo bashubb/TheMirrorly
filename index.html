@@ -21,7 +21,7 @@
 <link rel="apple-touch-icon" href="assets/fav/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/landing.css?v=21">
-<link rel="stylesheet" href="assets/mirrorly.css?v=42">
+<link rel="stylesheet" href="assets/mirrorly.css?v=44">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -360,15 +360,19 @@
   const cards = [...track.children];
   L.scene("moments", (p) => {
     if (innerWidth < innerHeight) {
-      // portrait: a stack of cards, each slides up over the previous one; the ones underneath step back
+      // portrait: a stack of cards; each next one tips up out of the depth onto the stack (always fully on screen),
+      // the ones underneath step back. Each card rests a moment before the next one comes.
       track.style.transform = "";
-      const n = cards.length, c = L.clamp((p - 0.04) / 0.9) * (n - 1);
+      const n = cards.length, raw = L.clamp((p - 0.04) / 0.9) * (n - 1);
+      const k = Math.min(n - 2, Math.floor(raw));
+      const c = k + L.range(raw - k, 0.2, 0.8);
       cards.forEach((el, i) => {
-        const enter = L.ease(L.clamp(c - (i - 1)));          // 0 below the screen → 1 in place
+        const enter = L.ease(L.clamp(c - (i - 1)));          // 0 waiting in the depth → 1 in place
         const under = L.clamp(c - i);                          // how far the next card has covered it
-        const y = i === 0 ? 0 : (1 - enter) * 120;
-        el.style.transform = `translate3d(0, ${y}%, 0) scale(${1 - under * 0.06})`;
-        el.style.opacity = ((i === 0 ? 1 : Math.min(1, enter * 4)) * (1 - under * 0.5)).toFixed(3);
+        const e = i === 0 ? 1 : enter;
+        el.style.transform = `translate3d(0, ${(1 - e) * 6}%, ${(1 - e) * -260}px) rotateX(${(1 - e) * 24}deg) scale(${1 - under * 0.06})`;
+        el.style.opacity = (Math.min(1, e * 2.5) * (1 - under * 0.5)).toFixed(3);
+        el.style.visibility = e < 0.01 ? "hidden" : "";
       });
       return;
     }

@@ -370,3 +370,11 @@
 }
 
 .ambient { display: none !important; }
+
+/* Tall phones keep the Camera comparison under each line, like on desktop */
+@media (max-width: 720px) and (orientation: portrait) and (min-height: 780px) {
+  .vs em { display: block; font-size: 12px; line-height: 16px; }
+  .vs { gap: var(--s-100); }
+}
+@media (pointer: coarse) { .beat { filter: none !important; } }
+@media (max-width: 720px) and (orientation: portrait) { .moments .track { perspective: 1200px; perspective-origin: 50% 100%; } .moment { transform-origin: 50% 100%; } }
