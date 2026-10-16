@@ -20,7 +20,7 @@
 <link rel="icon" href="assets/fav/favicon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="assets/fav/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/landing.css?v=48">
+<link rel="stylesheet" href="assets/landing.css?v=50">
 <link rel="stylesheet" href="assets/mirrorly.css?v=55">
 <script type="application/ld+json">
 {
@@ -108,7 +108,6 @@
       <div class="opener-actions">
         <span class="btn when-soon" aria-disabled="true"><svg aria-hidden="true"><use href="#i-apple-logo"/></svg>Coming soon to the App Store</span>
         <a class="store-badge when-live" href="https://apps.apple.com/app/id6792856754" data-store-link><img src="assets/app-store-badge-white.svg" alt="Download on the App Store" width="156" height="52"></a>
-        <button class="play" type="button" id="film-toggle" aria-label="Pause film"><svg aria-hidden="true"><use href="#i-pause"/></svg></button>
       </div>
     </div>
   </div>
@@ -292,7 +291,6 @@
       <video id="story" muted loop playsinline preload="none" poster="assets/media/story-poster.jpg" aria-label="Animated story: caught in the rain, too dark to see her reflection, she finds Mirrorly, the phone lights her up and she walks off like a superhero">
         <source src="assets/media/story.mp4" type="video/mp4">
       </video>
-      <button class="play" type="button" id="story-toggle" aria-label="Play film"><svg aria-hidden="true"><use href="#i-play"/></svg></button>
     </figure>
   </div>
 </section>
@@ -323,7 +321,7 @@
   const $ = (id) => document.getElementById(id);
 
   // 0. The film: full screen; its colours light the page around it; scrolling pulls it back
-  const film = $("film"), screen = $("screen"), amb = $("ambient"), bar = $("opener-bar"), ft = $("film-toggle");
+  const film = $("film"), screen = $("screen"), amb = $("ambient"), bar = $("opener-bar");
   // pick the cut whose shape is closest to the window; switch on resize
   let cut = "";
   const pickCut = () => {
@@ -357,9 +355,6 @@
   let userPaused = reduce;
   if (!L.phone) pickCut(); else { film.removeAttribute("autoplay"); film.querySelector("source").remove(); film.removeAttribute("poster"); film.load(); }
   if (reduce) { film.removeAttribute("autoplay"); film.pause(); }
-  const fIcon = () => { ft.querySelector("use").setAttribute("href", film.paused ? "#i-play" : "#i-pause"); ft.setAttribute("aria-label", film.paused ? "Play film" : "Pause film"); };
-  ["play", "playing", "pause", "timeupdate"].forEach((ev) => film.addEventListener(ev, fIcon)); fIcon();
-  ft.addEventListener("click", () => { if (film.paused) { userPaused = false; film.play(); } else { userPaused = true; film.pause(); } });
   new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting && !userPaused) film.play().catch(() => {}); else if (!e.isIntersecting) film.pause(); }), { threshold: 0.2 }).observe(screen);
   const actx = amb.getContext("2d");
   // the ambient light only needs a few frames a second, and none while the opener is off screen
@@ -504,11 +499,8 @@
   }
 
   // The story film at the bottom: plays while on screen
-  const sv = $("story"), st = $("story-toggle");
-  let sPaused = reduce;
-  const sIcon = () => { st.querySelector("use").setAttribute("href", sv.paused ? "#i-play" : "#i-pause"); st.setAttribute("aria-label", sv.paused ? "Play film" : "Pause film"); };
-  ["play", "playing", "pause"].forEach((ev) => sv.addEventListener(ev, sIcon));
-  st.addEventListener("click", () => { if (sv.paused) { sPaused = false; sv.play(); } else { sPaused = true; sv.pause(); } });
+  const sv = $("story"); sv.muted = true; sv.playsInline = true;
+  const sPaused = reduce;
   new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting && !sPaused) sv.play().catch(() => {}); else if (!e.isIntersecting) sv.pause(); }), { threshold: 0.4 }).observe(sv);
 
 })();

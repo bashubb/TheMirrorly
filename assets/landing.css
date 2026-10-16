@@ -406,3 +406,8 @@ h3 { font-size: 20px; line-height: 28px; letter-spacing: -0.01em; }
 .film-intro-skip { position: absolute; z-index: 2; top: calc(var(--nav-h) + var(--s-100)); right: max(var(--gutter), env(safe-area-inset-right, 0px)); min-height: 44px; padding: var(--s-75) var(--s-200); border: 0; border-radius: 9999px; background: rgba(0, 0, 0, 0.45); color: #fff; font-size: 14px; line-height: 20px; font-weight: 600; cursor: pointer; transition: opacity 300ms var(--ease), transform 120ms var(--ease); }
 .film-intro-skip:active { transform: scale(0.96); }
 .film-intro.done .film-intro-skip, .film-intro.done .film-intro-ui { opacity: 0; pointer-events: none; }
+
+/* No play buttons on our films: hide the native start glyph iOS paints on a video that waits to play */
+video::-webkit-media-controls-start-playback-button { display: none !important; -webkit-appearance: none; }
+video::-webkit-media-controls-overlay-play-button { display: none !important; }
+video:not([controls])::-webkit-media-controls { display: none !important; }
