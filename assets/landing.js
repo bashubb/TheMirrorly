@@ -126,6 +126,9 @@
     if (!phone) return;
     const v = sec.querySelector("video"), bar = sec.querySelector(".film-intro-bar b"), skip = sec.querySelector(".film-intro-skip");
     const tall = innerHeight >= innerWidth;
+    // iOS autoplays only a muted inline video: set it all as properties too, before the source
+    v.muted = true; v.defaultMuted = true; v.playsInline = true; v.autoplay = !reduce.matches;
+    v.setAttribute("muted", ""); v.setAttribute("playsinline", "");
     v.poster = tall ? v.dataset.tallPoster : v.dataset.widePoster;
     v.src = tall ? v.dataset.tall : v.dataset.wide;
     const end = +v.dataset.end || 0;                    // a cut that must stop early (before a rewind)
@@ -134,7 +137,14 @@
     const relax = () => { sec.classList.remove("pulling"); sec.style.setProperty("--tug", "0px"); };
     const moveOn = () => { const n = sec.nextElementSibling; if (n) n.scrollIntoView({ behavior: reduce.matches ? "auto" : "smooth", block: "start" }); };
     const atFilm = () => scrollY < sec.offsetTop + sec.offsetHeight / 2;
-    const play = () => v.play().catch(() => { v.controls = true; });   // Low Power Mode blocks autoplay: a tap plays it
+    // a play() that fails while the clip is still loading is retried when it can play; only a real
+    // "not allowed" (Low Power Mode) asks for a tap, which the touch handler below turns into play()
+    const play = () => {
+      const pr = v.play();
+      if (pr) pr.catch((err) => { if (err && err.name === "NotAllowedError") sec.classList.add("tap"); });
+    };
+    v.addEventListener("canplay", () => { if (held && v.paused) play(); });
+    v.addEventListener("playing", () => sec.classList.remove("tap"));
     const start = () => {                               // each time it shows up: from the beginning, playing, holding
       sec.classList.remove("done");
       try { v.currentTime = 0; } catch (e) {}
@@ -161,6 +171,7 @@
     // the hold: a soft swipe only tugs the film; a long or fast one lets go
     let y0 = 0, t0 = 0, dy = 0;
     sec.addEventListener("touchstart", (e) => { y0 = e.touches[0].clientY; t0 = performance.now(); dy = 0; if (held && v.paused) play(); }, { passive: true });
+    sec.addEventListener("click", () => { if (held && v.paused) play(); });
     sec.addEventListener("touchmove", (e) => {
       if (!held) return;
       if (e.cancelable) e.preventDefault();
