@@ -255,6 +255,20 @@
   const mqIO = new IntersectionObserver((es) => es.forEach((e) => e.target.classList.toggle("run", e.isIntersecting)));
   document.querySelectorAll(".m-marquee").forEach((m) => mqIO.observe(m));
 
+  // Links to a section jump straight there: no smooth scroll through the pinned scenes on the way,
+  // so nothing plays backwards or flickers. Scenes pick up their state from where the page lands.
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    const id = decodeURIComponent(a.getAttribute("href").slice(1));
+    const t = id ? document.getElementById(id) : null;
+    if (!t) return;
+    e.preventDefault();
+    t.scrollIntoView({ behavior: "instant", block: "start" });
+    history.pushState(null, "", "#" + id);
+    requestAnimationFrame(() => { if (window.Landing && Landing._tick) Landing._tick(); });
+  });
+
   // Scroll reveal
   const revealIO = new IntersectionObserver((entries) => {
     for (const e of entries) if (e.isIntersecting) { e.target.classList.add("in"); revealIO.unobserve(e.target); }
@@ -352,6 +366,7 @@
   window.Landing = {
     reduceMotion: () => reduce.matches,
     phone,
+    _tick: () => tick(),
     scene(name, fn) {
       if (phone) return;                                 // phones have no pinned scenes
       scenes.set(name, fn);
