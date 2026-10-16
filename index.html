@@ -20,8 +20,8 @@
 <link rel="icon" href="assets/fav/favicon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="assets/fav/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/landing.css?v=47">
-<link rel="stylesheet" href="assets/mirrorly.css?v=51">
+<link rel="stylesheet" href="assets/landing.css?v=48">
+<link rel="stylesheet" href="assets/mirrorly.css?v=52">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -179,7 +179,7 @@
         <div class="m-txt"><span class="eyebrow">Zoom</span><h2 class="m-h">Closer than<br>a compact.</h2><p class="lead">Pinch in for brows, lashes and the last bit of highlighter.</p><span class="zoomer" id="m-zoomer">1.0×</span></div>
       </div>
       <div class="m-slide lit">
-        <div class="m-vis"><div class="iphone" data-finish="pro-silver"><img class="front" src="assets/media/m-zoom-1.webp" alt="Mirrorly showing her face at 1.0× with the ring light on" width="780" height="1608" loading="lazy"></div></div>
+        <div class="m-vis"><div class="iphone" data-finish="pro-silver"><img class="front" src="assets/media/m-look.webp" alt="Mirrorly on iPhone: a woman tucks her hair behind her ear, the light and settings buttons at the side, no shutter" width="780" height="1608" loading="lazy"></div></div>
         <div class="m-txt"><span class="eyebrow">Not the Camera app</span><h2 class="m-h">Made for looking,<br>not for shooting.</h2><ul class="vs on-all" aria-label="Mirrorly compared with the Camera app">
             <li><span>A ring light, whenever you want</span><em>Camera: flash only when you shoot</em></li>
             <li><span>Brightness at maximum</span><em>Camera: whatever it was</em></li>
@@ -260,6 +260,16 @@
   </div>
 </section>
 
+<section class="pad m-talk" id="talks" aria-labelledby="talk-title">
+  <div class="wrap m-talk-box reveal">
+    <span class="mascot m-talk-face" id="talk-face" data-face="wink" aria-hidden="true"></span>
+    <div>
+      <h2 class="m-h" id="talk-title">It also talks back. A little.</h2>
+      <p class="lead">Once in a while Mirrorly reads your face and says something to you. Make a face and find out what.</p>
+    </div>
+  </div>
+</section>
+
 <section class="pad m-end" aria-labelledby="final-title">
   <div class="wrap center reveal">
     <img class="m-icon" src="assets/icon-512.png" alt="" width="112" height="112">
@@ -304,7 +314,7 @@
 </footer>
 
 <script src="assets/mascot.js?v=1"></script>
-<script src="assets/landing.js?v=47"></script>
+<script src="assets/landing.js?v=49"></script>
 <script>
 (() => {
   const L = window.Landing;
@@ -461,6 +471,17 @@
       if (!e.isIntersecting) lights.classList.remove("lit-now");
       else if (lights.classList.contains("on")) lt = setTimeout(() => lights.classList.add("lit-now"), reduce ? 0 : 1300);
     }), { threshold: 0.5 }).observe(showCar);
+  }
+
+  // It talks back: the little mirror makes a few faces while the note is on screen
+  const tf = document.getElementById("talk-face");
+  if (tf && !reduce) {
+    const faces = ["wink", "oo", "squint", "smug", "happy"];
+    let fi = 0, ft = 0;
+    new IntersectionObserver((es) => es.forEach((e) => {
+      clearInterval(ft);
+      if (e.isIntersecting) ft = setInterval(() => { fi = (fi + 1) % faces.length; Mascot.set(tf, faces[fi]); tf.classList.remove("bounce"); void tf.offsetWidth; tf.classList.add("bounce"); }, 1600);
+    }), { threshold: 0.6 }).observe(tf);
   }
 
   // The story film at the bottom: plays while on screen

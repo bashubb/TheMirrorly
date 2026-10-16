@@ -387,10 +387,10 @@
   .show-m .m-h { color: #fff; }
   .show-m .lead { color: rgba(244, 237, 231, 0.75); }
   /* the ring light: a warm glow that spills out from under the phone */
-  .show-m .m-vis::before { content: ""; position: absolute; z-index: -1; left: 50%; top: 58%; width: 190%; height: 120%; transform: translate(-50%, -50%) scale(0.55);
-    border-radius: 50%; background: radial-gradient(closest-side, rgba(255, 226, 196, 0.55), rgba(255, 226, 196, 0.18) 50%, rgba(255, 226, 196, 0) 100%); opacity: 0;
-    transition: opacity 1200ms var(--ease), transform 1600ms var(--ease); }
-  .show-m .lit.on .m-vis::before { opacity: 0.7; transform: translate(-50%, -50%) scale(0.9); }
+  .show-m .m-vis::before { content: ""; position: absolute; z-index: -1; left: 50%; top: 60%; width: 260%; height: 150%; transform: translate(-50%, -50%) scale(0.5);
+    border-radius: 50%; background: radial-gradient(closest-side, rgba(255, 232, 205, 0.95), rgba(255, 214, 170, 0.5) 38%, rgba(255, 200, 150, 0.16) 68%, rgba(255, 200, 150, 0) 100%); opacity: 0;
+    transition: opacity 1100ms var(--ease), transform 1500ms var(--ease); }
+  .show-m .lit.on .m-vis::before { opacity: 0.6; transform: translate(-50%, -50%) scale(0.85); }
   .show-m .lights.lit-now .m-vis::before { opacity: 1; transform: translate(-50%, -50%) scale(1); }
   .show-m .lights .front.alt { opacity: 0; transition: opacity 700ms var(--ease); }
   .show-m .lights.lit-now .front.alt { opacity: 1; }
@@ -423,3 +423,9 @@
   .story-split { grid-template-columns: 1fr auto; text-align: left; }
   .story-film { width: calc((var(--m-room) - var(--s-400)) * 9 / 16); max-width: none; }
 }
+
+/* It talks back: a small note near the end, no lines quoted */
+.m-talk-box { display: flex; align-items: center; gap: var(--s-400); max-width: 720px; padding: var(--s-500); border-radius: 32px; background: var(--surface); border: 1px solid var(--line); }
+.m-talk-face { flex: none; width: 88px; }
+.m-talk .lead { margin-top: var(--s-100); }
+@media (max-width: 720px) and (orientation: portrait) { .m-talk-box { flex-direction: column; text-align: center; gap: var(--s-200); padding: var(--s-400) var(--s-300); } .m-talk-face { width: 72px; } }

@@ -121,41 +121,55 @@
       timer = setTimeout(next, left);
     };
     const pause = () => { clearTimeout(timer); left = Math.max(0, left - (performance.now() - since)); };
-    // touch: hold still to pause, swipe sideways to move; vertical movement is the page's (the browser cancels us)
-    let x0 = 0, y0 = 0, t0 = 0, ht = 0, w = 1, base = 0;
-    track.addEventListener("pointerdown", (e) => {
-      x0 = e.clientX; y0 = e.clientY; t0 = performance.now(); w = track.clientWidth || 1;
+    // touch: hold still to pause, swipe sideways to move; vertical movement stays the page's.
+    // Touch events (iOS Safari's most reliable path): the first clear direction decides, sideways blocks the page scroll.
+    let x0 = 0, y0 = 0, t0 = 0, ht = 0, w = 1, base = 0, axis = "";
+    const begin = (x, y) => {
+      x0 = x; y0 = y; t0 = performance.now(); w = track.clientWidth || 1; axis = "";
       clearTimeout(ht);
-      ht = setTimeout(() => { holding = true; pause(); }, 180);
-    });
-    track.addEventListener("pointermove", (e) => {
-      if (!e.buttons && e.pointerType === "mouse") return;
-      const dx = e.clientX - x0, dy = e.clientY - y0;
-      if (!dragging) {
-        if (Math.abs(dx) > 8 && Math.abs(dx) > Math.abs(dy)) {
-          clearTimeout(ht); dragging = true; pause();
-          if (pos === n) { pos = 0; } else if (pos === 0 && dx > 0) { pos = n; }
+      ht = setTimeout(() => { if (!axis) { holding = true; pause(); } }, 180);
+    };
+    const move = (x, y, e) => {
+      const dx = x - x0, dy = y - y0;
+      if (!axis && Math.hypot(dx, dy) > 8) {
+        clearTimeout(ht);
+        axis = Math.abs(dx) > Math.abs(dy) ? "x" : "y";
+        if (axis === "x") {
+          dragging = true; pause();
+          if (holding) holding = false;
+          if (pos === n) pos = 0; else if (pos === 0 && dx > 0) pos = n;
           base = pos;
-          try { track.setPointerCapture(e.pointerId); } catch (err) {}
-        } else if (Math.hypot(dx, dy) > 8) clearTimeout(ht);
-        if (!dragging) return;
+        }
       }
+      if (axis !== "x") return;
+      if (e && e.cancelable) e.preventDefault();
       place(base - dx / w, false);
-    });
-    const up = (e) => {
+    };
+    const end = (x) => {
       clearTimeout(ht);
       if (dragging) {
         dragging = false;
-        const dx = e.clientX - x0, v = dx / Math.max(1, performance.now() - t0);
+        const dx = x - x0, v = dx / Math.max(1, performance.now() - t0);
         pos = base;
         if (dx < -w * 0.2 || v < -0.4) next();
         else if (dx > w * 0.2 || v > 0.4) prev();
         else show(pos, true);
       }
-      if (holding) { holding = false; left = dur; run(); }
+      if (holding) { holding = false; left = dur; }
+      axis = ""; run();
     };
-    track.addEventListener("pointerup", up);
-    track.addEventListener("pointercancel", (e) => { if (dragging) up(e); else { clearTimeout(ht); if (holding) { holding = false; run(); } } });
+    let lastX = 0;
+    const area = car.closest("section") || track;           // the whole section answers to a swipe, not just the slides
+    area.style.touchAction = "pan-y";
+    area.addEventListener("touchstart", (e) => { const t = e.touches[0]; lastX = t.clientX; begin(t.clientX, t.clientY); }, { passive: true });
+    area.addEventListener("touchmove", (e) => { const t = e.touches[0]; lastX = t.clientX; move(t.clientX, t.clientY, e); }, { passive: false });
+    area.addEventListener("touchend", () => end(lastX), { passive: true });
+    area.addEventListener("touchcancel", () => end(lastX), { passive: true });
+    // mouse (desktop testing): the same with pointer events
+    let mouse = false;
+    area.addEventListener("pointerdown", (e) => { if (e.pointerType !== "mouse") return; mouse = true; begin(e.clientX, e.clientY); });
+    addEventListener("pointermove", (e) => { if (mouse) move(e.clientX, e.clientY, null); });
+    addEventListener("pointerup", (e) => { if (mouse) { mouse = false; end(e.clientX); } });
     track.addEventListener("contextmenu", (e) => e.preventDefault());
     new IntersectionObserver((es) => es.forEach((e) => { visible = e.isIntersecting; if (visible) run(); else pause(); }), { threshold: 0.5 }).observe(car);
     document.addEventListener("visibilitychange", () => { if (document.hidden) pause(); else run(); });
