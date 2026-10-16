@@ -448,3 +448,19 @@ video:not([controls])::-webkit-media-controls { display: none !important; }
   .doc-body { padding-bottom: var(--s-700); }
   .doc-body .contact { padding: var(--s-300); }
 }
+
+/* Language switch in the footer */
+.footer .langs { display: flex; flex-wrap: wrap; gap: var(--s-50) var(--s-100); width: 100%; font-size: 14px; line-height: 20px; }
+.footer .langs a { color: var(--muted); text-decoration: none; padding: var(--s-25) 0; }
+.footer .langs a[aria-current="true"] { color: var(--text); font-weight: 700; }
+@media (hover: hover) and (pointer: fine) { .footer .langs a:hover { color: var(--text); } }
+
+/* Guides: a screenshot as a phone sized card, related links as a list of cards */
+.doc-body .doc-shot { display: block; width: min(320px, 72vw); height: auto; margin: var(--s-500) auto; border-radius: 32px; border: 1px solid var(--line); }
+.doc-body ol { margin: var(--s-100) 0 0; padding-left: var(--s-300); display: grid; gap: var(--s-75); }
+.doc-body ol li { color: var(--muted); }
+.doc-body .contact .cta-row { margin-top: var(--s-300); }
+.doc-related { margin-top: var(--s-700); }
+.doc-related ul { list-style: none; padding: 0; display: grid; gap: var(--s-100); }
+.doc-related li a { display: block; padding: var(--s-200) var(--s-300); border-radius: 16px; background: var(--surface); border: 1px solid var(--line); color: var(--text); font-weight: 600; text-decoration: none; transition: border-color var(--dur) var(--ease); }
+@media (hover: hover) and (pointer: fine) { .doc-related li a:hover { border-color: var(--accent-text, var(--text)); } }

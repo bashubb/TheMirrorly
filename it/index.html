@@ -1,61 +1,52 @@
 <!doctype html>
-<html lang="it">
+<html lang="it" class="no-js" data-store="soon">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>App specchio per iPhone con luce e zoom | Mirrorly</title>
-<meta name="description" content="Mirrorly trasforma l’iPhone in uno specchio: schermo intero, luce ad anello, zoom per denti e sopracciglia. Nessuna foto salvata, nessun account.">
-<link rel="canonical" href="https://bashubb.github.io/TheMirrorly/it/">
-<link rel="alternate" hreflang="en" href="https://bashubb.github.io/TheMirrorly/">
-<link rel="alternate" hreflang="de" href="https://bashubb.github.io/TheMirrorly/de/">
-<link rel="alternate" hreflang="fr" href="https://bashubb.github.io/TheMirrorly/fr/">
-<link rel="alternate" hreflang="es" href="https://bashubb.github.io/TheMirrorly/es/">
-<link rel="alternate" hreflang="it" href="https://bashubb.github.io/TheMirrorly/it/">
-<link rel="alternate" hreflang="ja" href="https://bashubb.github.io/TheMirrorly/ja/">
-<link rel="alternate" hreflang="zh-Hans" href="https://bashubb.github.io/TheMirrorly/zh/">
-<link rel="alternate" hreflang="x-default" href="https://bashubb.github.io/TheMirrorly/">
-<meta name="robots" content="index, follow">
-<meta name="author" content="Hubert Kiełkowski">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mirrorly: app specchio per iPhone con luce ad anello e zoom</title>
+<meta name="description" content="Mirrorly trasforma il tuo iPhone in un vero specchio, con luce ad anello, zoom e un umorismo asciutto. Nessuna foto salvata, nessun account, nessuna pubblicità. Presto su iPhone.">
+<link rel="alternate" hreflang="en" href="https://bashubb.com/TheMirrorly/">
+<link rel="alternate" hreflang="de" href="https://bashubb.com/TheMirrorly/de/">
+<link rel="alternate" hreflang="fr" href="https://bashubb.com/TheMirrorly/fr/">
+<link rel="alternate" hreflang="es" href="https://bashubb.com/TheMirrorly/es/">
+<link rel="alternate" hreflang="it" href="https://bashubb.com/TheMirrorly/it/">
+<link rel="alternate" hreflang="ja" href="https://bashubb.com/TheMirrorly/ja/">
+<link rel="alternate" hreflang="zh-Hans" href="https://bashubb.com/TheMirrorly/zh/">
+<link rel="alternate" hreflang="x-default" href="https://bashubb.com/TheMirrorly/">
+<link rel="canonical" href="https://bashubb.com/TheMirrorly/it/">
+<meta name="theme-color" content="#151012">
+<meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
-<meta property="og:title" content="App specchio per iPhone con luce e zoom | Mirrorly">
-<meta property="og:description" content="Mirrorly trasforma l’iPhone in uno specchio: schermo intero, luce ad anello, zoom per denti e sopracciglia. Nessuna foto salvata, nessun account.">
-<meta property="og:image" content="https://bashubb.github.io/TheMirrorly/assets/screenshots/it/check-before-anyone-web.jpg">
-<meta property="og:url" content="https://bashubb.github.io/TheMirrorly/it/">
 <meta property="og:site_name" content="Mirrorly">
+<meta property="og:title" content="Mirrorly: Un po’ di luce. Uno sguardo più da vicino.">
+<meta property="og:description" content="Uno specchietto tascabile per iPhone con luce ad anello, zoom e opinioni proprie. Presto disponibile.">
+<meta property="og:url" content="https://bashubb.com/TheMirrorly/it/">
 <meta property="og:locale" content="it_IT">
+<meta property="og:image" content="https://bashubb.com/TheMirrorly/assets/social-preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mirrorly: un po’ di luce, uno sguardo più da vicino. Uno specchietto tascabile per iPhone con luce ad anello e zoom.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="App specchio per iPhone con luce e zoom | Mirrorly">
-<meta name="twitter:description" content="Mirrorly trasforma l’iPhone in uno specchio: schermo intero, luce ad anello, zoom per denti e sopracciglia. Nessuna foto salvata, nessun account.">
-<meta name="twitter:image" content="https://bashubb.github.io/TheMirrorly/assets/screenshots/it/check-before-anyone-web.jpg">
-<meta name="apple-itunes-app" content="app-id=6792856754">
+<meta name="twitter:image" content="https://bashubb.com/TheMirrorly/assets/social-preview.jpg">
+<meta name="twitter:image:alt" content="Mirrorly: un po’ di luce, uno sguardo più da vicino. Uno specchietto tascabile per iPhone con luce ad anello e zoom.">
 <link rel="icon" href="../assets/fav/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="icon" href="../assets/fav/favicon-48.png" type="image/png" sizes="48x48">
 <link rel="icon" href="../assets/fav/favicon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="../assets/fav/apple-touch-icon.png">
-<link rel="stylesheet" href="../assets/style.css">
+<link rel="preload" href="../assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/landing.css?v=55">
+<link rel="stylesheet" href="../assets/mirrorly.css?v=57">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Mirrorly",
-  "alternateName": "Specchio con luce: Mirrorly",
-  "operatingSystem": "iOS",
+  "operatingSystem": "iOS 26 or later",
   "applicationCategory": "LifestyleApplication",
-  "description": "App specchio per iPhone: specchio a schermo intero con la fotocamera frontale, luce ad anello, zoom e luminosità al massimo. Nessuna foto salvata, nessun account, nessuna pubblicità.",
-  "image": "https://bashubb.github.io/TheMirrorly/assets/icon-1024.png",
-  "url": "https://bashubb.github.io/TheMirrorly/it/",
-  "installUrl": "https://apps.apple.com/app/id6792856754",
-  "inLanguage": "it",
-  "author": {
-    "@type": "Person",
-    "name": "Hubert Kiełkowski"
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD",
-    "description": "Prova gratuita (tre controlli), poi sblocco una tantum a vita. Nessun abbonamento."
-  }
+  "description": "Un’app specchio per iPhone: uno specchio a tutto schermo con la fotocamera frontale, luce ad anello, zoom e luminosità al massimo. Nessuna foto salvata, nessun account, nessuna pubblicità.",
+  "url": "https://bashubb.com/TheMirrorly/it/",
+  "image": "https://bashubb.com/TheMirrorly/assets/icon-1024.png",
+  "publisher": {"@type": "Organization", "name": "bashubb", "url": "https://bashubb.com/"}
 }
 </script>
 <script type="application/ld+json">
@@ -63,358 +54,497 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Mirrorly è gratis?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Mirrorly si scarica e si prova gratis: i primi tre controlli allo specchio non costano nulla. Poi un acquisto una tantum lo sblocca per sempre: nessun abbonamento e, in ogni caso, nessuna pubblicità."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "L’iPhone ha un’app specchio integrata?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. iOS non ha un’app specchio. Quasi tutti usano l’app Fotocamera, ma è fatta per scattare foto: il pulsante di scatto è sotto il pollice, la luminosità non è al massimo e non c’è luce frontale. Mirrorly trasforma la fotocamera frontale in uno specchio vero."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Mirrorly salva o carica le mie foto?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Mirrorly non ha un pulsante di scatto e non cattura, salva o carica mai foto, video, fotogrammi della fotocamera o dati del volto. Il flusso della fotocamera e l’analisi delle espressioni restano sul tuo iPhone. E non c’è nemmeno un account."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Mirrorly funziona al buio?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sì. Tocca la lampadina e i bordi dello schermo diventano una luce ad anello alla massima luminosità: utile in auto di notte, in un bagno buio o in albergo. Puoi regolarne la temperatura, e Mirrorly ti suggerisce la luce quando rileva un’illuminazione scarsa."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Posso ingrandire per controllare denti o sopracciglia?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sì. Trascina il cursore dello zoom o pizzica lo schermo per ingrandire. Circa 2× bastano per vedere residui di cibo tra i denti, mettere una lente a contatto o togliere un pelo ribelle."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "È la stessa cosa della duplicazione dello schermo?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. La duplicazione dello schermo (AirPlay) invia lo schermo dell’iPhone a un televisore. Mirrorly è uno specchio: mostra il tuo viso con la fotocamera frontale, come farebbe un vetro."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Perché in Mirrorly mi vedo diverso rispetto ai selfie?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Mirrorly ti mostra sempre a specchio, come un vetro vero: la versione del tuo viso a cui sei abituato. I selfie vengono salvati non specchiati, come ti vedono gli altri, ed è per questo che le foto possono sembrare un po’ «strane»."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Perché lo specchio mi parla?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "È la personalità di Mirrorly. Un’analisi delle espressioni sul dispositivo legge il tuo viso e risponde con una battuta asciutta come «okay, posa da diva.» o «allontanati, detective dei pori.» Le Reazioni dello specchio si spengono nelle impostazioni. Nulla del tuo viso esce dal telefono."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Mirrorly esiste per Android?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Mirrorly è un’app iOS per iPhone, disponibile sull’App Store in italiano, inglese, tedesco, francese, spagnolo, giapponese e cinese semplificato."
-      }
-    }
+    {"@type": "Question", "name": "L’iPhone ha un’app specchio integrata?", "acceptedAnswer": {"@type": "Answer", "text": "No. iOS non ha un’app specchio. Molti usano l’app Fotocamera, ma è fatta per scattare foto. Mirrorly trasforma la fotocamera frontale in un vero specchio, con luminosità al massimo, luce ad anello e zoom."}},
+    {"@type": "Question", "name": "Mirrorly salva o carica le mie foto?", "acceptedAnswer": {"@type": "Answer", "text": "No. Mirrorly non ha un pulsante di scatto e non acquisisce, salva o carica mai foto, video, fotogrammi della fotocamera o dati del viso. Non c’è nessun account."}},
+    {"@type": "Question", "name": "Mirrorly funziona al buio?", "acceptedAnswer": {"@type": "Answer", "text": "Sì. Tocca la lampadina e i bordi dello schermo diventano una luce ad anello alla massima luminosità. Puoi renderla più calda o più fredda."}},
+    {"@type": "Question", "name": "Perché lo specchio mi parla?", "acceptedAnswer": {"@type": "Answer", "text": "È la personalità di Mirrorly. Un’analisi delle espressioni, fatta sul dispositivo, legge il tuo viso e risponde con una battuta asciutta. Puoi disattivare le Reazioni dello specchio nelle Impostazioni."}}
   ]
 }
 </script>
 </head>
 <body>
-<header class="site-header">
-  <div class="wrap">
-    <a href="./" class="brand"><img src="../assets/icon-512.png" alt="Mirrorly app icon" width="32" height="32">Mirrorly</a>
-    <nav class="nav-links" aria-label="Main">
-      <a href="./#how-it-works">Come funziona</a>
-      <a href="./#guides">Guide</a>
-      <a href="./#faq">FAQ</a>
-    </nav>
-    <a href="https://apps.apple.com/app/id6792856754" class="btn btn-primary btn-sm">Scarica</a>
-  </div>
-</header>
-<main>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-apple-logo" viewBox="0 0 256 256" fill="currentColor"><path d="M227,168a12,12,0,0,0-4.21-5.09C207.25,152.22,204,133.68,204,120c0-16.17,12.68-30.6,20.25-37.76a12,12,0,0,0,0-17.43C210.89,52.17,188.81,44,168,44a76.29,76.29,0,0,0-40,11.37,75.59,75.59,0,0,0-93.58,11A78.64,78.64,0,0,0,12,123.51,131,131,0,0,0,53.43,216,43.81,43.81,0,0,0,83.6,228h87.69a43.87,43.87,0,0,0,32.05-13.85,127.63,127.63,0,0,0,18.4-25.39c1.57-2.88,3-5.71,4.14-8.41C227.47,176.67,229.12,172.87,227,168Zm-41.23,29.82A19.78,19.78,0,0,1,171.29,204H83.6a19.85,19.85,0,0,1-13.7-5.42A107.18,107.18,0,0,1,36,122.88,54.49,54.49,0,0,1,51.5,83.28,50.86,50.86,0,0,1,88,68h.72A51.5,51.5,0,0,1,120.48,79.4a12,12,0,0,0,15,0A51.41,51.41,0,0,1,168,68a67.24,67.24,0,0,1,29.88,7.4C186.26,89.66,180,105.13,180,120c0,23.33,7.47,42.89,21.25,56.19A103.3,103.3,0,0,1,185.76,197.81ZM128.75,13A43.83,43.83,0,0,1,142.17,1.51a12,12,0,0,1,11.64,21,19.84,19.84,0,0,0-6.11,5.24A12,12,0,0,1,128.75,13Z"/></symbol><symbol id="i-lightbulb" viewBox="0 0 256 256" fill="currentColor"><path d="M180,232a12,12,0,0,1-12,12H88a12,12,0,0,1,0-24h80A12,12,0,0,1,180,232Zm40-128a91.51,91.51,0,0,1-35.17,72.35A12.26,12.26,0,0,0,180,186v2a20,20,0,0,1-20,20H96a20,20,0,0,1-20-20v-2a12,12,0,0,0-4.7-9.51A91.57,91.57,0,0,1,36,104.52C35.73,54.69,76,13.2,125.79,12A92,92,0,0,1,220,104Zm-24,0a68,68,0,0,0-69.65-68C89.56,36.88,59.8,67.55,60,104.38a67.71,67.71,0,0,0,26.1,53.19A35.87,35.87,0,0,1,100,184h56.1A36.13,36.13,0,0,1,170,157.49,67.68,67.68,0,0,0,196,104Zm-20.07-5.32a48.5,48.5,0,0,0-31.91-40,12,12,0,0,0-8,22.62,24.31,24.31,0,0,1,16.09,20,12,12,0,0,0,23.86-2.64Z"/></symbol><symbol id="i-magnifying-glass-plus" viewBox="0 0 256 256" fill="currentColor"><path d="M156,112a12,12,0,0,1-12,12H124v20a12,12,0,0,1-24,0V124H80a12,12,0,0,1,0-24h20V80a12,12,0,0,1,24,0v20h20A12,12,0,0,1,156,112Zm76.49,120.49a12,12,0,0,1-17,0L168,185a92.12,92.12,0,1,1,17-17l47.54,47.53A12,12,0,0,1,232.49,232.49ZM112,180a68,68,0,1,0-68-68A68.08,68.08,0,0,0,112,180Z"/></symbol><symbol id="i-pause" viewBox="0 0 256 256" fill="currentColor"><path d="M200,28H160a20,20,0,0,0-20,20V208a20,20,0,0,0,20,20h40a20,20,0,0,0,20-20V48A20,20,0,0,0,200,28Zm-4,176H164V52h32ZM96,28H56A20,20,0,0,0,36,48V208a20,20,0,0,0,20,20H96a20,20,0,0,0,20-20V48A20,20,0,0,0,96,28ZM92,204H60V52H92Z"/></symbol><symbol id="i-play" viewBox="0 0 256 256" fill="currentColor"><path d="M234.49,111.07,90.41,22.94A20,20,0,0,0,60,39.87V216.13a20,20,0,0,0,30.41,16.93l144.08-88.13a19.82,19.82,0,0,0,0-33.86ZM84,208.85V47.15L216.16,128Z"/></symbol><symbol id="i-plus" viewBox="0 0 256 256" fill="currentColor"><path d="M228,128a12,12,0,0,1-12,12H140v76a12,12,0,0,1-24,0V140H40a12,12,0,0,1,0-24h76V40a12,12,0,0,1,24,0v76h76A12,12,0,0,1,228,128Z"/></symbol></svg>
 
-<section class="hero" id="top">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="eyebrow">Prova gratis sull’App Store</span>
-      <h1>L’app specchio per iPhone che funziona davvero come uno specchio</h1>
-      <p class="hero-sub">Uno specchio da telefono a schermo intero con luce ad anello, zoom e luminosità al massimo. Controlla capelli, trucco e denti prima che lo facciano gli altri.</p>
-      <div class="hero-ctas">
-        <a href="https://apps.apple.com/app/id6792856754" class="btn btn-primary">Scarica Mirrorly</a>
-        <a href="#how-it-works" class="btn btn-secondary">Guarda come funziona</a>
-      </div>
-      <div class="trust-row">
-        <span>Nessuna foto salvata</span>
-        <span>Nessun account</span>
-        <span>Nessuna pubblicità</span>
-        <span>Nessun abbonamento</span>
-      </div>
-      <p class="disambig" style="margin-top:16px">Non è la duplicazione dello schermo: è uno specchio vero, con la tua fotocamera frontale.</p>
-    </div>
-    <div class="hero-visual">
-      <img src="../assets/screenshots/it/check-before-anyone-web.jpg" alt="Controllo rapido in Mirrorly: un uomo in ufficio si sistema la cravatta nello specchio dell’iPhone" width="1080" height="2337" fetchpriority="high">
+<a class="skip" href="#main">Vai al contenuto</a>
+
+<nav class="island keep-pill" aria-label="Navigazione principale">
+  <a class="brand" href="./"><img src="../assets/icon-512.png" alt="" width="36" height="36">Mirrorly</a>
+  <div class="links">
+    <a href="#show">Lo specchio</a>
+    <a href="#moments">Momenti</a>
+    <a href="#guides">Guide</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <span class="btn sm cta when-soon" aria-disabled="true">Presto</span>
+  <a class="btn sm cta when-live" href="https://apps.apple.com/app/id6792856754" data-store-link>Scarica</a>
+  <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Apri il menu"><span></span><span></span></button>
+</nav>
+<div class="menu" id="menu">
+  <a href="#show">Lo specchio</a>
+  <a href="#moments">Momenti</a>
+  <a href="#guides">Guide</a>
+  <a href="#faq">FAQ</a>
+  <a href="../privacy/">Privacy</a>
+</div>
+
+<main id="main">
+<section class="m-only film-intro" data-film-intro aria-label="Mirrorly in 18 secondi">
+  <video muted playsinline preload="auto" data-tall="../assets/media/mirror-film-tall.mp4" data-tall-poster="../assets/media/mirror-film-tall-poster.jpg" data-wide="../assets/media/mirror-film-wide.mp4" data-wide-poster="../assets/media/mirror-film-wide-poster.jpg" aria-label="Film animato: lo specchio di Mirrorly si sveglia al buio, si accende come una luce ad anello e fa zoom"></video>
+  <button class="film-intro-skip" type="button">Salta</button>
+  <div class="film-intro-ui" aria-hidden="true"><span class="film-intro-hint">Scorri con decisione verso l’alto per saltare</span></div>
+</section>
+
+<section class="m-only m-intro" aria-labelledby="m-intro-title">
+  <div class="wrap center m-fit">
+    <img class="m-icon" src="../assets/icon-512.png" alt="" width="96" height="96">
+    <h2 class="m-title" id="m-intro-title">Mirrorly</h2>
+    <p class="lead">Uno specchietto tascabile per iPhone, con luce ad anello e zoom. Presto disponibile.</p>
+    <div class="cta-row">
+      <span class="btn when-soon" aria-disabled="true"><svg aria-hidden="true"><use href="#i-apple-logo"/></svg>Presto sull’App Store</span>
+      <a class="store-badge when-live" href="https://apps.apple.com/app/id6792856754" data-store-link><img src="../assets/app-store-badge-white.svg" alt="Scarica su App Store" width="156" height="52"></a>
     </div>
   </div>
 </section>
 
-<section class="section-alt" id="download">
-  <div class="wrap">
-    <div class="download-inner">
+<!-- 0. The film first: full screen, its own light spilling around it -->
+<section class="scene opener d-only" data-scene="opener" aria-labelledby="hero-title">
+  <div class="scene-pin">
+    <canvas class="ambient" id="ambient" width="8" height="6" hidden></canvas>
+    <span class="spill" id="spill" aria-hidden="true"></span>
+    <div class="screen" id="screen">
+      <video id="film" autoplay muted loop playsinline preload="auto" poster="../assets/media/mirror-film-wide-poster.jpg" aria-label="Film animato: lo specchio di Mirrorly si sveglia al buio, si accende come una luce ad anello, fa zoom, scansa il pulsante di scatto e fa commenti asciutti">
+        <source src="../assets/media/mirror-film-wide.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="opener-bar wrap" id="opener-bar">
       <div>
-        <h2>Lo specchietto da borsa che non dimenticherai mai a casa</h2>
-        <p>Prova gratuita per iPhone. Si apre direttamente come specchio: nessuna registrazione, nessun menu.</p>
+        <h1 class="opener-title" id="hero-title">Mirrorly</h1>
+        <p class="opener-line">Uno specchietto tascabile per iPhone. Presto disponibile.</p>
       </div>
-      <a href="https://apps.apple.com/app/id6792856754" aria-label="Scarica su App Store">
-        <img class="badge-store" src="../assets/app-store-badge-black.svg" alt="Scarica su App Store" width="160" height="52">
-      </a>
-    </div>
-  </div>
-</section>
-
-<section id="screenshots">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Cosa fa</span>
-      <h2>Uno specchio con luce, zoom… e opinioni</h2>
-      <p>Tutto quello che fa uno specchietto, più quello che uno specchietto non può fare.</p>
-    </div>
-    <div class="screens-grid">
-      <div class="screen-card">
-        <img src="../assets/screenshots/it/check-before-anyone-web.jpg" alt="Controllo rapido in Mirrorly: un uomo in ufficio si sistema la cravatta nello specchio dell’iPhone" width="1080" height="2337" loading="lazy">
-        <h3>Controlla prima che lo facciano gli altri</h3>
-        <p>Schermo intero, sempre a specchio, luminosità al massimo. Capelli, colletto, denti: dieci secondi.</p>
-      </div>
-      <div class="screen-card">
-        <img src="../assets/screenshots/it/see-in-the-dark-web.jpg" alt="Luce ad anello di Mirrorly: i bordi dello schermo dell’iPhone si illuminano per una donna che applica l’eyeliner al buio" width="1080" height="2337" loading="lazy">
-        <h3>Guardati anche al buio</h3>
-        <p>Tocca la lampadina e i bordi dello schermo diventano una luce ad anello. Auto, bagno buio, camera d’albergo alle 6 del mattino.</p>
-      </div>
-      <div class="screen-card">
-        <img src="../assets/screenshots/it/catch-in-your-teeth-web.jpg" alt="Cursore dello zoom di Mirrorly a 1,7× che ingrandisce i denti di una donna per trovare residui di cibo" width="1080" height="2337" loading="lazy">
-        <h3>Scopri cosa hai tra i denti</h3>
-        <p>Pizzica o scorri per lo zoom. Spinaci, semi di papavero, un pelo ribelle sul sopracciglio: a 2× non si nasconde niente.</p>
-      </div>
-      <div class="screen-card">
-        <img src="../assets/screenshots/it/get-judged-web.jpg" alt="Commento ironico di Mirrorly «okay, quel sorrisetto compiaciuto.» sotto un uomo sorridente" width="1080" height="2337" loading="lazy">
-        <h3>Fatti giudicare dal tuo specchio</h3>
-        <p>Legge la tua espressione e risponde. «okay, quel sorrisetto compiaciuto.» Si spegne quando vuoi un po’ di pace.</p>
+      <div class="opener-actions">
+        <span class="btn when-soon" aria-disabled="true"><svg aria-hidden="true"><use href="#i-apple-logo"/></svg>Presto sull’App Store</span>
+        <a class="store-badge when-live" href="https://apps.apple.com/app/id6792856754" data-store-link><img src="../assets/app-store-badge-white.svg" alt="Scarica su App Store" width="156" height="52"></a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section-alt" id="how-it-works">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Come funziona</span>
-      <h2>Apri. Guarda. Chiudi. È tutta qui, l’app.</h2>
-    </div>
-    <div class="steps">
-      <div>
-        <div class="step-num">1</div>
-        <h3>Apri Mirrorly</h3>
-        <p>La fotocamera frontale si accende all’istante, a schermo intero e a specchio come un vetro. La luminosità sale da sola al massimo.</p>
+
+<!-- 1. Light, zoom, better than the Camera app -->
+<section class="scene show d-only" id="show" data-scene="show" aria-label="Lo specchio">
+  <div class="scene-pin">
+    <span class="room" id="room" aria-hidden="true"></span>
+    <span class="glow" id="glow" aria-hidden="true"></span>
+    <div class="wrap show-grid">
+      <div class="beats">
+        <span class="mascot beat-mascot" id="beat-mascot" data-face="wink" aria-hidden="true"></span>
+        <div class="beat on">
+          <span class="eyebrow">Lo specchio</span>
+          <h2 class="m-title">Il tuo iPhone,<br>come specchio.</h2>
+          <p class="lead">Con luce ad anello, zoom e un pizzico di carattere.</p>
+          <div class="cta-row">
+            <span class="btn when-soon" aria-disabled="true"><svg aria-hidden="true"><use href="#i-apple-logo"/></svg>Presto sull’App Store</span>
+            <a class="store-badge when-live" href="https://apps.apple.com/app/id6792856754" data-store-link><img src="../assets/app-store-badge-white.svg" alt="Scarica su App Store" width="156" height="52"></a>
+          </div>
+          <span class="cue" aria-hidden="true"><i></i>Scorri</span>
+        </div>
+        <div class="beat">
+          <h2 class="word small">Una buona luce,<br>ovunque tu sia.</h2>
+          <p class="lead">Tocca la lampadina e lo schermo ti illumina. Un’auto al buio, un bagno poco illuminato, una camera d’albergo a mezzanotte.</p>
+        </div>
+        <div class="beat">
+          <h2 class="word small">Più da vicino<br>di uno specchietto.</h2>
+          <p class="lead">Fai zoom per sopracciglia, ciglia e l’ultimo tocco di illuminante.</p>
+          <span class="zoomer" id="zoomer">1.0×</span>
+        </div>
+        <div class="beat">
+          <h2 class="word small">Fatto per guardarti,<br>non per scattare.</h2>
+          <ul class="vs" aria-label="Mirrorly a confronto con l’app Fotocamera">
+            <li><span>Una luce ad anello, quando vuoi</span><em>Fotocamera: flash solo quando scatti</em></li>
+            <li><span>Luminosità al massimo</span><em>Fotocamera: quella che c’era</em></li>
+            <li><span>Nessun pulsante da premere per sbaglio</span><em>Fotocamera: un tocco sbagliato, una foto</em></li>
+            <li><span>Niente salvato, mai</span><em>Fotocamera: ora è nella tua libreria</em></li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <div class="step-num">2</div>
-        <h3>Tocca la lampadina se è buio</h3>
-        <p>Il bordo dello schermo diventa una luce ad anello, calda o fredda, come preferisci. Mirrorly ti avvisa persino quando la luce è cattiva.</p>
-      </div>
-      <div>
-        <div class="step-num">3</div>
-        <h3>Zoom per i dettagli</h3>
-        <p>Trascina il cursore o pizzica per ingrandire denti, sopracciglia e lenti a contatto. Metti i comandi dal lato che preferisce il tuo pollice.</p>
-      </div>
-      <div>
-        <div class="step-num">4</div>
-        <h3>Chiudi e vai</h3>
-        <p>Niente è stato fotografato, registrato o caricato. Aspettati però un commento dello specchio mentre esci.</p>
+      <div class="stage" role="img" aria-label="Mirrorly su iPhone: una stanza buia illuminata dalla luce ad anello, poi uno sguardo da vicino a sopracciglia e pelle">
+        <div class="iphone mphone" id="mphone" data-finish="pro-silver">
+          <img class="front" id="f-off" src="../assets/media/m-light-off.webp" alt="" width="780" height="1608">
+          <img class="front alt" id="f-on" src="../assets/media/m-light-on.webp" alt="" width="780" height="1608">
+          <img class="front alt" id="f-z1" src="../assets/media/m-zoom-1.webp" alt="" width="780" height="1608">
+          <img class="front alt" id="f-z2" src="../assets/media/m-zoom-2.webp" alt="" width="780" height="1608">
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="guides">
+<section class="m-only m-sec show-m" id="show-m" aria-labelledby="show-m-title">
+  <div class="m-car" data-carousel="5500">
+    <div class="m-track">
+      <div class="m-slide">
+        <div class="m-vis"><div class="iphone" data-finish="pro-silver"><img class="front" src="../assets/media/m-moment-date.webp" alt="Mirrorly su iPhone: un riflesso nitido e luminoso del suo viso, con zoom a 1,4×" width="780" height="1608" loading="lazy"></div></div>
+        <div class="m-txt"><span class="eyebrow">Lo specchio</span><h2 class="m-h" id="show-m-title">Il tuo iPhone,<br>come specchio.</h2><p class="lead">Con luce ad anello, zoom e niente salvato, mai.</p></div>
+      </div>
+      <div class="m-slide lights">
+        <div class="m-vis"><div class="iphone" data-finish="pro-silver"><img class="front" src="../assets/media/m-light-off.webp" alt="Mirrorly in una stanza buia; poi si accende la luce ad anello e lo schermo illumina il suo viso" width="780" height="1608" loading="lazy"><img class="front alt" src="../assets/media/m-light-on.webp" alt="" width="780" height="1608" loading="lazy"></div></div>
+        <div class="m-txt"><span class="eyebrow">Luce</span><h2 class="m-h">Una buona luce,<br>ovunque tu sia.</h2><p class="lead">Tocca la lampadina e lo schermo ti illumina. Un’auto al buio, un bagno poco illuminato, una camera d’albergo a mezzanotte.</p></div>
+      </div>
+      <div class="m-slide lit zooms">
+        <div class="m-vis"><div class="iphone" data-finish="pro-silver"><img class="front" src="../assets/media/m-zoom-1.webp" alt="Mirrorly a 1,0×, poi con zoom a 1,6× su sopracciglia e pelle" width="780" height="1608" loading="lazy"><img class="front alt" src="../assets/media/m-zoom-2.webp" alt="" width="780" height="1608" loading="lazy"></div></div>
+        <div class="m-txt"><span class="eyebrow">Zoom</span><h2 class="m-h">Più da vicino<br>di uno specchietto.</h2><p class="lead">Fai zoom per sopracciglia, ciglia e l’ultimo tocco di illuminante.</p><span class="zoomer" id="m-zoomer">1.0×</span></div>
+      </div>
+      <div class="m-slide lit">
+        <div class="m-vis"><div class="iphone" data-finish="pro-silver"><img class="front" src="../assets/media/m-look.webp" alt="Mirrorly su iPhone: una donna si sistema i capelli dietro l’orecchio, i pulsanti di luce e impostazioni di lato, nessun pulsante di scatto" width="780" height="1608" loading="lazy"></div></div>
+        <div class="m-txt"><span class="eyebrow">Non è l’app Fotocamera</span><h2 class="m-h">Fatto per guardarti,<br>non per scattare.</h2><ul class="vs on-all" aria-label="Mirrorly a confronto con l’app Fotocamera">
+            <li><span>Una luce ad anello, quando vuoi</span><em>Fotocamera: flash solo quando scatti</em></li>
+            <li><span>Luminosità al massimo</span><em>Fotocamera: quella che c’era</em></li>
+            <li><span>Nessun pulsante da premere per sbaglio</span><em>Fotocamera: un tocco sbagliato, una foto</em></li>
+            <li><span>Niente salvato, mai</span><em>Fotocamera: ora è nella tua libreria</em></li>
+          </ul></div>
+      </div>
+    </div>
+    <div class="m-dots"></div>
+  </div>
+</section>
+
+<!-- 2. Why you need it: other people -->
+<section class="scene moments d-only" id="moments" data-scene="moments" aria-labelledby="moments-title">
+  <div class="scene-pin">
+    <div class="wrap moments-head">
+      <span class="eyebrow">Perché</span>
+      <h2 class="m-h" id="moments-title">Per i momenti<br>in cui ti vedono.</h2>
+    </div>
+    <div class="track" id="track">
+      <article class="moment">
+        <div class="iphone" data-finish="pro-silver"><img class="front" src="../assets/media/m-moment-interview.webp" alt="Un uomo controlla viso e cravatta in Mirrorly prima di un colloquio" width="780" height="1608" loading="lazy"></div>
+        <div><span class="time">8:52</span><h3>Prima del colloquio.</h3><p>Colletto, capelli e la faccia che fai quando sei nervoso.</p></div>
+      </article>
+      <article class="moment">
+        <div class="iphone" data-finish="pro-silver"><img class="front" src="../assets/media/m-moment-date.webp" alt="Una ragazza controlla il viso con zoom a 1,4× prima di un pranzo romantico" width="780" height="1608" loading="lazy"></div>
+        <div><span class="time">13:40</span><h3>Pranzo a due.</h3><p>Un ultimo sguardo prima di entrare e sorridere.</p></div>
+      </article>
+      <article class="moment">
+        <div class="iphone" data-finish="pro-silver"><img class="front" src="../assets/media/m-moment-mechanic.webp" alt="Un meccanico in officina nota una macchia di grasso sulla guancia in Mirrorly" width="780" height="1608" loading="lazy"></div>
+        <div><span class="time">17:45</span><h3>Dritto dall’officina.</h3><p>Grasso sulla guancia? Meglio che lo veda tu prima dei bambini all’uscita da scuola.</p></div>
+      </article>
+      <article class="moment">
+        <div class="iphone" data-finish="pro-silver"><img class="front" src="../assets/media/m-moment-party.webp" alt="Una donna mette l’eyeliner in una stanza buia alla luce dell’anello" width="780" height="1608" loading="lazy"></div>
+        <div><span class="time">22:15</span><h3>Prepararsi al buio.</h3><p>Luce accesa. Eyeliner dritto. Si esce.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="m-only m-sec moments-m" id="moments-m" aria-labelledby="moments-m-title">
+  <div class="wrap center m-head">
+    <span class="eyebrow">Perché</span>
+    <h2 class="m-h" id="moments-m-title">Per i momenti<br>in cui ti vedono.</h2>
+  </div>
+  <div class="m-car" data-carousel="5000">
+    <div class="m-track">
+      <article class="m-slide">
+        <div class="m-vis"><div class="iphone" data-finish="pro-silver"><img class="front" src="../assets/media/m-moment-interview.webp" alt="Un uomo controlla viso e cravatta in Mirrorly prima di un colloquio" width="780" height="1608" loading="lazy"></div></div>
+        <div class="m-txt"><span class="time">8:52</span><h3>Prima del colloquio.</h3><p>Colletto, capelli e la faccia che fai quando sei nervoso.</p></div>
+      </article>
+      <article class="m-slide">
+        <div class="m-vis"><div class="iphone" data-finish="pro-silver"><img class="front" src="../assets/media/m-moment-date.webp" alt="Una ragazza controlla il viso con zoom a 1,4× prima di un pranzo romantico" width="780" height="1608" loading="lazy"></div></div>
+        <div class="m-txt"><span class="time">13:40</span><h3>Pranzo a due.</h3><p>Un ultimo sguardo prima di entrare e sorridere.</p></div>
+      </article>
+      <article class="m-slide">
+        <div class="m-vis"><div class="iphone" data-finish="pro-silver"><img class="front" src="../assets/media/m-moment-mechanic.webp" alt="Un meccanico in officina nota una macchia di grasso sulla guancia in Mirrorly" width="780" height="1608" loading="lazy"></div></div>
+        <div class="m-txt"><span class="time">17:45</span><h3>Dritto dall’officina.</h3><p>Grasso sulla guancia? Meglio che lo veda tu prima dei bambini all’uscita da scuola.</p></div>
+      </article>
+      <article class="m-slide">
+        <div class="m-vis"><div class="iphone" data-finish="pro-silver"><img class="front" src="../assets/media/m-moment-party.webp" alt="Una donna mette l’eyeliner in una stanza buia alla luce dell’anello" width="780" height="1608" loading="lazy"></div></div>
+        <div class="m-txt"><span class="time">22:15</span><h3>Prepararsi al buio.</h3><p>Luce accesa. Eyeliner dritto. Si esce.</p></div>
+      </article>
+    </div>
+    <div class="m-dots"></div>
+  </div>
+</section>
+
+<!-- guides -->
+<section class="pad guides-sec" id="guides" aria-labelledby="guides-title">
   <div class="wrap">
-    <div class="section-head">
+    <div class="center">
       <span class="eyebrow">Guide</span>
-      <h2>Tutto quello che si chiede chi usa il telefono come specchio</h2>
-      <p>Prima la risposta vera, poi come farlo in Mirrorly.</p>
+      <h2 class="m-h" id="guides-title">Tutto quello che si chiede chi usa il telefono come specchio</h2>
+      <p class="lead">Prima la risposta vera, poi come farlo in Mirrorly.</p>
     </div>
     <div class="guides-grid">
-      <a class="guide-card" href="guides/usare-iphone-come-specchio.html">
-        <span class="eyebrow">Guida pratica</span>
-        <h3>Come usare l’iPhone come specchio</h3>
-        <p>Tre metodi dal peggiore al migliore: lo schermo spento, l’app Fotocamera e una vera app specchio.</p>
-        <span class="read-more">Leggi la guida &rarr;</span>
-      </a>
-      <a class="guide-card" href="guides/iphone-ha-app-specchio-integrata.html">
-        <span class="eyebrow">Domanda</span>
-        <h3>L’iPhone ha un’app specchio integrata?</h3>
-        <p>No, ed ecco perché Fotocamera, FaceTime e Lente d’ingrandimento non contano davvero.</p>
-        <span class="read-more">Leggi la guida &rarr;</span>
-      </a>
-      <a class="guide-card" href="guides/perche-la-fotocamera-frontale-inverte-il-viso.html">
-        <span class="eyebrow">Spiegazione</span>
-        <h3>Perché la fotocamera frontale del tuo iPhone inverte il tuo viso?</h3>
-        <p>L’anteprima è a specchio, il selfie salvato no. Cosa succede e l’impostazione che lo cambia.</p>
-        <span class="read-more">Leggi la guida &rarr;</span>
-      </a>
-      <a class="guide-card" href="guides/app-specchio-con-luce.html">
-        <span class="eyebrow">Funzione</span>
-        <h3>Un’app specchio con luce: per auto buie, bagni poco illuminati e serate lunghe</h3>
-        <p>Perché la torcia non serve con la fotocamera frontale, e come lo schermo diventa una luce ad anello.</p>
-        <span class="read-more">Leggi la guida &rarr;</span>
-      </a>
-      <a class="guide-card" href="guides/app-specchio-con-zoom.html">
-        <span class="eyebrow">Funzione</span>
-        <h3>Un’app specchio con zoom per sopracciglia, denti, lenti a contatto e piccoli dettagli</h3>
-        <p>Sopracciglia, lenti, denti: fin dove spingere l’ingrandimento e come tenere l’immagine nitida.</p>
-        <span class="read-more">Leggi la guida &rarr;</span>
-      </a>
-      <a class="guide-card" href="guides/controllare-i-denti-senza-specchio.html">
-        <span class="eyebrow">Guida pratica</span>
-        <h3>Come controllare se hai cibo tra i denti quando non c’è uno specchio</h3>
-        <p>Passata di lingua, sorso d’acqua, o il metodo affidabile in dieci secondi con il telefono.</p>
-        <span class="read-more">Leggi la guida &rarr;</span>
-      </a>
-      <a class="guide-card" href="guides/controllare-il-look-prima-di-una-riunione.html">
-        <span class="eyebrow">Guida pratica</span>
-        <h3>Come controllare il tuo aspetto prima di una riunione (in meno di 10 secondi)</h3>
-        <p>La checklist da 10 secondi (capelli, viso, denti, occhiali, colletto, spalle) dalla scrivania o dal parcheggio.</p>
-        <span class="read-more">Leggi la guida &rarr;</span>
-      </a>
-      <a class="guide-card" href="guides/app-specchio-per-il-trucco.html">
-        <span class="eyebrow">Per il trucco</span>
-        <h3>L’app specchio per il trucco per ritoccarti ovunque</h3>
-        <p>Luce frontale, colore regolabile, ingrandimento, mani libere: cosa serve a uno specchio da trucco e come ottenerlo dal telefono.</p>
-        <span class="read-more">Leggi la guida &rarr;</span>
-      </a>
-      <a class="guide-card" href="guides/specchietto-dimenticato.html">
-        <span class="eyebrow">Situazione</span>
-        <h3>Hai dimenticato lo specchietto? Usa quello che hai già in tasca</h3>
-        <p>Specchi improvvisati in classifica, dal disperato al buono, e quello che hai già con te.</p>
-        <span class="read-more">Leggi la guida &rarr;</span>
-      </a>
-      <a class="guide-card" href="guides/app-specchio-e-sicura.html">
-        <span class="eyebrow">Privacy</span>
-        <h3>Un’app specchio è sicura? Cosa controllare prima di installarla</h3>
-        <p>Permessi e segnali d’allarme da controllare per qualsiasi app che usa la fotocamera, e cosa fa esattamente Mirrorly con la tua.</p>
-        <span class="read-more">Leggi la guida &rarr;</span>
-      </a>
-      <a class="guide-card" href="guides/app-specchio-divertente.html">
-        <span class="eyebrow">Personalità</span>
-        <h3>L’app specchio divertente che ti giudica (con affetto)</h3>
-        <p>«piano, ispettore.» Lo specchio con le opinioni, e perché l’analisi del viso resta sul tuo telefono.</p>
-        <span class="read-more">Leggi la guida &rarr;</span>
-      </a>
+      <a class="guide-card" href="guides/usare-iphone-come-specchio.html"><span class="eyebrow">Guida pratica</span><h3>Come usare l’iPhone come specchio</h3><p>Tre metodi dal peggiore al migliore: lo schermo spento, l’app Fotocamera e una vera app specchio.</p><span class="read-more">Leggi la guida &rarr;</span></a>
+      <a class="guide-card" href="guides/iphone-ha-app-specchio-integrata.html"><span class="eyebrow">Domanda</span><h3>L’iPhone ha un’app specchio integrata?</h3><p>No, ed ecco perché Fotocamera, FaceTime e Lente d’ingrandimento non contano davvero.</p><span class="read-more">Leggi la guida &rarr;</span></a>
+      <a class="guide-card" href="guides/perche-la-fotocamera-frontale-inverte-il-viso.html"><span class="eyebrow">Spiegazione</span><h3>Perché la fotocamera frontale del tuo iPhone inverte il tuo viso?</h3><p>L’anteprima è a specchio, il selfie salvato no. Cosa succede e l’impostazione che lo cambia.</p><span class="read-more">Leggi la guida &rarr;</span></a>
+      <a class="guide-card" href="guides/app-specchio-con-luce.html"><span class="eyebrow">Funzione</span><h3>Un’app specchio con luce: per auto buie, bagni poco illuminati e serate lunghe</h3><p>Perché la torcia non serve con la fotocamera frontale, e come lo schermo diventa una luce ad anello.</p><span class="read-more">Leggi la guida &rarr;</span></a>
+      <a class="guide-card" href="guides/app-specchio-con-zoom.html"><span class="eyebrow">Funzione</span><h3>Un’app specchio con zoom per sopracciglia, denti, lenti a contatto e piccoli dettagli</h3><p>Sopracciglia, lenti, denti: fin dove spingere l’ingrandimento e come tenere l’immagine nitida.</p><span class="read-more">Leggi la guida &rarr;</span></a>
+      <a class="guide-card" href="guides/controllare-i-denti-senza-specchio.html"><span class="eyebrow">Guida pratica</span><h3>Come controllare se hai cibo tra i denti quando non c’è uno specchio</h3><p>Passata di lingua, sorso d’acqua, o il metodo affidabile in dieci secondi con il telefono.</p><span class="read-more">Leggi la guida &rarr;</span></a>
+      <a class="guide-card" href="guides/controllare-il-look-prima-di-una-riunione.html"><span class="eyebrow">Guida pratica</span><h3>Come controllare il tuo aspetto prima di una riunione (in meno di 10 secondi)</h3><p>La checklist da 10 secondi (capelli, viso, denti, occhiali, colletto, spalle) dalla scrivania o dal parcheggio.</p><span class="read-more">Leggi la guida &rarr;</span></a>
+      <a class="guide-card" href="guides/app-specchio-per-il-trucco.html"><span class="eyebrow">Per il trucco</span><h3>L’app specchio per il trucco per ritoccarti ovunque</h3><p>Luce frontale, colore regolabile, ingrandimento, mani libere: cosa serve a uno specchio da trucco e come ottenerlo dal telefono.</p><span class="read-more">Leggi la guida &rarr;</span></a>
+      <a class="guide-card" href="guides/specchietto-dimenticato.html"><span class="eyebrow">Situazione</span><h3>Hai dimenticato lo specchietto? Usa quello che hai già in tasca</h3><p>Specchi improvvisati in classifica, dal disperato al buono, e quello che hai già con te.</p><span class="read-more">Leggi la guida &rarr;</span></a>
+      <a class="guide-card" href="guides/app-specchio-e-sicura.html"><span class="eyebrow">Privacy</span><h3>Un’app specchio è sicura? Cosa controllare prima di installarla</h3><p>Permessi e segnali d’allarme da controllare per qualsiasi app che usa la fotocamera, e cosa fa esattamente Mirrorly con la tua.</p><span class="read-more">Leggi la guida &rarr;</span></a>
+      <a class="guide-card" href="guides/app-specchio-divertente.html"><span class="eyebrow">Personalità</span><h3>L’app specchio divertente che ti giudica (con affetto)</h3><p>«piano, ispettore.» Lo specchio con le opinioni, e perché l’analisi del viso resta sul tuo telefono.</p><span class="read-more">Leggi la guida &rarr;</span></a>
+    </div>
+  </div>
+</section>
+<!-- /guides -->
+<section class="pad" id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <h2 class="m-h center" id="faq-title">Domande</h2>
+    <div class="faq">
+      <details><summary>Mirrorly salva o carica qualcosa?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary><div>No. Non c’è nessun pulsante di scatto. Non acquisisce, salva o carica mai foto, video, fotogrammi o dati del viso, e la lettura delle espressioni avviene sul tuo iPhone. Nessun account, nessuna pubblicità.</div></details>
+      <details><summary>Posso disattivare i commenti?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary><div>Sì. Disattiva le Reazioni dello specchio nelle Impostazioni e resta uno specchio silenzioso e ottimo.</div></details>
+      <details><summary>Quanto costerà?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary><div>I primi tre controlli allo specchio sono gratis. Poi un unico acquisto lo sblocca per sempre. Nessun abbonamento.</div></details>
+      <details><summary>Quali iPhone saranno supportati?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary><div>Gli iPhone con iOS 26 o versioni successive.</div></details>
     </div>
   </div>
 </section>
 
-<section class="section-alt" id="faq">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">FAQ</span>
-      <h2>Le domande che ci si fa prima di installare un’app specchio</h2>
-    </div>
-    <div class="faq-list">
-      <div class="faq-item">
-        <h3>Mirrorly è gratis?</h3>
-        <p>Mirrorly si scarica e si prova gratis: i primi tre controlli allo specchio non costano nulla. Poi un acquisto una tantum lo sblocca per sempre: nessun abbonamento e, in ogni caso, nessuna pubblicità.</p>
-        <a class="learn-more" href="guides/app-specchio-e-sicura.html">Scopri di più &rarr;</a>
-      </div>
-      <div class="faq-item">
-        <h3>L’iPhone ha un’app specchio integrata?</h3>
-        <p>No. iOS non ha un’app specchio. Quasi tutti usano l’app Fotocamera, ma è fatta per scattare foto: il pulsante di scatto è sotto il pollice, la luminosità non è al massimo e non c’è luce frontale. Mirrorly trasforma la fotocamera frontale in uno specchio vero.</p>
-        <a class="learn-more" href="guides/iphone-ha-app-specchio-integrata.html">Scopri di più &rarr;</a>
-      </div>
-      <div class="faq-item">
-        <h3>Mirrorly salva o carica le mie foto?</h3>
-        <p>No. Mirrorly non ha un pulsante di scatto e non cattura, salva o carica mai foto, video, fotogrammi della fotocamera o dati del volto. Il flusso della fotocamera e l’analisi delle espressioni restano sul tuo iPhone. E non c’è nemmeno un account.</p>
-        <a class="learn-more" href="guides/app-specchio-e-sicura.html">Scopri di più &rarr;</a>
-      </div>
-      <div class="faq-item">
-        <h3>Mirrorly funziona al buio?</h3>
-        <p>Sì. Tocca la lampadina e i bordi dello schermo diventano una luce ad anello alla massima luminosità: utile in auto di notte, in un bagno buio o in albergo. Puoi regolarne la temperatura, e Mirrorly ti suggerisce la luce quando rileva un’illuminazione scarsa.</p>
-        <a class="learn-more" href="guides/app-specchio-con-luce.html">Scopri di più &rarr;</a>
-      </div>
-      <div class="faq-item">
-        <h3>Posso ingrandire per controllare denti o sopracciglia?</h3>
-        <p>Sì. Trascina il cursore dello zoom o pizzica lo schermo per ingrandire. Circa 2× bastano per vedere residui di cibo tra i denti, mettere una lente a contatto o togliere un pelo ribelle.</p>
-        <a class="learn-more" href="guides/app-specchio-con-zoom.html">Scopri di più &rarr;</a>
-      </div>
-      <div class="faq-item">
-        <h3>È la stessa cosa della duplicazione dello schermo?</h3>
-        <p>No. La duplicazione dello schermo (AirPlay) invia lo schermo dell’iPhone a un televisore. Mirrorly è uno specchio: mostra il tuo viso con la fotocamera frontale, come farebbe un vetro.</p>
-        <a class="learn-more" href="guides/usare-iphone-come-specchio.html">Scopri di più &rarr;</a>
-      </div>
-      <div class="faq-item">
-        <h3>Perché in Mirrorly mi vedo diverso rispetto ai selfie?</h3>
-        <p>Mirrorly ti mostra sempre a specchio, come un vetro vero: la versione del tuo viso a cui sei abituato. I selfie vengono salvati non specchiati, come ti vedono gli altri, ed è per questo che le foto possono sembrare un po’ «strane».</p>
-        <a class="learn-more" href="guides/perche-la-fotocamera-frontale-inverte-il-viso.html">Scopri di più &rarr;</a>
-      </div>
-      <div class="faq-item">
-        <h3>Perché lo specchio mi parla?</h3>
-        <p>È la personalità di Mirrorly. Un’analisi delle espressioni sul dispositivo legge il tuo viso e risponde con una battuta asciutta come «okay, posa da diva.» o «allontanati, detective dei pori.» Le Reazioni dello specchio si spengono nelle impostazioni. Nulla del tuo viso esce dal telefono.</p>
-        <a class="learn-more" href="guides/app-specchio-divertente.html">Scopri di più &rarr;</a>
-      </div>
-      <div class="faq-item">
-        <h3>Mirrorly esiste per Android?</h3>
-        <p>No. Mirrorly è un’app iOS per iPhone, disponibile sull’App Store in italiano, inglese, tedesco, francese, spagnolo, giapponese e cinese semplificato.</p>
-        <a class="learn-more" href="#download">Scopri di più &rarr;</a>
-      </div>
+<section class="pad m-talk" id="talks" aria-labelledby="talk-title">
+  <div class="wrap m-talk-box reveal">
+    <span class="mascot m-talk-face" id="talk-face" data-face="wink" aria-hidden="true"></span>
+    <div>
+      <h2 class="m-h" id="talk-title">Ti risponde anche. Un po’.</h2>
+      <p class="lead">Ogni tanto Mirrorly legge il tuo viso e ti dice qualcosa. Fai una smorfia e scopri cosa.</p>
     </div>
   </div>
 </section>
 
-<section id="cta">
-  <div class="wrap">
-    <div class="cta-band">
-      <h2>Rispecchia la tua sicurezza</h2>
-      <p>Un controllo rapido e facile del tuo aspetto, sul telefono. Provalo gratis sull’App Store.</p>
-      <a href="https://apps.apple.com/app/id6792856754" class="btn btn-primary">Scarica Mirrorly</a>
+<section class="pad m-end" aria-labelledby="final-title">
+  <div class="wrap center reveal">
+    <img class="m-icon" src="../assets/icon-512.png" alt="" width="112" height="112">
+    <h2 class="m-title" id="final-title">Un po’ di luce.<br>Uno sguardo più da vicino.</h2>
+    <div class="cta-row">
+      <span class="btn when-soon" aria-disabled="true"><svg aria-hidden="true"><use href="#i-apple-logo"/></svg>Presto sull’App Store</span>
+      <a class="store-badge when-live" href="https://apps.apple.com/app/id6792856754" data-store-link><img src="../assets/app-store-badge-white.svg" alt="Scarica su App Store" width="156" height="52"></a>
     </div>
+  </div>
+</section>
+
+<section class="pad m-story" aria-labelledby="story-title">
+  <div class="wrap story-split">
+    <div class="reveal">
+      <span class="eyebrow">Una sera di pioggia</span>
+      <h2 class="m-h" id="story-title">Troppo buio per vederti?<br>Non più.</h2>
+    </div>
+    <figure class="story-film reveal d1">
+      <video id="story" muted loop playsinline preload="none" poster="../assets/media/story-poster.jpg" aria-label="Storia animata: sorpresa dalla pioggia, troppo buio per vedere il suo riflesso, trova Mirrorly, il telefono la illumina e se ne va come una supereroina">
+        <source src="../assets/media/story.mp4" type="video/mp4">
+      </video>
+    </figure>
   </div>
 </section>
 
 </main>
-<footer class="site-footer">
+
+<span class="ringframe" id="ringframe" aria-hidden="true"></span>
+
+<footer class="footer">
   <div class="wrap">
-    <div class="footer-grid">
-      <a href="./" class="brand"><img src="../assets/icon-512.png" alt="Mirrorly app icon" width="32" height="32">Mirrorly</a>
-      <nav class="footer-links" aria-label="Footer">
-        <a href="./#guides">Guide</a>
-        <a href="./#faq">FAQ</a>
-        <a href="https://apps.apple.com/app/id6792856754">App Store</a>
-        <a href="../privacy/">Privacy</a>
-        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula">Termini di servizio</a>
-        <a href="mailto:bashubb.dev@gmail.com">Contatti</a>
-      </nav>
-    </div>
-    <div class="footer-lang"><span>Lingua:</span> <nav class="lang-switch" aria-label="Language"><a href="https://bashubb.github.io/TheMirrorly/" lang="en" hreflang="en">English</a> <a href="https://bashubb.github.io/TheMirrorly/de/" lang="de" hreflang="de">Deutsch</a> <a href="https://bashubb.github.io/TheMirrorly/fr/" lang="fr" hreflang="fr">Français</a> <a href="https://bashubb.github.io/TheMirrorly/es/" lang="es" hreflang="es">Español</a> <a href="https://bashubb.github.io/TheMirrorly/it/" lang="it" hreflang="it" class="current">Italiano</a> <a href="https://bashubb.github.io/TheMirrorly/ja/" lang="ja" hreflang="ja">日本語</a> <a href="https://bashubb.github.io/TheMirrorly/zh/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a></nav></div>
-    <p class="footer-note">&copy; 2026 Mirrorly. Controlla come stai prima che lo faccia qualcun altro.</p>
+    <a class="brand" href="./"><img src="../assets/icon-512.png" alt="" width="40" height="40">Mirrorly</a>
+    <nav aria-label="Piè di pagina">
+      <a href="../privacy/">Informativa sulla privacy</a>
+      <a href="#guides">Guide</a>
+      <a href="mailto:bashubb.dev@gmail.com">Contatti</a>
+      <a href="https://bashubb.com/">Altre app di bashubb</a>
+    </nav>
+        <nav class="langs" aria-label="Language"><a href="../" lang="en" hreflang="en">English</a><a href="../de/" lang="de" hreflang="de">Deutsch</a><a href="../fr/" lang="fr" hreflang="fr">Français</a><a href="../es/" lang="es" hreflang="es">Español</a><a href="../it/" lang="it" hreflang="it" aria-current="true">Italiano</a><a href="../ja/" lang="ja" hreflang="ja">日本語</a><a href="../zh/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a></nav>
+    <span>© 2026 bashubb</span>
   </div>
 </footer>
+
+<script src="../assets/mascot.js?v=1"></script>
+<script src="../assets/landing.js?v=52"></script>
+<script>
+(() => {
+  const L = window.Landing;
+  const reduce = L.reduceMotion();
+  const $ = (id) => document.getElementById(id);
+
+  // 0. The film: full screen; its colours light the page around it; scrolling pulls it back
+  const film = $("film"), screen = $("screen"), amb = $("ambient"), bar = $("opener-bar");
+  // pick the cut whose shape is closest to the window; switch on resize
+  let cut = "";
+  const pickCut = () => {
+    const want = innerWidth / innerHeight < 1 ? "tall" : "wide";
+    if (want === cut) return;
+    cut = want;
+    const t = film.currentTime || 0;
+    const mine = cut;
+    film.poster = `../assets/media/mirror-film-${cut}-poster.jpg`;
+    film.classList.add("switching");
+    // whole clip in memory: the new cut continues from the same moment on any server
+    fetch(`../assets/media/mirror-film-${cut}.mp4`).then((r) => r.blob()).then((blob) => {
+      if (mine !== cut) return;
+      if (film.src.startsWith("blob:")) URL.revokeObjectURL(film.src);
+      film.src = URL.createObjectURL(blob);
+      film.addEventListener("loadeddata", () => { film.currentTime = t; film.classList.remove("switching"); if (!userPaused) film.play().catch(() => {}); }, { once: true });
+    }).catch(() => { film.querySelector("source").src = `../assets/media/mirror-film-${cut}.mp4`; film.load(); film.classList.remove("switching"); });
+    screen.style.setProperty("--ar", cut === "tall" ? 9 / 16 : 16 / 9);
+    amb.width = cut === "tall" ? 36 : 64; amb.height = cut === "tall" ? 64 : 36;
+  };
+  // reserve exactly the space the nav and the caption bar take, so the film never sits under text
+  const pin = screen.parentElement, nav = document.querySelector(".island");
+  const fitRoom = () => {
+    const top = nav.getBoundingClientRect().bottom + 16;
+    const bottom = bar.offsetHeight + parseFloat(getComputedStyle(bar).bottom) + 24;
+    pin.style.setProperty("--top", top + "px");
+    pin.style.setProperty("--bottom", bottom + "px");
+  };
+  fitRoom(); document.fonts.ready.then(fitRoom);
+  let rz = 0; addEventListener("resize", () => { fitRoom(); clearTimeout(rz); if (!L.phone) rz = setTimeout(pickCut, 200); });
+  let userPaused = reduce;
+  if (!L.phone) pickCut(); else { film.removeAttribute("autoplay"); film.querySelector("source").remove(); film.removeAttribute("poster"); film.load(); }
+  if (reduce) { film.removeAttribute("autoplay"); film.pause(); }
+  new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting && !userPaused) film.play().catch(() => {}); else if (!e.isIntersecting) film.pause(); }), { threshold: 0.2 }).observe(screen);
+  const actx = amb.getContext("2d");
+  // the ambient light only needs a few frames a second, and none while the opener is off screen
+  let ambOn = true, lastPaint = 0;
+  new IntersectionObserver((es) => es.forEach((e) => { ambOn = e.isIntersecting; if (ambOn) requestAnimationFrame(paint); })).observe(screen);
+  // the film lights the whole room: colours from its edges spill out to the edges of the screen
+  const spill = $("spill");
+  const avg = (d, x0, y0, x1, y1) => {          // light-weighted: the bright parts decide the colour of the spill
+    let r = 0, g = 0, b = 0, w = 0, m = 0;
+    for (let y = y0; y < y1; y++) for (let x = x0; x < x1; x++) { const i = (y * 8 + x) * 4, l = (d[i] + d[i + 1] + d[i + 2]) / 765, k = l * l + 0.002; r += d[i] * k; g += d[i + 1] * k; b += d[i + 2] * k; w += k; m = Math.max(m, l); }
+    const boost = Math.min(1.25, 0.3 + m * 1.6);
+    return [r / w, g / w, b / w].map((v) => Math.round(Math.min(255, v * boost))).join(",");
+  };
+  const paint = (now = 0) => {
+    if (now - lastPaint > 120 && film.readyState >= 2) {
+      lastPaint = now;
+      try {
+        actx.drawImage(film, 0, 0, 8, 6);
+        const d = actx.getImageData(0, 0, 8, 6).data;
+        spill.style.setProperty("--l", avg(d, 0, 0, 2, 6)); spill.style.setProperty("--r", avg(d, 6, 0, 8, 6));
+        spill.style.setProperty("--t", avg(d, 0, 0, 8, 2)); spill.style.setProperty("--b", avg(d, 0, 4, 8, 6));
+        spill.style.setProperty("--c", avg(d, 2, 1, 6, 5));
+      } catch (e) {}
+    }
+    if (!film.paused && ambOn) requestAnimationFrame(paint);
+  };
+  film.addEventListener("playing", () => requestAnimationFrame(paint)); film.addEventListener("seeked", paint);
+  L.scene("opener", (p) => {
+    const t = L.ease(L.range(p, 0.05, 0.85));
+    if (!reduce) screen.style.transform = `translate3d(-50%, -50%, 0) rotateX(${t * 10}deg) scale(${1 - t * 0.24})`;
+    spill.style.opacity = (1 - 0.5 * t).toFixed(3);
+    bar.style.opacity = (1 - L.range(p, 0.05, 0.3)).toFixed(3);
+    bar.style.transform = `translate3d(0, ${L.range(p, 0.05, 0.3) * 24}px, 0)`;
+  });
+
+  // 1. Light, zoom, not the Camera app
+  // on one column layouts the text block sits under the phone: reserve its real height, the phone gets the rest
+  const beatsBox = document.querySelector(".beats");
+  const sizeBeats = () => {
+    const h = Math.max(...[...document.querySelectorAll(".beat")].map((b) => b.offsetHeight));
+    beatsBox.style.setProperty("--beats-h", h + "px");
+    // each pinned phone on one-column layouts: as big as its stage allows
+    requestAnimationFrame(() => {
+      [["mphone", ".show .stage"]].forEach(([id, sel]) => {
+        const ph = $(id), st = document.querySelector(sel);
+        if (innerWidth <= 900) ph.style.setProperty("--phone-w", Math.max(60, Math.min(st.clientHeight * 0.46 * 0.94, innerWidth * 0.62)) + "px");
+        else ph.style.removeProperty("--phone-w");
+      });
+    });
+  };
+  sizeBeats(); document.fonts.ready.then(sizeBeats); addEventListener("resize", sizeBeats);
+  const beats = [...document.querySelectorAll(".beat")];
+  const rows = [...document.querySelectorAll(".vs li")];
+  const phone = $("mphone");
+  L.scene("show", (p) => {
+    const beat = p < 0.12 ? 0 : p < 0.4 ? 1 : p < 0.68 ? 2 : 3;
+    beats.forEach((b, i) => b.classList.toggle("on", i === beat));
+    const light = L.ease(L.range(p, 0.14, 0.3));
+    const zoom = L.ease(L.range(p, 0.44, 0.62));
+    $("f-on").style.opacity = (beat <= 1 ? light : 0).toFixed(3);
+    $("f-z1").style.opacity = beat >= 2 ? (1 - zoom * (beat === 2 ? 1 : 0)).toFixed(3) : 0;
+    $("f-z2").style.opacity = beat === 2 ? zoom.toFixed(3) : 0;
+    $("zoomer").textContent = (1 + 0.6 * zoom).toFixed(1) + "×";
+    const lit = beat === 0 ? 0 : beat === 1 ? light : 1;
+    $("room").style.opacity = (lit * 0.85).toFixed(3);
+    $("glow").style.opacity = (lit * 0.38).toFixed(3);
+    $("ringframe").style.opacity = (lit * (1 - L.range(p, 0.92, 1)) * 0.85).toFixed(3);
+    const sc = beat === 2 ? 1 + 0.16 * zoom : 1;
+    if (!reduce) phone.style.transform = `rotateY(${-10 + 10 * L.ease(L.range(p, 0, 0.3))}deg) rotateX(${4 - 4 * L.ease(L.range(p, 0, 0.3))}deg) scale(${sc})`;
+    rows.forEach((r, i) => r.classList.toggle("on", beat === 3 && p > 0.7 + i * 0.05));
+    const bm = $("beat-mascot"), bf = ["wink", lit > 0.5 ? "happy" : "dark", "squint", p > 0.85 ? "smug" : "frown"][beat];
+    if (bm.dataset.face !== bf) { Mascot.set(bm, bf); bm.classList.remove("bounce"); void bm.offsetWidth; bm.classList.add("bounce"); }
+    bm.classList.toggle("lit", beat === 1 && lit > 0.5);
+  });
+
+  // 2. Moments: a horizontal track
+  const track = $("track");
+  const cards = [...track.children];
+  L.scene("moments", (p) => {
+    if (innerWidth < innerHeight) {
+      // portrait: a stack of cards; each next one tips up out of the depth onto the stack (always fully on screen),
+      // the ones underneath step back. Each card rests a moment before the next one comes.
+      track.style.transform = "";
+      const n = cards.length, raw = L.clamp((p - 0.04) / 0.9) * (n - 1);
+      const k = Math.min(n - 2, Math.floor(raw));
+      const c = k + L.range(raw - k, 0.2, 0.8);
+      cards.forEach((el, i) => {
+        const enter = L.ease(L.clamp(c - (i - 1)));          // 0 waiting in the depth → 1 in place
+        const under = L.clamp(c - i);                          // how far the next card has covered it
+        const e = i === 0 ? 1 : enter;
+        el.style.transform = `translate3d(0, ${(1 - e) * 6}%, ${(1 - e) * -260}px) rotateX(${(1 - e) * 24}deg) scale(${1 - under * 0.06})`;
+        el.style.opacity = (Math.min(1, e * 2.5) * (1 - under * 0.5)).toFixed(3);
+        el.style.visibility = e < 0.01 ? "hidden" : "";
+      });
+      return;
+    }
+    cards.forEach((el) => { el.style.transform = ""; el.style.opacity = ""; });
+    const last = track.lastElementChild; const max = last.offsetLeft + last.offsetWidth - innerWidth + Math.max(24, (innerWidth - 1120) / 2);
+    track.style.transform = `translateX(${-L.ease(L.range(p, 0.05, 0.95)) * Math.max(0, max)}px)`;
+  });
+
+  // Phones: the light slide shows the dark room first, then switches the ring light on by itself
+  const showCar = document.querySelector(".show-m .m-car"), lights = document.querySelector(".show-m .lights");
+  if (L.phone && showCar) {
+    let lt = 0;
+    showCar.addEventListener("slide", (e) => {
+      clearTimeout(lt);
+      lights.classList.remove("lit-now");
+      if (e.detail === 1) lt = setTimeout(() => lights.classList.add("lit-now"), reduce ? 0 : 1300);
+    });
+    // the zoom slide: 1.0× first, then it pinches in to 1.6× and the counter follows
+    const zooms = document.querySelector(".show-m .zooms"), zoomer = document.getElementById("m-zoomer");
+    let zt = 0, zf = 0;
+    const zoomIn = () => {
+      zooms.classList.add("zoom-now");
+      const t0 = performance.now();
+      const step = (now) => {
+        const k = Math.min(1, (now - t0) / 1400), e = 1 - Math.pow(1 - k, 3);
+        zoomer.textContent = (1 + 0.6 * e).toFixed(1) + "×";
+        if (k < 1) zf = requestAnimationFrame(step);
+      };
+      zf = requestAnimationFrame(step);
+    };
+    const zoomOut = () => { clearTimeout(zt); cancelAnimationFrame(zf); zooms.classList.remove("zoom-now"); zoomer.textContent = "1.0×"; };
+    showCar.addEventListener("slide", (e) => { zoomOut(); if (e.detail === 2) zt = setTimeout(zoomIn, reduce ? 0 : 1200); });
+    new IntersectionObserver((es) => es.forEach((e) => {
+      clearTimeout(lt);
+      if (!e.isIntersecting) lights.classList.remove("lit-now");
+      else if (lights.classList.contains("on")) lt = setTimeout(() => lights.classList.add("lit-now"), reduce ? 0 : 1300);
+    }), { threshold: 0.5 }).observe(showCar);
+  }
+
+  // It talks back: the little mirror makes a few faces while the note is on screen
+  const tf = document.getElementById("talk-face");
+  if (tf && !reduce) {
+    const faces = ["wink", "oo", "squint", "smug", "happy"];
+    let fi = 0, ft = 0;
+    new IntersectionObserver((es) => es.forEach((e) => {
+      clearInterval(ft);
+      if (e.isIntersecting) ft = setInterval(() => { fi = (fi + 1) % faces.length; Mascot.set(tf, faces[fi]); tf.classList.remove("bounce"); void tf.offsetWidth; tf.classList.add("bounce"); }, 1600);
+    }), { threshold: 0.6 }).observe(tf);
+  }
+
+  // The story film at the bottom: plays while on screen
+  const sv = $("story"); sv.muted = true; sv.playsInline = true;
+  const sPaused = reduce;
+  new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting && !sPaused) sv.play().catch(() => {}); else if (!e.isIntersecting) sv.pause(); }), { threshold: 0.4 }).observe(sv);
+
+})();
+</script>
 </body>
 </html>
