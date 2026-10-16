@@ -78,9 +78,9 @@
     if (id && document.getElementById(id + "-m")) a.setAttribute("href", "#" + id + "-m");
   });
 
-  // Carousels: [data-carousel] > .m-track (slides) + .m-dots. They move by themselves, in a loop (transform,
-  // not scrolling). A finger held still pauses them; a swipe up or down is the page's and changes nothing.
-  // Fires "slide" (detail = index) on change.
+  // Carousels: [data-carousel] > .m-track (slides) + .m-dots. Two ways: they move by themselves, in a loop
+  // (transform, not scrolling), and a sideways swipe moves them too. A finger held still pauses them;
+  // a swipe up or down belongs to the page (touch-action: pan-y). Fires "slide" (detail = index) on change.
   document.querySelectorAll("[data-carousel]").forEach((car) => {
     const track = car.querySelector(".m-track"), slides = [...track.children], dots = car.querySelector(".m-dots");
     const n = slides.length, dur = +car.dataset.carousel || 5000;
@@ -96,47 +96,70 @@
       dots && dots.append(b);
       return b;
     });
-    let pos = 0, timer = 0, left = dur, since = 0, visible = false, holding = false;
+    let pos = 0, timer = 0, left = dur, since = 0, visible = false, holding = false, dragging = false;
     const auto = !reduce.matches;
-    const place = (i, animate) => {
-      track.style.transition = animate && auto ? "transform 900ms var(--ease)" : "none";
-      track.style.transform = `translate3d(${-i * 100}%, 0, 0)`;
+    const place = (x, animate) => {                     // x in slides (may be fractional while dragging)
+      track.style.transition = animate ? `transform ${reduce.matches ? 0 : 700}ms var(--ease)` : "none";
+      track.style.transform = `translate3d(${(-x * 100).toFixed(3)}%, 0, 0)`;
     };
+    let cur = -1;
     const mark = (i) => {
+      if (i === cur) return;
+      cur = i;
       btns.forEach((b, k) => b.setAttribute("aria-current", String(k === i)));
       slides.forEach((s, k) => s.classList.toggle("on", k === i));
-      loop.classList.toggle("on", false);
       car.dispatchEvent(new CustomEvent("slide", { detail: i }));
     };
-    const show = (i, animate) => {
-      pos = i; place(i, animate);
-      mark(i % n);
-      left = dur; run();
-    };
+    const show = (i, animate) => { pos = i; place(i, animate); mark(i % n); left = dur; run(); };
     track.addEventListener("transitionend", (e) => { if (e.target === track && pos === n) { pos = 0; place(0, false); } });
+    const next = () => { if (pos === n) { pos = 0; place(0, false); void track.offsetWidth; } show(pos + 1, true); };
+    const prev = () => { if (pos === 0) { pos = n; place(n, false); void track.offsetWidth; } show(pos - 1, true); };
     const run = () => {
       clearTimeout(timer);
-      if (!auto || !visible || holding || document.hidden) return;
+      if (!auto || !visible || holding || dragging || document.hidden) return;
       since = performance.now();
-      timer = setTimeout(() => { if (pos === n) { pos = 0; place(0, false); void track.offsetWidth; } show(pos + 1, true); }, left);
+      timer = setTimeout(next, left);
     };
     const pause = () => { clearTimeout(timer); left = Math.max(0, left - (performance.now() - since)); };
-    // hold to pause: a finger that stays put for a moment; moving it (scrolling the page) cancels the hold
-    let hx = 0, hy = 0, ht = 0;
+    // touch: hold still to pause, swipe sideways to move; vertical movement is the page's (the browser cancels us)
+    let x0 = 0, y0 = 0, t0 = 0, ht = 0, w = 1, base = 0;
     track.addEventListener("pointerdown", (e) => {
-      hx = e.clientX; hy = e.clientY;
+      x0 = e.clientX; y0 = e.clientY; t0 = performance.now(); w = track.clientWidth || 1;
       clearTimeout(ht);
       ht = setTimeout(() => { holding = true; pause(); }, 180);
     });
-    track.addEventListener("pointermove", (e) => { if (!holding && Math.hypot(e.clientX - hx, e.clientY - hy) > 8) clearTimeout(ht); });
-    const up = () => { clearTimeout(ht); if (holding) { holding = false; run(); } };
-    ["pointerup", "pointercancel", "pointerleave"].forEach((ev) => track.addEventListener(ev, up));
+    track.addEventListener("pointermove", (e) => {
+      if (!e.buttons && e.pointerType === "mouse") return;
+      const dx = e.clientX - x0, dy = e.clientY - y0;
+      if (!dragging) {
+        if (Math.abs(dx) > 8 && Math.abs(dx) > Math.abs(dy)) {
+          clearTimeout(ht); dragging = true; pause();
+          if (pos === n) { pos = 0; } else if (pos === 0 && dx > 0) { pos = n; }
+          base = pos;
+          try { track.setPointerCapture(e.pointerId); } catch (err) {}
+        } else if (Math.hypot(dx, dy) > 8) clearTimeout(ht);
+        if (!dragging) return;
+      }
+      place(base - dx / w, false);
+    });
+    const up = (e) => {
+      clearTimeout(ht);
+      if (dragging) {
+        dragging = false;
+        const dx = e.clientX - x0, v = dx / Math.max(1, performance.now() - t0);
+        pos = base;
+        if (dx < -w * 0.2 || v < -0.4) next();
+        else if (dx > w * 0.2 || v > 0.4) prev();
+        else show(pos, true);
+      }
+      if (holding) { holding = false; left = dur; run(); }
+    };
+    track.addEventListener("pointerup", up);
+    track.addEventListener("pointercancel", (e) => { if (dragging) up(e); else { clearTimeout(ht); if (holding) { holding = false; run(); } } });
     track.addEventListener("contextmenu", (e) => e.preventDefault());
-    new IntersectionObserver((es) => es.forEach((e) => {
-      visible = e.isIntersecting;
-      if (visible) run(); else pause();
-    }), { threshold: 0.5 }).observe(car);
+    new IntersectionObserver((es) => es.forEach((e) => { visible = e.isIntersecting; if (visible) run(); else pause(); }), { threshold: 0.5 }).observe(car);
     document.addEventListener("visibilitychange", () => { if (document.hidden) pause(); else run(); });
+    addEventListener("resize", () => place(pos, false));
     show(0, false);
   });
 
