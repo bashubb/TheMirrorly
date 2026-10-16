@@ -1,33 +1,33 @@
 /* Mirrorly theme (dark room, warm ring light) + page sections. Shared system: landing.css */
 :root {
-  /* a vanity mirror: warm cream page, plum from the icon, cyan glass for the mirror's voice */
-  --bg: #f7f1ec;
-  --bg-2: #efe5de;
-  --surface: #ffffff;
-  --surface-2: #f1e8e2;
-  --text: #24141f;
-  --muted: #6e5c67;
-  --line: #e7dbd3;
-  --accent: #5a1e52;
+  /* a vanity mirror in a dark room: one dark page like the film, plum from the icon */
+  --bg: #151012;
+  --bg-2: #1d1619;
+  --surface: #241b1f;
+  --surface-2: #30252a;
+  --text: #fbf3ee;
+  --muted: #c7b8b2;
+  --line: #30252a;
+  --accent: #7a2a6f;
   --on-accent: #ffffff;
-  --accent-text: #8a3a5c;
+  --accent-text: #c27bb5;
   --glass-c: #caf5f7;
-  --h-from: #24141f;
-  --h-to: #6e5c67;
-  --glass: rgba(247, 241, 236, 0.86);
-  --glass-line: rgba(36, 20, 31, 0.08);
-  --glass-hover: rgba(36, 20, 31, 0.06);
-  --menu-bg: rgba(247, 241, 236, 0.94);
-  --btn-bg: #5a1e52;
+  --h-from: #ffffff;
+  --h-to: #9b9b9b;
+  --glass: rgba(21, 16, 18, 0.86);
+  --glass-line: rgba(255, 255, 255, 0.08);
+  --glass-hover: rgba(255, 255, 255, 0.06);
+  --menu-bg: rgba(21, 16, 18, 0.94);
+  --btn-bg: #7a2a6f;
   --btn-fg: #ffffff;
-  --soon-bg: #5a1e52;
+  --soon-bg: #7a2a6f;
   --soon-fg: #ffffff;
   --glow: #ffe2c4;
-  color-scheme: light;
+  color-scheme: dark;
 }
-/* the light scenes are a dark stage inside the cream page */
+/* the light scenes: the same dark room, a touch deeper */
 .opener, .show, .ringframe { --bg: #151012; --bg-2: #1d1619; --surface: #241b1f; --surface-2: #30252a; --text: #fbf3ee; --muted: #c7b8b2; --line: #30252a;
-  --h-from: #ffffff; --h-to: #c7b8b2; --accent: #f3c3a4; --on-accent: #24141f; --accent-text: #f3c3a4; --btn-bg: #f3c3a4; --btn-fg: #24141f; --soon-bg: #f3c3a4; --soon-fg: #24141f; color: var(--text); }
+  --h-from: #ffffff; --h-to: #9b9b9b; color: var(--text); }
 .opener .scene-pin, .show .scene-pin { background: #151012; }
 .eyebrow { text-transform: uppercase; letter-spacing: 0.08em; font-size: 12px; line-height: 16px; }
 
@@ -336,16 +336,10 @@
 .m-story { background: var(--bg-2) !important; }
 @media (max-width: 720px) { .moments .scene-pin { align-content: center; } .moments-head { margin-bottom: var(--s-300); } }
 
-/* cream sections */
-.moment { background: var(--surface) !important; border: 1px solid var(--line) !important; box-shadow: 0 24px 48px -32px rgba(36, 20, 31, 0.35); }
+/* sections and cards */
+.moment { background: var(--surface) !important; border: 1px solid var(--line) !important; box-shadow: 0 24px 48px -32px rgba(0, 0, 0, 0.6); }
 .moments { background: var(--bg-2) !important; }
 .m-story { background: var(--bg-2) !important; }
-.talks { background: var(--bg); }
-.talks-mascot { filter: drop-shadow(0 24px 30px rgba(90, 30, 82, 0.25)); }
-.joke .bubble-in { box-shadow: 0 16px 32px -20px rgba(36, 20, 31, 0.45); }
-.joke .j1 { color: #24141f !important; }
-.joke .j2 { color: #a23a5b !important; }
-.talks-cta { color: var(--accent); }
 .m-end .m-title { background: none; color: var(--text); }
 
 /* ===== Portrait (phones): built for a tall screen ===== */
@@ -381,15 +375,15 @@
 
 /* ===== Phones, portrait and landscape: their own layout (system in landing.css) ===== */
 @media (max-width: 720px), (pointer: coarse) and (max-height: 540px) {
-  .film-intro { --film-bg: #15100a; --film-fg: #f4e2cc; }
+  .film-intro { --film-bg: #15100a; --film-fg: #c27bb5; }
   .m-intro { padding: var(--s-700) 0; }
   .m-intro .m-icon { width: 96px; height: 96px; border-radius: 22px; margin: 0 auto var(--s-200); }
   .m-intro .lead { margin-top: var(--s-100); }
   .m-intro .cta-row { justify-content: center; margin-top: var(--s-300); }
 
   /* the mirror: a dark room, the phone in its own warm light */
-  .show-m { background: #0e0a0b; color: #f4ede7; padding: var(--s-700) 0 var(--s-600); --line: rgba(255, 255, 255, 0.16); --dot: #f4e2cc; }
-  .show-m .eyebrow { color: #e9b9a0; }
+  .show-m { background: #0e0a0b; color: #f4ede7; padding: var(--s-700) 0 var(--s-600); --line: rgba(255, 255, 255, 0.16); --dot: var(--accent-text); }
+  .show-m .eyebrow { color: var(--accent-text); }
   .show-m .m-h { color: #fff; }
   .show-m .lead { color: rgba(244, 237, 231, 0.75); }
   .show-m .m-vis::before { content: ""; position: absolute; z-index: -1; left: 50%; top: 50%; width: 170%; aspect-ratio: 1; transform: translate(-50%, -50%);
@@ -401,7 +395,7 @@
   .show-m .m-vis .iphone { --w: calc(min(44svh, 420px) * 0.48); }
   .show-m .vs { margin: var(--s-200) auto 0; gap: var(--s-100); text-align: left; max-width: 340px; }
   .show-m .vs li { padding-left: var(--s-400); }
-  .show-m .vs li::after, .show-m .vs li::before { width: 20px; height: 20px; font-size: 12px; background: #e9b9a0; color: #24141f; }
+  .show-m .vs li::after, .show-m .vs li::before { width: 20px; height: 20px; font-size: 12px; background: var(--accent); color: #fff; }
   .show-m .vs span { font-size: 16px; line-height: 24px; color: #fff; }
   .show-m .vs em { font-size: 12px; line-height: 16px; color: rgba(244, 237, 231, 0.6); }
 
