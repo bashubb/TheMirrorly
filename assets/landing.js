@@ -119,7 +119,8 @@
     mark(0);
   });
 
-  // The film that opens the phone page: fills the screen, plays once and holds the page while it plays.
+  // The film that opens the phone page: fills the screen, starts from the beginning and plays each time it
+  // comes into view, and holds the page while it is on screen (touch-action: none, so Safari itself can't scroll).
   // A hard swipe or Skip leaves early; when it ends the page scrolls on to the next section by itself.
   document.querySelectorAll("[data-film-intro]").forEach((sec) => {
     if (!phone) return;
@@ -128,48 +129,56 @@
     v.poster = tall ? v.dataset.tallPoster : v.dataset.widePoster;
     v.src = tall ? v.dataset.tall : v.dataset.wide;
     const end = +v.dataset.end || 0;                    // a cut that must stop early (before a rewind)
-    let held = !reduce.matches, done = false;
-    const atFilm = () => scrollY < sec.offsetTop + sec.offsetHeight / 2;
-    const holding = () => held && !v.paused && atFilm();
+    let held = false, away = true;
+    const setHeld = (h) => { held = h; sec.classList.toggle("held", h); root.classList.toggle("film-held", h); };
     const relax = () => { sec.classList.remove("pulling"); sec.style.setProperty("--tug", "0px"); };
     const moveOn = () => { const n = sec.nextElementSibling; if (n) n.scrollIntoView({ behavior: reduce.matches ? "auto" : "smooth", block: "start" }); };
+    const atFilm = () => scrollY < sec.offsetTop + sec.offsetHeight / 2;
+    const play = () => v.play().catch(() => { v.controls = true; });   // Low Power Mode blocks autoplay: a tap plays it
+    const start = () => {                               // each time it shows up: from the beginning, playing, holding
+      sec.classList.remove("done");
+      try { v.currentTime = 0; } catch (e) {}
+      bar.style.transform = "scaleX(0)";
+      if (!reduce.matches) { play(); setHeld(true); }
+    };
     const finish = (jump) => {
-      held = false; relax();
-      if (!done) { done = true; sec.classList.add("done"); }
+      v.pause(); setHeld(false); relax(); sec.classList.add("done");
       if (jump) moveOn();
     };
     v.addEventListener("timeupdate", () => {
       const d = end || v.duration || 1;
       bar.style.transform = `scaleX(${Math.min(1, v.currentTime / d).toFixed(3)})`;
-      if (end && v.currentTime >= end && !v.paused) { v.pause(); finish(atFilm()); }
+      if (end && v.currentTime >= end && !v.paused) finish(held && atFilm());
     });
-    v.addEventListener("ended", () => finish(atFilm()));
-    skip.addEventListener("click", () => { v.pause(); finish(true); });
+    v.addEventListener("ended", () => finish(held && atFilm()));
+    skip.addEventListener("click", () => finish(true));
     if (reduce.matches) { v.controls = true; sec.classList.add("done"); }
-    else new IntersectionObserver((es) => es.forEach((e) => {
-      if (e.isIntersecting && !done) v.play().catch(() => { v.controls = true; held = false; });   // Low Power Mode: no autoplay, the viewer plays it
-      else if (!e.isIntersecting) v.pause();
-    }), { threshold: 0.5 }).observe(v);
+    new IntersectionObserver((es) => es.forEach((e) => {
+      if (e.intersectionRatio >= 0.85 && away) { away = false; start(); }
+      else if (e.intersectionRatio < 0.05) { away = true; v.pause(); setHeld(false); relax(); }
+      else if (e.intersectionRatio < 0.85 && held) setHeld(false);      // half scrolled away: let the page move
+    }), { threshold: [0, 0.05, 0.5, 0.85, 1] }).observe(sec);
     // the hold: a soft swipe only tugs the film; a long or fast one lets go
-    let y0 = 0, t0 = 0;
-    addEventListener("touchstart", (e) => { y0 = e.touches[0].clientY; t0 = performance.now(); }, { passive: true });
-    addEventListener("touchmove", (e) => {
-      const dy = y0 - e.touches[0].clientY;
-      if (dy <= 0 || !holding()) return;
-      e.preventDefault();
+    let y0 = 0, t0 = 0, dy = 0;
+    sec.addEventListener("touchstart", (e) => { y0 = e.touches[0].clientY; t0 = performance.now(); dy = 0; if (held && v.paused) play(); }, { passive: true });
+    sec.addEventListener("touchmove", (e) => {
+      if (!held) return;
+      if (e.cancelable) e.preventDefault();
+      dy = y0 - e.touches[0].clientY;
+      if (dy <= 0) { relax(); return; }
       const speed = dy / Math.max(1, performance.now() - t0);         // px per ms
-      if (dy > 180 || speed > 1.1) { v.pause(); finish(true); return; }
+      if (dy > 160 || speed > 1) { finish(true); return; }
       sec.classList.add("pulling");
       sec.style.setProperty("--tug", (64 * (1 - Math.exp(-dy / 140))).toFixed(1) + "px");
     }, { passive: false });
-    addEventListener("touchend", relax, { passive: true });
+    sec.addEventListener("touchend", relax, { passive: true });
     let pull = 0, last = 0, wt = 0;
     addEventListener("wheel", (e) => {
-      if (e.deltaY <= 0 || !holding()) return;
+      if (e.deltaY <= 0 || !held || !atFilm()) return;
       e.preventDefault();
       const now = performance.now();
       pull = pull * Math.exp(-(now - last) / 380) + e.deltaY; last = now;
-      if (pull > 600) { v.pause(); finish(true); return; }
+      if (pull > 600) { pull = 0; finish(true); return; }
       sec.classList.add("pulling");
       sec.style.setProperty("--tug", (64 * (1 - Math.exp(-pull / 220))).toFixed(1) + "px");
       clearTimeout(wt); wt = setTimeout(relax, 220);
