@@ -195,14 +195,17 @@
     const relax = () => { sec.classList.remove("pulling"); sec.style.setProperty("--tug", "0px"); };
     const moveOn = () => { const n = sec.nextElementSibling; if (n) n.scrollIntoView({ behavior: reduce.matches ? "auto" : "smooth", block: "start" }); };
     const atFilm = () => scrollY < sec.offsetTop + sec.offsetHeight / 2;
-    // a play() that fails while the clip is still loading is retried when it can play; only a real
-    // "not allowed" (Low Power Mode) asks for a tap, which the touch handler below turns into play()
+    // a play() that fails while the clip is still loading is retried when it can play
+    // iOS refuses autoplay in Low Power Mode: then no button and no hold, just the first frame; the first touch
+    // anywhere on the page (a scroll counts) is a user gesture, and that starts the film
+    let refused = false;
+    const kick = () => { if (refused && !sec.classList.contains("done")) { refused = false; v.play().catch(() => {}); } };
+    ["touchend", "click"].forEach((ev) => document.addEventListener(ev, kick, { passive: true }));
     const play = () => {
       const pr = v.play();
-      if (pr) pr.catch((err) => { if (err && err.name === "NotAllowedError") sec.classList.add("tap"); });
+      if (pr) pr.catch((err) => { if (err && err.name === "NotAllowedError") { refused = true; setHeld(false); } });
     };
     v.addEventListener("canplay", () => { if (held && v.paused) play(); });
-    v.addEventListener("playing", () => sec.classList.remove("tap"));
     const start = () => {                               // each time it shows up: from the beginning, playing, holding
       sec.classList.remove("done");
       try { v.currentTime = 0; } catch (e) {}
@@ -226,7 +229,6 @@
     // the hold: a soft swipe only tugs the film; a long or fast one lets go
     let y0 = 0, t0 = 0, dy = 0;
     sec.addEventListener("touchstart", (e) => { y0 = e.touches[0].clientY; t0 = performance.now(); dy = 0; if (held && v.paused) play(); }, { passive: true });
-    sec.addEventListener("click", () => { if (held && v.paused) play(); });
     sec.addEventListener("touchmove", (e) => {
       if (!held) return;
       if (e.cancelable) e.preventDefault();
