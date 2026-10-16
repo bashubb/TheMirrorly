@@ -429,3 +429,13 @@
 .m-talk-face { flex: none; width: 88px; }
 .m-talk .lead { margin-top: var(--s-100); }
 @media (max-width: 720px) and (orientation: portrait) { .m-talk-box { flex-direction: column; text-align: center; gap: var(--s-200); padding: var(--s-400) var(--s-300); } .m-talk-face { width: 72px; } }
+
+/* Desktop opener: the film's light fills the whole screen around it */
+.spill { position: absolute; inset: 0; pointer-events: none; transition: background 400ms linear;
+  background:
+    radial-gradient(60% 90% at 0% 50%, rgba(var(--l, 40,30,30), 0.6), transparent 72%),
+    radial-gradient(60% 90% at 100% 50%, rgba(var(--r, 40,30,30), 0.6), transparent 72%),
+    radial-gradient(90% 60% at 50% 0%, rgba(var(--t, 40,30,30), 0.5), transparent 72%),
+    radial-gradient(90% 60% at 50% 100%, rgba(var(--b, 40,30,30), 0.5), transparent 72%),
+    radial-gradient(70% 70% at 50% 50%, rgba(var(--c, 40,30,30), 0.55), transparent 78%); }
+.opener .screen { box-shadow: 0 0 140px 30px rgba(var(--glow-c, 255,226,196), 0.18), 0 40px 120px -30px rgba(0, 0, 0, 0.8); }

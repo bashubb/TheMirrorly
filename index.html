@@ -21,7 +21,7 @@
 <link rel="apple-touch-icon" href="assets/fav/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/landing.css?v=48">
-<link rel="stylesheet" href="assets/mirrorly.css?v=52">
+<link rel="stylesheet" href="assets/mirrorly.css?v=55">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -93,7 +93,8 @@
 <!-- 0. The film first: full screen, its own light spilling around it -->
 <section class="scene opener d-only" data-scene="opener" aria-labelledby="hero-title">
   <div class="scene-pin">
-    <canvas class="ambient" id="ambient" width="2" height="2" hidden></canvas>
+    <canvas class="ambient" id="ambient" width="8" height="6" hidden></canvas>
+    <span class="spill" id="spill" aria-hidden="true"></span>
     <div class="screen" id="screen">
       <video id="film" autoplay muted loop playsinline preload="auto" poster="assets/media/mirror-film-wide-poster.jpg" aria-label="Animated film: the Mirrorly mirror wakes up in the dark, lights up like a ring light, zooms in, knocks a camera shutter away and makes dry comments">
         <source src="assets/media/mirror-film-wide.mp4" type="video/mp4">
@@ -364,14 +365,32 @@
   // the ambient light only needs a few frames a second, and none while the opener is off screen
   let ambOn = true, lastPaint = 0;
   new IntersectionObserver((es) => es.forEach((e) => { ambOn = e.isIntersecting; if (ambOn) requestAnimationFrame(paint); })).observe(screen);
+  // the film lights the whole room: colours from its edges spill out to the edges of the screen
+  const spill = $("spill");
+  const avg = (d, x0, y0, x1, y1) => {          // light-weighted: the bright parts decide the colour of the spill
+    let r = 0, g = 0, b = 0, w = 0, m = 0;
+    for (let y = y0; y < y1; y++) for (let x = x0; x < x1; x++) { const i = (y * 8 + x) * 4, l = (d[i] + d[i + 1] + d[i + 2]) / 765, k = l * l + 0.002; r += d[i] * k; g += d[i + 1] * k; b += d[i + 2] * k; w += k; m = Math.max(m, l); }
+    const boost = Math.min(1.25, 0.3 + m * 1.6);
+    return [r / w, g / w, b / w].map((v) => Math.round(Math.min(255, v * boost))).join(",");
+  };
   const paint = (now = 0) => {
+    if (now - lastPaint > 120 && film.readyState >= 2) {
+      lastPaint = now;
+      try {
+        actx.drawImage(film, 0, 0, 8, 6);
+        const d = actx.getImageData(0, 0, 8, 6).data;
+        spill.style.setProperty("--l", avg(d, 0, 0, 2, 6)); spill.style.setProperty("--r", avg(d, 6, 0, 8, 6));
+        spill.style.setProperty("--t", avg(d, 0, 0, 8, 2)); spill.style.setProperty("--b", avg(d, 0, 4, 8, 6));
+        spill.style.setProperty("--c", avg(d, 2, 1, 6, 5));
+      } catch (e) {}
+    }
     if (!film.paused && ambOn) requestAnimationFrame(paint);
   };
   film.addEventListener("playing", () => requestAnimationFrame(paint)); film.addEventListener("seeked", paint);
   L.scene("opener", (p) => {
     const t = L.ease(L.range(p, 0.05, 0.85));
     if (!reduce) screen.style.transform = `translate3d(-50%, -50%, 0) rotateX(${t * 10}deg) scale(${1 - t * 0.24})`;
-    amb.style.opacity = (0.8 - 0.45 * t).toFixed(3);
+    spill.style.opacity = (1 - 0.5 * t).toFixed(3);
     bar.style.opacity = (1 - L.range(p, 0.05, 0.3)).toFixed(3);
     bar.style.transform = `translate3d(0, ${L.range(p, 0.05, 0.3) * 24}px, 0)`;
   });
