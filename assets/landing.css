@@ -393,9 +393,12 @@ h3 { font-size: 20px; line-height: 28px; letter-spacing: -0.01em; }
 .film-intro { position: relative; height: 100vh; height: 100svh; overflow: hidden; background: var(--film-bg, #000); color: var(--film-fg, #fff); }
 .film-intro video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: translate3d(0, calc(var(--tug, 0px) * -1), 0); transition: transform 400ms var(--ease); }
 .film-intro.pulling video { transition: none; }
-/* never a play button on the film, not even the native one */
+/* never the native play glyph; if autoplay is refused (Low Power Mode) a quiet "Tap to play" instead */
 .film-intro video::-webkit-media-controls-start-playback-button { display: none !important; -webkit-appearance: none; }
 .film-intro video::-webkit-media-controls { display: none !important; }
+.film-intro::after { content: "Tap to play"; position: absolute; left: 50%; top: 50%; padding: var(--s-75) var(--s-200); border-radius: 9999px; background: rgba(0, 0, 0, 0.55); color: #fff;
+  font-size: 14px; line-height: 20px; font-weight: 600; transform: translate(-50%, -50%); opacity: 0; pointer-events: none; transition: opacity 300ms var(--ease); }
+.film-intro.tap::after { opacity: 1; }
 .film-intro.held, .film-held .island { touch-action: none; overscroll-behavior: none; }
 .film-intro-ui { position: absolute; left: 0; right: 0; bottom: calc(var(--s-300) + var(--ui-bottom)); display: grid; justify-items: center; gap: var(--s-100); pointer-events: none; }
 .film-intro-hint { padding: var(--s-50) var(--s-100); border-radius: 9999px; background: rgba(0, 0, 0, 0.6); color: #fff; font-size: 12px; line-height: 16px; font-weight: 600; opacity: 0; transform: translateY(4px); transition: opacity 300ms var(--ease), transform 300ms var(--ease); }
