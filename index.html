@@ -20,8 +20,8 @@
 <link rel="icon" href="assets/fav/favicon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="assets/fav/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/landing.css?v=43">
-<link rel="stylesheet" href="assets/mirrorly.css?v=47">
+<link rel="stylesheet" href="assets/landing.css?v=44">
+<link rel="stylesheet" href="assets/mirrorly.css?v=48">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -166,8 +166,8 @@
 <section class="m-only show-m" id="show-m" aria-labelledby="show-m-title">
   <div class="m-car" data-carousel="5500">
     <div class="m-track">
-      <div class="m-slide">
-        <div class="m-vis"><div class="iphone" data-finish="pro-silver"><img class="front" src="assets/media/m-light-off.webp" alt="Mirrorly on iPhone in a dark room, the ring light still off" width="780" height="1608" loading="lazy"></div></div>
+      <div class="m-slide lights">
+        <div class="m-vis"><div class="iphone" data-finish="pro-silver"><img class="front" src="assets/media/m-light-off.webp" alt="Mirrorly on iPhone in a dark room; then the ring light switches on" width="780" height="1608" loading="lazy"><img class="front alt" src="assets/media/m-light-on.webp" alt="" width="780" height="1608" loading="lazy"></div></div>
         <div class="m-txt"><span class="eyebrow">The mirror</span><h2 class="m-h" id="show-m-title">Your iPhone,<br>but a mirror.</h2><p class="lead">With a ring light, zoom and nothing saved, ever.</p></div>
       </div>
       <div class="m-slide lit">
@@ -304,7 +304,7 @@
 </footer>
 
 <script src="assets/mascot.js?v=1"></script>
-<script src="assets/landing.js?v=43"></script>
+<script src="assets/landing.js?v=44"></script>
 <script>
 (() => {
   const L = window.Landing;
@@ -431,6 +431,22 @@
     const last = track.lastElementChild; const max = last.offsetLeft + last.offsetWidth - innerWidth + Math.max(24, (innerWidth - 1120) / 2);
     track.style.transform = `translateX(${-L.ease(L.range(p, 0.05, 0.95)) * Math.max(0, max)}px)`;
   });
+
+  // Phones: the first slide of the mirror switches its ring light on by itself, a moment after it shows
+  const showCar = document.querySelector(".show-m .m-car"), lights = document.querySelector(".show-m .lights");
+  if (L.phone && showCar) {
+    let lt = 0;
+    showCar.addEventListener("slide", (e) => {
+      clearTimeout(lt);
+      lights.classList.remove("lit-now");
+      if (e.detail === 0) lt = setTimeout(() => lights.classList.add("lit-now"), reduce ? 0 : 1400);
+    });
+    new IntersectionObserver((es) => es.forEach((e) => {
+      clearTimeout(lt);
+      if (!e.isIntersecting) lights.classList.remove("lit-now");
+      else if (lights.classList.contains("on")) lt = setTimeout(() => lights.classList.add("lit-now"), reduce ? 0 : 1400);
+    }), { threshold: 0.5 }).observe(showCar);
+  }
 
   // The story film at the bottom: plays while on screen
   const sv = $("story"), st = $("story-toggle");

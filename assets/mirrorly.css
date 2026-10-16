@@ -394,7 +394,9 @@
   .show-m .lead { color: rgba(244, 237, 231, 0.75); }
   .show-m .m-vis::before { content: ""; position: absolute; z-index: -1; left: 50%; top: 50%; width: 170%; aspect-ratio: 1; transform: translate(-50%, -50%);
     border-radius: 50%; background: radial-gradient(closest-side, rgba(255, 226, 196, 0.5), rgba(255, 226, 196, 0.16) 55%, rgba(255, 226, 196, 0) 100%); opacity: 0.25; transition: opacity 900ms var(--ease); }
-  .show-m .lit.on .m-vis::before { opacity: 1; }
+  .show-m .lit.on .m-vis::before, .show-m .lights.lit-now .m-vis::before { opacity: 1; }
+  .show-m .lights .front.alt { opacity: 0; transition: opacity 900ms var(--ease); }
+  .show-m .lights.lit-now .front.alt { opacity: 1; }
   .show-m .m-vis { isolation: isolate; }
   .show-m .m-vis .iphone { --w: calc(min(44svh, 420px) * 0.48); }
   .show-m .vs { margin: var(--s-200) auto 0; gap: var(--s-100); text-align: left; max-width: 340px; }
