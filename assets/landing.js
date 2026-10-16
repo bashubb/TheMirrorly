@@ -5,6 +5,10 @@
   const root = document.documentElement;
   root.classList.remove("no-js");
   const reduce = matchMedia("(prefers-reduced-motion: reduce)");
+  // Phones (portrait and landscape) get their own layout; keep in sync with the query in landing.css
+  const phoneMQ = matchMedia("(max-width: 720px), (pointer: coarse) and (max-height: 540px)");
+  const phone = phoneMQ.matches;
+  root.classList.toggle("is-phone", phone);
 
   // Island nav + full screen menu
   const burger = document.querySelector(".burger");
@@ -47,7 +51,7 @@
     };
     const dock = () => {
       const keep = island.classList.contains("keep-pill");   // a site can keep the pill on desktop
-      const d = innerWidth <= 720 || !keep;   // a fixed bar everywhere; only "keep-pill" sites keep the pill on desktop
+      const d = phone || !keep;   // a fixed bar everywhere; only "keep-pill" sites keep the pill on desktop
       if (d === docked) return;
       docked = d;
       island.classList.toggle("docked", d);
@@ -66,17 +70,115 @@
     if (box && box.closest(".in")) box.classList.add("settled");
   });
 
-  // Segmented controls (phones): [data-seg] buttons switch [data-pane] panels in the same [data-segs] group
-  document.querySelectorAll("[data-segs]").forEach((g) => {
-    const btns = [...g.querySelectorAll("[data-seg]")], panes = [...g.querySelectorAll("[data-pane]")];
-    const pick = (k) => {
-      btns.forEach((b) => b.setAttribute("aria-selected", String(b.dataset.seg === k)));
-      panes.forEach((p) => p.classList.toggle("on", p.dataset.pane === k));
-      g.style.setProperty("--seg-i", btns.findIndex((b) => b.dataset.seg === k));
-    };
-    btns.forEach((b) => b.addEventListener("click", () => pick(b.dataset.seg)));
-    pick(btns[0].dataset.seg);
+  // crossing between the desktop scenes and the phone layout (resizing a desktop window) starts clean
+  phoneMQ.addEventListener("change", () => location.reload());
+  // links to a desktop scene go to its phone version (#how → #how-m) when there is one
+  if (phone) document.querySelectorAll('a[href^="#"]').forEach((a) => {
+    const id = a.getAttribute("href").slice(1);
+    if (id && document.getElementById(id + "-m")) a.setAttribute("href", "#" + id + "-m");
   });
+
+  // Carousels: [data-carousel] > .m-track (slides) + .m-dots. Advance on their own while on screen;
+  // a touch, a swipe or a dot stops that for good. Fires "slide" (detail = index) on change.
+  document.querySelectorAll("[data-carousel]").forEach((car) => {
+    const track = car.querySelector(".m-track"), slides = [...track.children], dots = car.querySelector(".m-dots");
+    const dur = +car.dataset.carousel || 5000;
+    car.style.setProperty("--car-dur", dur + "ms");
+    track.setAttribute("aria-roledescription", "carousel");
+    slides.forEach((s, i) => { s.setAttribute("role", "group"); s.setAttribute("aria-roledescription", "slide"); s.setAttribute("aria-label", `${i + 1} of ${slides.length}`); });
+    const btns = slides.map((_, i) => {
+      const b = document.createElement("button");
+      b.type = "button"; b.setAttribute("aria-label", `Show ${i + 1} of ${slides.length}`); b.append(document.createElement("i"));
+      b.addEventListener("click", () => { stop(); go(i); });
+      dots && dots.append(b);
+      return b;
+    });
+    let cur = -1, timer = 0, visible = false, auto = !reduce.matches;
+    const mark = (i) => {
+      if (i === cur) return;
+      cur = i;
+      btns.forEach((b, k) => b.setAttribute("aria-current", String(k === i)));
+      slides.forEach((s, k) => s.classList.toggle("on", k === i));
+      car.dispatchEvent(new CustomEvent("slide", { detail: i }));
+      if (auto) { car.classList.remove("auto"); void car.offsetWidth; car.classList.toggle("auto", visible); }
+      schedule();
+    };
+    const go = (i) => track.scrollTo({ left: i * track.clientWidth, behavior: reduce.matches ? "auto" : "smooth" });
+    const schedule = () => { clearTimeout(timer); if (auto && visible) timer = setTimeout(() => go((cur + 1) % slides.length), dur); };
+    const stop = () => { auto = false; clearTimeout(timer); car.classList.remove("auto"); };
+    let q = false;
+    track.addEventListener("scroll", () => { if (q) return; q = true; requestAnimationFrame(() => { q = false; mark(Math.round(track.scrollLeft / Math.max(1, track.clientWidth))); }); }, { passive: true });
+    ["pointerdown", "touchstart", "wheel"].forEach((ev) => track.addEventListener(ev, stop, { passive: true }));
+    new IntersectionObserver((es) => es.forEach((e) => {
+      visible = e.isIntersecting;
+      car.classList.toggle("auto", auto && visible);
+      if (visible) schedule(); else clearTimeout(timer);
+    }), { threshold: 0.6 }).observe(car);
+    document.addEventListener("visibilitychange", () => { if (document.hidden) clearTimeout(timer); else schedule(); });
+    addEventListener("resize", () => go(Math.max(0, cur)));
+    mark(0);
+  });
+
+  // The film that opens the phone page: fills the screen, plays once and holds the page while it plays.
+  // A hard swipe or Skip leaves early; when it ends the page scrolls on to the next section by itself.
+  document.querySelectorAll("[data-film-intro]").forEach((sec) => {
+    if (!phone) return;
+    const v = sec.querySelector("video"), bar = sec.querySelector(".film-intro-bar b"), skip = sec.querySelector(".film-intro-skip");
+    const tall = innerHeight >= innerWidth;
+    v.poster = tall ? v.dataset.tallPoster : v.dataset.widePoster;
+    v.src = tall ? v.dataset.tall : v.dataset.wide;
+    const end = +v.dataset.end || 0;                    // a cut that must stop early (before a rewind)
+    let held = !reduce.matches, done = false;
+    const atFilm = () => scrollY < sec.offsetTop + sec.offsetHeight / 2;
+    const holding = () => held && !v.paused && atFilm();
+    const relax = () => { sec.classList.remove("pulling"); sec.style.setProperty("--tug", "0px"); };
+    const moveOn = () => { const n = sec.nextElementSibling; if (n) n.scrollIntoView({ behavior: reduce.matches ? "auto" : "smooth", block: "start" }); };
+    const finish = (jump) => {
+      held = false; relax();
+      if (!done) { done = true; sec.classList.add("done"); }
+      if (jump) moveOn();
+    };
+    v.addEventListener("timeupdate", () => {
+      const d = end || v.duration || 1;
+      bar.style.transform = `scaleX(${Math.min(1, v.currentTime / d).toFixed(3)})`;
+      if (end && v.currentTime >= end && !v.paused) { v.pause(); finish(atFilm()); }
+    });
+    v.addEventListener("ended", () => finish(atFilm()));
+    skip.addEventListener("click", () => { v.pause(); finish(true); });
+    if (reduce.matches) { v.controls = true; sec.classList.add("done"); }
+    else new IntersectionObserver((es) => es.forEach((e) => {
+      if (e.isIntersecting && !done) v.play().catch(() => { v.controls = true; held = false; });   // Low Power Mode: no autoplay, the viewer plays it
+      else if (!e.isIntersecting) v.pause();
+    }), { threshold: 0.5 }).observe(v);
+    // the hold: a soft swipe only tugs the film; a long or fast one lets go
+    let y0 = 0, t0 = 0;
+    addEventListener("touchstart", (e) => { y0 = e.touches[0].clientY; t0 = performance.now(); }, { passive: true });
+    addEventListener("touchmove", (e) => {
+      const dy = y0 - e.touches[0].clientY;
+      if (dy <= 0 || !holding()) return;
+      e.preventDefault();
+      const speed = dy / Math.max(1, performance.now() - t0);         // px per ms
+      if (dy > 180 || speed > 1.1) { v.pause(); finish(true); return; }
+      sec.classList.add("pulling");
+      sec.style.setProperty("--tug", (64 * (1 - Math.exp(-dy / 140))).toFixed(1) + "px");
+    }, { passive: false });
+    addEventListener("touchend", relax, { passive: true });
+    let pull = 0, last = 0, wt = 0;
+    addEventListener("wheel", (e) => {
+      if (e.deltaY <= 0 || !holding()) return;
+      e.preventDefault();
+      const now = performance.now();
+      pull = pull * Math.exp(-(now - last) / 380) + e.deltaY; last = now;
+      if (pull > 600) { v.pause(); finish(true); return; }
+      sec.classList.add("pulling");
+      sec.style.setProperty("--tug", (64 * (1 - Math.exp(-pull / 220))).toFixed(1) + "px");
+      clearTimeout(wt); wt = setTimeout(relax, 220);
+    }, { passive: false });
+  });
+
+  // Marquees drift only while on screen
+  const mqIO = new IntersectionObserver((es) => es.forEach((e) => e.target.classList.toggle("run", e.isIntersecting)));
+  document.querySelectorAll(".m-marquee").forEach((m) => mqIO.observe(m));
 
   // Scroll reveal
   const revealIO = new IntersectionObserver((entries) => {
@@ -174,7 +276,9 @@
 
   window.Landing = {
     reduceMotion: () => reduce.matches,
+    phone,
     scene(name, fn) {
+      if (phone) return;                                 // phones have no pinned scenes
       scenes.set(name, fn);
       document.querySelectorAll(`[data-scene="${name}"]`).forEach((el) => sceneIO.observe(el));
       tick();
@@ -186,5 +290,5 @@
     range(p, a, b) { const t = Math.min(1, Math.max(0, (p - a) / (b - a))); return t; },
     ease(t) { return 1 - Math.pow(1 - t, 3); },
   };
-  document.querySelectorAll("[data-scene]").forEach((el) => sceneIO.observe(el));
+  if (!phone) document.querySelectorAll("[data-scene]").forEach((el) => sceneIO.observe(el));
 })();

@@ -20,8 +20,8 @@
 <link rel="icon" href="assets/fav/favicon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="assets/fav/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/landing.css?v=21">
-<link rel="stylesheet" href="assets/mirrorly.css?v=44">
+<link rel="stylesheet" href="assets/landing.css?v=41">
+<link rel="stylesheet" href="assets/mirrorly.css?v=47">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -58,7 +58,6 @@
   <div class="links">
     <a href="#show">The mirror</a>
     <a href="#moments">Moments</a>
-    <a href="#talks">It talks</a>
     <a href="#faq">FAQ</a>
   </div>
   <span class="btn sm cta when-soon" aria-disabled="true">Coming soon</span>
@@ -68,14 +67,31 @@
 <div class="menu" id="menu">
   <a href="#show">The mirror</a>
   <a href="#moments">Moments</a>
-  <a href="#talks">It talks</a>
   <a href="#faq">FAQ</a>
   <a href="privacy/">Privacy</a>
 </div>
 
 <main id="main">
+<section class="m-only film-intro" data-film-intro aria-label="Mirrorly in 18 seconds">
+  <video muted playsinline preload="auto" data-tall="assets/media/mirror-film-tall.mp4" data-tall-poster="assets/media/mirror-film-tall-poster.jpg" data-wide="assets/media/mirror-film-wide.mp4" data-wide-poster="assets/media/mirror-film-wide-poster.jpg" aria-label="Animated film: the Mirrorly mirror wakes up in the dark, lights up like a ring light and zooms in"></video>
+  <button class="film-intro-skip" type="button">Skip</button>
+  <div class="film-intro-ui" aria-hidden="true"><span class="film-intro-hint">Swipe up hard to skip</span><span class="film-intro-bar"><b></b></span></div>
+</section>
+
+<section class="m-only m-intro" aria-labelledby="m-intro-title">
+  <div class="wrap center m-fit">
+    <img class="m-icon" src="assets/icon-512.png" alt="" width="96" height="96">
+    <h2 class="m-title" id="m-intro-title">Mirrorly</h2>
+    <p class="lead">A pocket mirror for iPhone, with a ring light and zoom. Coming soon.</p>
+    <div class="cta-row">
+      <span class="btn when-soon" aria-disabled="true"><svg aria-hidden="true"><use href="#i-apple-logo"/></svg>Coming soon to the App Store</span>
+      <a class="store-badge when-live" href="https://apps.apple.com/app/id6792856754" data-store-link><img src="assets/app-store-badge-black.svg" alt="Download on the App Store" width="156" height="52"></a>
+    </div>
+  </div>
+</section>
+
 <!-- 0. The film first: full screen, its own light spilling around it -->
-<section class="scene opener" data-scene="opener" aria-labelledby="hero-title">
+<section class="scene opener d-only" data-scene="opener" aria-labelledby="hero-title">
   <div class="scene-pin">
     <canvas class="ambient" id="ambient" width="2" height="2" hidden></canvas>
     <div class="screen" id="screen">
@@ -99,7 +115,7 @@
 
 
 <!-- 1. Light, zoom, better than the Camera app -->
-<section class="scene show" id="show" data-scene="show" aria-label="The mirror">
+<section class="scene show d-only" id="show" data-scene="show" aria-label="The mirror">
   <div class="scene-pin">
     <span class="room" id="room" aria-hidden="true"></span>
     <span class="glow" id="glow" aria-hidden="true"></span>
@@ -147,8 +163,37 @@
   </div>
 </section>
 
+<section class="m-only show-m" id="show-m" aria-labelledby="show-m-title">
+  <div class="m-car" data-carousel="5500">
+    <div class="m-track">
+      <div class="m-slide">
+        <div class="m-vis"><div class="iphone" data-finish="pro-silver"><img class="front" src="assets/media/m-light-off.webp" alt="Mirrorly on iPhone in a dark room, the ring light still off" width="780" height="1608" loading="lazy"></div></div>
+        <div class="m-txt"><span class="eyebrow">The mirror</span><h2 class="m-h" id="show-m-title">Your iPhone,<br>but a mirror.</h2><p class="lead">With a ring light, zoom and nothing saved, ever.</p></div>
+      </div>
+      <div class="m-slide lit">
+        <div class="m-vis"><div class="iphone" data-finish="pro-silver"><img class="front" src="assets/media/m-light-on.webp" alt="Mirrorly with the ring light on: the screen glows around her face" width="780" height="1608" loading="lazy"></div></div>
+        <div class="m-txt"><span class="eyebrow">Light</span><h2 class="m-h">Good light,<br>wherever you are.</h2><p class="lead">Tap the bulb and the screen glows around you. A dark car, a dim bathroom, a hotel room at midnight.</p></div>
+      </div>
+      <div class="m-slide lit">
+        <div class="m-vis"><div class="iphone" data-finish="pro-silver"><img class="front" src="assets/media/m-zoom-2.webp" alt="Mirrorly zoomed in to 1.6× on brows and skin" width="780" height="1608" loading="lazy"></div></div>
+        <div class="m-txt"><span class="eyebrow">Zoom</span><h2 class="m-h">Closer than<br>a compact.</h2><p class="lead">Pinch in for brows, lashes and the last bit of highlighter.</p></div>
+      </div>
+      <div class="m-slide lit">
+        <div class="m-vis"><div class="iphone" data-finish="pro-silver"><img class="front" src="assets/media/m-zoom-1.webp" alt="Mirrorly showing her face at 1.0× with the ring light on" width="780" height="1608" loading="lazy"></div></div>
+        <div class="m-txt"><span class="eyebrow">Not the Camera app</span><h2 class="m-h">Made for looking,<br>not for shooting.</h2><ul class="vs on-all" aria-label="Mirrorly compared with the Camera app">
+            <li><span>A ring light, whenever you want</span><em>Camera: flash only when you shoot</em></li>
+            <li><span>Brightness at maximum</span><em>Camera: whatever it was</em></li>
+            <li><span>No shutter to slip on</span><em>Camera: one slip, one photo</em></li>
+            <li><span>Nothing saved, ever</span><em>Camera: it’s in your library now</em></li>
+          </ul></div>
+      </div>
+    </div>
+    <div class="m-dots"></div>
+  </div>
+</section>
+
 <!-- 2. Why you need it: other people -->
-<section class="scene moments" id="moments" data-scene="moments" aria-labelledby="moments-title">
+<section class="scene moments d-only" id="moments" data-scene="moments" aria-labelledby="moments-title">
   <div class="scene-pin">
     <div class="wrap moments-head">
       <span class="eyebrow">Why</span>
@@ -175,25 +220,31 @@
   </div>
 </section>
 
-<!-- 3. The comedy -->
-<section class="scene talks" id="talks" data-scene="talks" aria-labelledby="talks-title">
-  <div class="scene-pin">
-    <div class="wrap talks-grid">
-      <div class="talks-intro">
-        <span class="eyebrow">It has a personality</span>
-        <h2 class="m-h" id="talks-title">Most mirrors keep quiet.<br>This one doesn’t.</h2>
-        <p class="lead">Mirrorly reads your face and, once in a while, says the thing a good friend would only think. No compliments on demand. No filter.</p>
-        <p class="talks-cta">Make a face. See for yourself.</p>
-      </div>
-      <div class="talks-stage" aria-live="off">
-        <span class="mascot talks-mascot" id="talks-face" data-face="wink" role="img" aria-label="The Mirrorly mirror"></span>
-        <div class="lines">
-          <p class="joke on"><span class="bubble-in"><span class="j1">the lighting did all that.</span> <span class="j2">sadly.</span></span></p>
-          <p class="joke"><span class="bubble-in"><span class="j1">your eyebrows</span> <span class="j2">filed a complaint.</span></span></p>
-          <p class="joke"><span class="bubble-in"><span class="j1">that pore</span> <span class="j2">has representation.</span></span></p>
-        </div>
-      </div>
+<section class="m-only m-sec moments-m" id="moments-m" aria-labelledby="moments-m-title">
+  <div class="wrap center m-head">
+    <span class="eyebrow">Why</span>
+    <h2 class="m-h" id="moments-m-title">For the moments<br>people see you.</h2>
+  </div>
+  <div class="m-car" data-carousel="5000">
+    <div class="m-track">
+      <article class="m-slide">
+        <div class="m-vis"><div class="iphone" data-finish="pro-silver"><img class="front" src="assets/media/m-moment-interview.webp" alt="A man checking his face and tie in Mirrorly before an interview" width="780" height="1608" loading="lazy"></div></div>
+        <div class="m-txt"><span class="time">8:52</span><h3>Before the interview.</h3><p>Collar, hair, and the face you make when you’re nervous.</p></div>
+      </article>
+      <article class="m-slide">
+        <div class="m-vis"><div class="iphone" data-finish="pro-silver"><img class="front" src="assets/media/m-moment-date.webp" alt="A young woman checking her face at 1.4× zoom before a lunch date" width="780" height="1608" loading="lazy"></div></div>
+        <div class="m-txt"><span class="time">13:40</span><h3>Lunch date.</h3><p>One closer look before you walk in and smile.</p></div>
+      </article>
+      <article class="m-slide">
+        <div class="m-vis"><div class="iphone" data-finish="pro-silver"><img class="front" src="assets/media/m-moment-mechanic.webp" alt="A mechanic in a workshop checking a grease smudge on his cheek in Mirrorly" width="780" height="1608" loading="lazy"></div></div>
+        <div class="m-txt"><span class="time">17:45</span><h3>Straight from the garage.</h3><p>Grease on the cheek? Better you spot it than the kids at pickup.</p></div>
+      </article>
+      <article class="m-slide">
+        <div class="m-vis"><div class="iphone" data-finish="pro-silver"><img class="front" src="assets/media/m-moment-party.webp" alt="A woman doing her eyeliner in a dark room by the ring light" width="780" height="1608" loading="lazy"></div></div>
+        <div class="m-txt"><span class="time">22:15</span><h3>Getting ready in the dark.</h3><p>Ring light on. Eyeliner straight. Out the door.</p></div>
+      </article>
     </div>
+    <div class="m-dots"></div>
   </div>
 </section>
 
@@ -253,7 +304,7 @@
 </footer>
 
 <script src="assets/mascot.js?v=1"></script>
-<script src="assets/landing.js?v=20"></script>
+<script src="assets/landing.js?v=41"></script>
 <script>
 (() => {
   const L = window.Landing;
@@ -291,9 +342,9 @@
     pin.style.setProperty("--bottom", bottom + "px");
   };
   fitRoom(); document.fonts.ready.then(fitRoom);
-  let rz = 0; addEventListener("resize", () => { fitRoom(); clearTimeout(rz); rz = setTimeout(pickCut, 200); });
+  let rz = 0; addEventListener("resize", () => { fitRoom(); clearTimeout(rz); if (!L.phone) rz = setTimeout(pickCut, 200); });
   let userPaused = reduce;
-  pickCut();
+  if (!L.phone) pickCut(); else { film.removeAttribute("autoplay"); film.querySelector("source").remove(); film.removeAttribute("poster"); film.load(); }
   if (reduce) { film.removeAttribute("autoplay"); film.pause(); }
   const fIcon = () => { ft.querySelector("use").setAttribute("href", film.paused ? "#i-play" : "#i-pause"); ft.setAttribute("aria-label", film.paused ? "Play film" : "Pause film"); };
   ["play", "playing", "pause", "timeupdate"].forEach((ev) => film.addEventListener(ev, fIcon)); fIcon();
@@ -380,21 +431,6 @@
     const last = track.lastElementChild; const max = last.offsetLeft + last.offsetWidth - innerWidth + Math.max(24, (innerWidth - 1120) / 2);
     track.style.transform = `translateX(${-L.ease(L.range(p, 0.05, 0.95)) * Math.max(0, max)}px)`;
   });
-
-  // 3. The comedy: the setup, a beat, then the punchline; the mirror reacts
-  const jokes = [...document.querySelectorAll(".joke")];
-  const face = $("talks-face");
-  let lastJ = -1;
-  L.scene("talks", (p) => {
-    const j = p < 0.4 ? 0 : p < 0.7 ? 1 : 2;
-    jokes.forEach((el, i) => {
-      el.classList.toggle("on", i === j);
-      el.classList.toggle("punch", p > [0.1, 0.48, 0.78][i]);
-    });
-    if (j !== lastJ) { lastJ = j; Mascot.set(face, ["oo", "squint", "smug"][j]); face.classList.remove("bounce"); void face.offsetWidth; face.classList.add("bounce"); }
-  });
-
-
 
   // The story film at the bottom: plays while on screen
   const sv = $("story"), st = $("story-toggle");

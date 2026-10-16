@@ -378,3 +378,44 @@
 }
 @media (pointer: coarse) { .beat { filter: none !important; } }
 @media (max-width: 720px) and (orientation: portrait) { .moments .track { perspective: 1200px; perspective-origin: 50% 100%; } .moment { transform-origin: 50% 100%; } }
+
+/* ===== Phones, portrait and landscape: their own layout (system in landing.css) ===== */
+@media (max-width: 720px), (pointer: coarse) and (max-height: 540px) {
+  .film-intro { --film-bg: #15100a; --film-fg: #f4e2cc; }
+  .m-intro { padding: var(--s-700) 0; }
+  .m-intro .m-icon { width: 96px; height: 96px; border-radius: 22px; margin: 0 auto var(--s-200); }
+  .m-intro .lead { margin-top: var(--s-100); }
+  .m-intro .cta-row { justify-content: center; margin-top: var(--s-300); }
+
+  /* the mirror: a dark room, the phone in its own warm light */
+  .show-m { background: #0e0a0b; color: #f4ede7; padding: var(--s-700) 0 var(--s-600); --line: rgba(255, 255, 255, 0.16); --dot: #f4e2cc; }
+  .show-m .eyebrow { color: #e9b9a0; }
+  .show-m .m-h { color: #fff; }
+  .show-m .lead { color: rgba(244, 237, 231, 0.75); }
+  .show-m .m-vis::before { content: ""; position: absolute; z-index: -1; left: 50%; top: 50%; width: 170%; aspect-ratio: 1; transform: translate(-50%, -50%);
+    border-radius: 50%; background: radial-gradient(closest-side, rgba(255, 226, 196, 0.5), rgba(255, 226, 196, 0.16) 55%, rgba(255, 226, 196, 0) 100%); opacity: 0.25; transition: opacity 900ms var(--ease); }
+  .show-m .lit.on .m-vis::before { opacity: 1; }
+  .show-m .m-vis { isolation: isolate; }
+  .show-m .m-vis .iphone { --w: calc(min(44svh, 420px) * 0.48); }
+  .show-m .vs { margin: var(--s-200) auto 0; gap: var(--s-100); text-align: left; max-width: 340px; }
+  .show-m .vs li { padding-left: var(--s-400); }
+  .show-m .vs li::after, .show-m .vs li::before { width: 20px; height: 20px; font-size: 12px; background: #e9b9a0; color: #24141f; }
+  .show-m .vs span { font-size: 16px; line-height: 24px; color: #fff; }
+  .show-m .vs em { font-size: 12px; line-height: 16px; color: rgba(244, 237, 231, 0.6); }
+
+  .moments-m { background: var(--bg-2); }
+  .moments-m .m-slide { gap: var(--s-200); }
+  .moments-m .m-vis .iphone { --w: calc(min(44svh, 420px) * 0.48); }
+  .moments-m .time { display: block; font-size: 36px; line-height: 40px; font-weight: 700; letter-spacing: -0.04em; color: var(--accent-text); font-variant-numeric: tabular-nums; }
+  .moments-m h3 { margin-top: var(--s-50); font-size: 20px; line-height: 28px; font-weight: 600; }
+  .moments-m p { margin-top: var(--s-75); color: var(--muted); }
+}
+@media (max-width: 720px) and (orientation: landscape), (pointer: coarse) and (max-height: 540px) and (orientation: landscape) {
+  .m-intro { padding: var(--s-500) 0; }
+  .m-intro .m-icon { width: 64px; height: 64px; border-radius: 15px; }
+  .show-m .m-vis .iphone, .moments-m .m-vis .iphone { --w: calc((var(--m-room) - var(--s-600)) * 0.48); }
+  .show-m .vs { margin-inline: 0; }
+  .show-m .vs em { display: none; }
+  .story-split { grid-template-columns: 1fr auto; text-align: left; }
+  .story-film { width: calc((var(--m-room) - var(--s-400)) * 9 / 16); max-width: none; }
+}
