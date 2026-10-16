@@ -386,11 +386,19 @@
   .show-m .eyebrow { color: var(--accent-text); }
   .show-m .m-h { color: #fff; }
   .show-m .lead { color: rgba(244, 237, 231, 0.75); }
-  .show-m .m-vis::before { content: ""; position: absolute; z-index: -1; left: 50%; top: 50%; width: 170%; aspect-ratio: 1; transform: translate(-50%, -50%);
-    border-radius: 50%; background: radial-gradient(closest-side, rgba(255, 226, 196, 0.5), rgba(255, 226, 196, 0.16) 55%, rgba(255, 226, 196, 0) 100%); opacity: 0.25; transition: opacity 900ms var(--ease); }
-  .show-m .lit.on .m-vis::before, .show-m .lights.lit-now .m-vis::before { opacity: 1; }
-  .show-m .lights .front.alt { opacity: 0; transition: opacity 900ms var(--ease); }
+  /* the ring light: a warm glow that spills out from under the phone */
+  .show-m .m-vis::before { content: ""; position: absolute; z-index: -1; left: 50%; top: 58%; width: 190%; height: 120%; transform: translate(-50%, -50%) scale(0.55);
+    border-radius: 50%; background: radial-gradient(closest-side, rgba(255, 226, 196, 0.55), rgba(255, 226, 196, 0.18) 50%, rgba(255, 226, 196, 0) 100%); opacity: 0;
+    transition: opacity 1200ms var(--ease), transform 1600ms var(--ease); }
+  .show-m .lit.on .m-vis::before { opacity: 0.7; transform: translate(-50%, -50%) scale(0.9); }
+  .show-m .lights.lit-now .m-vis::before { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  .show-m .lights .front.alt { opacity: 0; transition: opacity 700ms var(--ease); }
   .show-m .lights.lit-now .front.alt { opacity: 1; }
+  .show-m .zooms .iphone { transition: transform 1400ms var(--ease); }
+  .show-m .zooms .front.alt { opacity: 0; transition: opacity 900ms var(--ease) 200ms; }
+  .show-m .zooms.zoom-now .front.alt { opacity: 1; }
+  .show-m .zooms.zoom-now .iphone { transform: scale(1.06); }
+  .show-m .zoomer { display: inline-block; margin-top: var(--s-200); padding: var(--s-50) var(--s-200); border-radius: 9999px; background: rgba(255, 255, 255, 0.1); font-size: 20px; line-height: 28px; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--accent-text); }
   .show-m .m-vis { isolation: isolate; }
   .show-m .m-vis .iphone { --w: calc(min(44svh, 420px) * 0.48); }
   .show-m .vs { margin: var(--s-200) auto 0; gap: var(--s-100); text-align: left; max-width: 340px; }

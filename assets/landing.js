@@ -84,7 +84,6 @@
   document.querySelectorAll("[data-carousel]").forEach((car) => {
     const track = car.querySelector(".m-track"), slides = [...track.children], dots = car.querySelector(".m-dots");
     const n = slides.length, dur = +car.dataset.carousel || 5000;
-    car.style.setProperty("--car-dur", dur + "ms");
     track.setAttribute("aria-roledescription", "carousel");
     slides.forEach((s, i) => { s.setAttribute("role", "group"); s.setAttribute("aria-roledescription", "slide"); s.setAttribute("aria-label", `${i + 1} of ${n}`); });
     const loop = slides[0].cloneNode(true);             // the first slide again at the end: the loop never runs backwards
@@ -92,7 +91,7 @@
     track.append(loop);
     const btns = slides.map((_, i) => {
       const b = document.createElement("button");
-      b.type = "button"; b.setAttribute("aria-label", `Show ${i + 1} of ${n}`); b.append(document.createElement("i"));
+      b.type = "button"; b.setAttribute("aria-label", `Show ${i + 1} of ${n}`);
       b.addEventListener("click", () => show(i, true));
       dots && dots.append(b);
       return b;
@@ -108,7 +107,6 @@
       slides.forEach((s, k) => s.classList.toggle("on", k === i));
       loop.classList.toggle("on", false);
       car.dispatchEvent(new CustomEvent("slide", { detail: i }));
-      car.classList.remove("auto"); void car.offsetWidth; car.classList.toggle("auto", auto && visible);
     };
     const show = (i, animate) => {
       pos = i; place(i, animate);
@@ -128,15 +126,14 @@
     track.addEventListener("pointerdown", (e) => {
       hx = e.clientX; hy = e.clientY;
       clearTimeout(ht);
-      ht = setTimeout(() => { holding = true; car.classList.add("hold"); pause(); }, 180);
+      ht = setTimeout(() => { holding = true; pause(); }, 180);
     });
     track.addEventListener("pointermove", (e) => { if (!holding && Math.hypot(e.clientX - hx, e.clientY - hy) > 8) clearTimeout(ht); });
-    const up = () => { clearTimeout(ht); if (holding) { holding = false; car.classList.remove("hold"); run(); } };
+    const up = () => { clearTimeout(ht); if (holding) { holding = false; run(); } };
     ["pointerup", "pointercancel", "pointerleave"].forEach((ev) => track.addEventListener(ev, up));
     track.addEventListener("contextmenu", (e) => e.preventDefault());
     new IntersectionObserver((es) => es.forEach((e) => {
       visible = e.isIntersecting;
-      car.classList.toggle("auto", auto && visible);
       if (visible) run(); else pause();
     }), { threshold: 0.5 }).observe(car);
     document.addEventListener("visibilitychange", () => { if (document.hidden) pause(); else run(); });
@@ -148,7 +145,7 @@
   // A hard swipe or Skip leaves early; when it ends the page scrolls on to the next section by itself.
   document.querySelectorAll("[data-film-intro]").forEach((sec) => {
     if (!phone) return;
-    const v = sec.querySelector("video"), bar = sec.querySelector(".film-intro-bar b"), skip = sec.querySelector(".film-intro-skip");
+    const v = sec.querySelector("video"), skip = sec.querySelector(".film-intro-skip");
     const tall = innerHeight >= innerWidth;
     // iOS autoplays only a muted inline video: set it all as properties too, before the source
     v.muted = true; v.defaultMuted = true; v.playsInline = true; v.autoplay = !reduce.matches;
@@ -172,7 +169,6 @@
     const start = () => {                               // each time it shows up: from the beginning, playing, holding
       sec.classList.remove("done");
       try { v.currentTime = 0; } catch (e) {}
-      bar.style.transform = "scaleX(0)";
       if (!reduce.matches) { play(); setHeld(true); }
     };
     const finish = (jump) => {
@@ -180,8 +176,6 @@
       if (jump) moveOn();
     };
     v.addEventListener("timeupdate", () => {
-      const d = end || v.duration || 1;
-      bar.style.transform = `scaleX(${Math.min(1, v.currentTime / d).toFixed(3)})`;
       if (end && v.currentTime >= end && !v.paused) finish(held && atFilm());
     });
     v.addEventListener("ended", () => finish(held && atFilm()));

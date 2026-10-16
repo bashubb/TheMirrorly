@@ -373,15 +373,10 @@ h3 { font-size: 20px; line-height: 28px; letter-spacing: -0.01em; }
 .m-track { display: flex; margin: 0; padding: 0; list-style: none; touch-action: pan-y; will-change: transform; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
 .m-track img { -webkit-user-drag: none; pointer-events: none; }
 .m-track > * { flex: 0 0 100%; min-width: 0; padding-inline: max(var(--gutter), env(safe-area-inset-left, 0px)) max(var(--gutter), env(safe-area-inset-right, 0px)); }
-.m-car.hold .m-dots button[aria-current="true"] i { animation-play-state: paused; }
 .m-dots { display: flex; justify-content: center; gap: var(--s-75); margin-top: var(--s-200); }
-.m-dots button { position: relative; width: 8px; height: 8px; padding: 0; border: 0; border-radius: 9999px; background: var(--line); overflow: hidden; cursor: pointer; transition: width 500ms var(--ease), background-color 500ms var(--ease); }
+.m-dots button { position: relative; width: 8px; height: 8px; padding: 0; border: 0; border-radius: 9999px; background: var(--line); cursor: pointer; transition: width 500ms var(--ease), background-color 500ms var(--ease); }
 .m-dots button::after { content: ""; position: absolute; inset: -18px -8px; }
-.m-dots button[aria-current="true"] { width: 32px; background: var(--dot-track, var(--line)); }
-.m-dots button i { position: absolute; inset: 0; border-radius: inherit; background: var(--dot, var(--text)); transform: scaleX(0); transform-origin: 0 50%; }
-.m-dots button[aria-current="true"] i { transform: scaleX(1); }
-.m-car.auto .m-dots button[aria-current="true"] i { animation: m-dot var(--car-dur, 5s) linear both; }
-@keyframes m-dot { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.m-dots button[aria-current="true"] { width: 24px; background: var(--dot, var(--text)); }
 
 /* a row that drifts sideways on its own (duplicated content, -50% loop) */
 .m-marquee { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
@@ -406,8 +401,6 @@ h3 { font-size: 20px; line-height: 28px; letter-spacing: -0.01em; }
 .film-intro.tap::after { opacity: 1; }
 .film-intro.held, .film-held .island { touch-action: none; overscroll-behavior: none; }
 .film-intro-ui { position: absolute; left: 0; right: 0; bottom: calc(var(--s-300) + var(--ui-bottom)); display: grid; justify-items: center; gap: var(--s-100); pointer-events: none; }
-.film-intro-bar { width: min(200px, 50vw); height: 4px; border-radius: 4px; background: color-mix(in srgb, currentColor 25%, transparent); overflow: hidden; }
-.film-intro-bar b { display: block; height: 100%; background: currentColor; transform-origin: 0 50%; transform: scaleX(0); }
 .film-intro-hint { padding: var(--s-50) var(--s-100); border-radius: 9999px; background: rgba(0, 0, 0, 0.6); color: #fff; font-size: 12px; line-height: 16px; font-weight: 600; opacity: 0; transform: translateY(4px); transition: opacity 300ms var(--ease), transform 300ms var(--ease); }
 .film-intro.pulling .film-intro-hint { opacity: 1; transform: none; }
 .film-intro-skip { position: absolute; z-index: 2; top: calc(var(--nav-h) + var(--s-100)); right: max(var(--gutter), env(safe-area-inset-right, 0px)); min-height: 44px; padding: var(--s-75) var(--s-200); border: 0; border-radius: 9999px; background: rgba(0, 0, 0, 0.45); color: #fff; font-size: 14px; line-height: 20px; font-weight: 600; cursor: pointer; transition: opacity 300ms var(--ease), transform 120ms var(--ease); }

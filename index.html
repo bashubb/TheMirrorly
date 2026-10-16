@@ -20,8 +20,8 @@
 <link rel="icon" href="assets/fav/favicon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="assets/fav/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/landing.css?v=44">
-<link rel="stylesheet" href="assets/mirrorly.css?v=49">
+<link rel="stylesheet" href="assets/landing.css?v=45">
+<link rel="stylesheet" href="assets/mirrorly.css?v=51">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -75,7 +75,7 @@
 <section class="m-only film-intro" data-film-intro aria-label="Mirrorly in 18 seconds">
   <video muted playsinline preload="auto" data-tall="assets/media/mirror-film-tall.mp4" data-tall-poster="assets/media/mirror-film-tall-poster.jpg" data-wide="assets/media/mirror-film-wide.mp4" data-wide-poster="assets/media/mirror-film-wide-poster.jpg" aria-label="Animated film: the Mirrorly mirror wakes up in the dark, lights up like a ring light and zooms in"></video>
   <button class="film-intro-skip" type="button">Skip</button>
-  <div class="film-intro-ui" aria-hidden="true"><span class="film-intro-hint">Swipe up hard to skip</span><span class="film-intro-bar"><b></b></span></div>
+  <div class="film-intro-ui" aria-hidden="true"><span class="film-intro-hint">Swipe up hard to skip</span></div>
 </section>
 
 <section class="m-only m-intro" aria-labelledby="m-intro-title">
@@ -166,17 +166,17 @@
 <section class="m-only show-m" id="show-m" aria-labelledby="show-m-title">
   <div class="m-car" data-carousel="5500">
     <div class="m-track">
-      <div class="m-slide lights">
-        <div class="m-vis"><div class="iphone" data-finish="pro-silver"><img class="front" src="assets/media/m-light-off.webp" alt="Mirrorly on iPhone in a dark room; then the ring light switches on" width="780" height="1608" loading="lazy"><img class="front alt" src="assets/media/m-light-on.webp" alt="" width="780" height="1608" loading="lazy"></div></div>
+      <div class="m-slide">
+        <div class="m-vis"><div class="iphone" data-finish="pro-silver"><img class="front" src="assets/media/m-moment-date.webp" alt="Mirrorly on iPhone: a clear, bright mirror of her face, zoomed to 1.4×" width="780" height="1608" loading="lazy"></div></div>
         <div class="m-txt"><span class="eyebrow">The mirror</span><h2 class="m-h" id="show-m-title">Your iPhone,<br>but a mirror.</h2><p class="lead">With a ring light, zoom and nothing saved, ever.</p></div>
       </div>
-      <div class="m-slide lit">
-        <div class="m-vis"><div class="iphone" data-finish="pro-silver"><img class="front" src="assets/media/m-light-on.webp" alt="Mirrorly with the ring light on: the screen glows around her face" width="780" height="1608" loading="lazy"></div></div>
+      <div class="m-slide lights">
+        <div class="m-vis"><div class="iphone" data-finish="pro-silver"><img class="front" src="assets/media/m-light-off.webp" alt="Mirrorly in a dark room; then the ring light switches on and the screen glows around her face" width="780" height="1608" loading="lazy"><img class="front alt" src="assets/media/m-light-on.webp" alt="" width="780" height="1608" loading="lazy"></div></div>
         <div class="m-txt"><span class="eyebrow">Light</span><h2 class="m-h">Good light,<br>wherever you are.</h2><p class="lead">Tap the bulb and the screen glows around you. A dark car, a dim bathroom, a hotel room at midnight.</p></div>
       </div>
-      <div class="m-slide lit">
-        <div class="m-vis"><div class="iphone" data-finish="pro-silver"><img class="front" src="assets/media/m-zoom-2.webp" alt="Mirrorly zoomed in to 1.6× on brows and skin" width="780" height="1608" loading="lazy"></div></div>
-        <div class="m-txt"><span class="eyebrow">Zoom</span><h2 class="m-h">Closer than<br>a compact.</h2><p class="lead">Pinch in for brows, lashes and the last bit of highlighter.</p></div>
+      <div class="m-slide lit zooms">
+        <div class="m-vis"><div class="iphone" data-finish="pro-silver"><img class="front" src="assets/media/m-zoom-1.webp" alt="Mirrorly at 1.0×, then pinched in to 1.6× on brows and skin" width="780" height="1608" loading="lazy"><img class="front alt" src="assets/media/m-zoom-2.webp" alt="" width="780" height="1608" loading="lazy"></div></div>
+        <div class="m-txt"><span class="eyebrow">Zoom</span><h2 class="m-h">Closer than<br>a compact.</h2><p class="lead">Pinch in for brows, lashes and the last bit of highlighter.</p><span class="zoomer" id="m-zoomer">1.0×</span></div>
       </div>
       <div class="m-slide lit">
         <div class="m-vis"><div class="iphone" data-finish="pro-silver"><img class="front" src="assets/media/m-zoom-1.webp" alt="Mirrorly showing her face at 1.0× with the ring light on" width="780" height="1608" loading="lazy"></div></div>
@@ -304,7 +304,7 @@
 </footer>
 
 <script src="assets/mascot.js?v=1"></script>
-<script src="assets/landing.js?v=44"></script>
+<script src="assets/landing.js?v=45"></script>
 <script>
 (() => {
   const L = window.Landing;
@@ -432,19 +432,34 @@
     track.style.transform = `translateX(${-L.ease(L.range(p, 0.05, 0.95)) * Math.max(0, max)}px)`;
   });
 
-  // Phones: the first slide of the mirror switches its ring light on by itself, a moment after it shows
+  // Phones: the light slide shows the dark room first, then switches the ring light on by itself
   const showCar = document.querySelector(".show-m .m-car"), lights = document.querySelector(".show-m .lights");
   if (L.phone && showCar) {
     let lt = 0;
     showCar.addEventListener("slide", (e) => {
       clearTimeout(lt);
       lights.classList.remove("lit-now");
-      if (e.detail === 0) lt = setTimeout(() => lights.classList.add("lit-now"), reduce ? 0 : 1400);
+      if (e.detail === 1) lt = setTimeout(() => lights.classList.add("lit-now"), reduce ? 0 : 1300);
     });
+    // the zoom slide: 1.0× first, then it pinches in to 1.6× and the counter follows
+    const zooms = document.querySelector(".show-m .zooms"), zoomer = document.getElementById("m-zoomer");
+    let zt = 0, zf = 0;
+    const zoomIn = () => {
+      zooms.classList.add("zoom-now");
+      const t0 = performance.now();
+      const step = (now) => {
+        const k = Math.min(1, (now - t0) / 1400), e = 1 - Math.pow(1 - k, 3);
+        zoomer.textContent = (1 + 0.6 * e).toFixed(1) + "×";
+        if (k < 1) zf = requestAnimationFrame(step);
+      };
+      zf = requestAnimationFrame(step);
+    };
+    const zoomOut = () => { clearTimeout(zt); cancelAnimationFrame(zf); zooms.classList.remove("zoom-now"); zoomer.textContent = "1.0×"; };
+    showCar.addEventListener("slide", (e) => { zoomOut(); if (e.detail === 2) zt = setTimeout(zoomIn, reduce ? 0 : 1200); });
     new IntersectionObserver((es) => es.forEach((e) => {
       clearTimeout(lt);
       if (!e.isIntersecting) lights.classList.remove("lit-now");
-      else if (lights.classList.contains("on")) lt = setTimeout(() => lights.classList.add("lit-now"), reduce ? 0 : 1400);
+      else if (lights.classList.contains("on")) lt = setTimeout(() => lights.classList.add("lit-now"), reduce ? 0 : 1300);
     }), { threshold: 0.5 }).observe(showCar);
   }
 
