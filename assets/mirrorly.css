@@ -382,7 +382,7 @@
   .m-intro .cta-row { justify-content: center; margin-top: var(--s-300); }
 
   /* the mirror: a dark room, the phone in its own warm light */
-  .show-m { background: #0e0a0b; color: #f4ede7; padding: var(--s-700) 0 var(--s-600); --line: rgba(255, 255, 255, 0.16); --dot: var(--accent-text); }
+  .show-m { background: #0e0a0b; color: #f4ede7; --line: rgba(255, 255, 255, 0.16); --dot: var(--accent-text); }
   .show-m .eyebrow { color: var(--accent-text); }
   .show-m .m-h { color: #fff; }
   .show-m .lead { color: rgba(244, 237, 231, 0.75); }

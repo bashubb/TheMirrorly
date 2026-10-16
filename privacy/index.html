@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js" data-store="soon">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,117 +11,136 @@
 <link rel="icon" href="../assets/fav/favicon-48.png" type="image/png" sizes="48x48">
 <link rel="icon" href="../assets/fav/favicon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="../assets/fav/apple-touch-icon.png">
-<link rel="stylesheet" href="../assets/style.css">
+<meta name="theme-color" content="#151012">
+<link rel="preload" href="../assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/landing.css?v=54">
+<link rel="stylesheet" href="../assets/mirrorly.css?v=56">
 </head>
 <body>
-<header class="site-header">
-  <div class="wrap">
-    <a href="../" class="brand"><img src="../assets/icon-512.png" alt="Mirrorly app icon" width="32" height="32">Mirrorly</a>
-    <nav class="nav-links" aria-label="Main">
-      <a href="../#how-it-works">How it works</a>
-      <a href="../#guides">Guides</a>
-      <a href="../#faq">FAQ</a>
-    </nav>
-    <a href="https://apps.apple.com/app/id6792856754" class="btn btn-primary btn-sm">Download</a>
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-apple-logo" viewBox="0 0 256 256" fill="currentColor"><path d="M227,168a12,12,0,0,0-4.21-5.09C207.25,152.22,204,133.68,204,120c0-16.17,12.68-30.6,20.25-37.76a12,12,0,0,0,0-17.43C210.89,52.17,188.81,44,168,44a76.29,76.29,0,0,0-40,11.37,75.59,75.59,0,0,0-93.58,11A78.64,78.64,0,0,0,12,123.51,131,131,0,0,0,53.43,216,43.81,43.81,0,0,0,83.6,228h87.69a43.87,43.87,0,0,0,32.05-13.85,127.63,127.63,0,0,0,18.4-25.39c1.57-2.88,3-5.71,4.14-8.41C227.47,176.67,229.12,172.87,227,168Zm-41.23,29.82A19.78,19.78,0,0,1,171.29,204H83.6a19.85,19.85,0,0,1-13.7-5.42A107.18,107.18,0,0,1,36,122.88,54.49,54.49,0,0,1,51.5,83.28,50.86,50.86,0,0,1,88,68h.72A51.5,51.5,0,0,1,120.48,79.4a12,12,0,0,0,15,0A51.41,51.41,0,0,1,168,68a67.24,67.24,0,0,1,29.88,7.4C186.26,89.66,180,105.13,180,120c0,23.33,7.47,42.89,21.25,56.19A103.3,103.3,0,0,1,185.76,197.81ZM128.75,13A43.83,43.83,0,0,1,142.17,1.51a12,12,0,0,1,11.64,21,19.84,19.84,0,0,0-6.11,5.24A12,12,0,0,1,128.75,13Z"/></symbol><symbol id="i-lightbulb" viewBox="0 0 256 256" fill="currentColor"><path d="M180,232a12,12,0,0,1-12,12H88a12,12,0,0,1,0-24h80A12,12,0,0,1,180,232Zm40-128a91.51,91.51,0,0,1-35.17,72.35A12.26,12.26,0,0,0,180,186v2a20,20,0,0,1-20,20H96a20,20,0,0,1-20-20v-2a12,12,0,0,0-4.7-9.51A91.57,91.57,0,0,1,36,104.52C35.73,54.69,76,13.2,125.79,12A92,92,0,0,1,220,104Zm-24,0a68,68,0,0,0-69.65-68C89.56,36.88,59.8,67.55,60,104.38a67.71,67.71,0,0,0,26.1,53.19A35.87,35.87,0,0,1,100,184h56.1A36.13,36.13,0,0,1,170,157.49,67.68,67.68,0,0,0,196,104Zm-20.07-5.32a48.5,48.5,0,0,0-31.91-40,12,12,0,0,0-8,22.62,24.31,24.31,0,0,1,16.09,20,12,12,0,0,0,23.86-2.64Z"/></symbol><symbol id="i-magnifying-glass-plus" viewBox="0 0 256 256" fill="currentColor"><path d="M156,112a12,12,0,0,1-12,12H124v20a12,12,0,0,1-24,0V124H80a12,12,0,0,1,0-24h20V80a12,12,0,0,1,24,0v20h20A12,12,0,0,1,156,112Zm76.49,120.49a12,12,0,0,1-17,0L168,185a92.12,92.12,0,1,1,17-17l47.54,47.53A12,12,0,0,1,232.49,232.49ZM112,180a68,68,0,1,0-68-68A68.08,68.08,0,0,0,112,180Z"/></symbol><symbol id="i-pause" viewBox="0 0 256 256" fill="currentColor"><path d="M200,28H160a20,20,0,0,0-20,20V208a20,20,0,0,0,20,20h40a20,20,0,0,0,20-20V48A20,20,0,0,0,200,28Zm-4,176H164V52h32ZM96,28H56A20,20,0,0,0,36,48V208a20,20,0,0,0,20,20H96a20,20,0,0,0,20-20V48A20,20,0,0,0,96,28ZM92,204H60V52H92Z"/></symbol><symbol id="i-play" viewBox="0 0 256 256" fill="currentColor"><path d="M234.49,111.07,90.41,22.94A20,20,0,0,0,60,39.87V216.13a20,20,0,0,0,30.41,16.93l144.08-88.13a19.82,19.82,0,0,0,0-33.86ZM84,208.85V47.15L216.16,128Z"/></symbol><symbol id="i-plus" viewBox="0 0 256 256" fill="currentColor"><path d="M228,128a12,12,0,0,1-12,12H140v76a12,12,0,0,1-24,0V140H40a12,12,0,0,1,0-24h76V40a12,12,0,0,1,24,0v76h76A12,12,0,0,1,228,128Z"/></symbol></svg>
+<nav class="island keep-pill" aria-label="Main navigation">
+  <a class="brand" href="../"><img src="../assets/icon-512.png" alt="" width="36" height="36">Mirrorly</a>
+  <div class="links">
+    <a href="../#show">The mirror</a>
+    <a href="../#moments">Moments</a>
+    <a href="../#faq">FAQ</a>
   </div>
-</header>
-<main>
+  <span class="btn sm cta when-soon" aria-disabled="true">Coming soon</span>
+  <a class="btn sm cta when-live" href="https://apps.apple.com/app/id6792856754" data-store-link>Download</a>
+  <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span></button>
+</nav>
+<div class="menu" id="menu">
+  <a href="../#show">The mirror</a>
+  <a href="../#moments">Moments</a>
+  <a href="../#faq">FAQ</a>
+  <a href="../privacy/">Privacy</a>
+</div>
+
+<main id="main" class="doc-page">
+<section class="doc-head">
+  <div class="wrap doc">
+    <span class="eyebrow">Legal</span>
+    <h1 class="hero-title">Privacy Policy</h1>
+    
+  </div>
+</section>
+<section class="doc-body">
+  <div class="wrap doc">
 <article class="article">
-  <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Home</a> / Privacy Policy</nav>
-<h1>Privacy Policy</h1>
-                <p>Last updated: August 13, 2026</p>
-                <h2>Who We Are</h2>
-                <p>This privacy policy covers Mirrorly, an iOS app operated by Hubert Kiełkowski, and the related Mirrorly website.</p>
-                <h2>What Data We Collect</h2>
-                <p>Mirrorly does not require an account and does not ask users to provide a name, email address, or other profile information inside the app.</p>
-                <p>When a user makes or restores the optional one-time in-app purchase, Apple and RevenueCat may process:</p>
-                <ul>
-                  <li>Purchase history and transaction receipt information</li>
-                  <li>A RevenueCat-generated anonymous app user identifier</li>
-                  <li>Technical app and device information, such as app version, device type, operating system, locale, and currency</li>
-                </ul>
-                <p>Mirrorly does not connect the anonymous RevenueCat identifier or purchase history with a user's name, email address, account, or other real-world identity.</p>
-                <p>The camera feed and on-device face-analysis signals used by Mirrorly remain on the device. Mirrorly does not capture, store, or upload photos, videos, camera frames, or face-analysis data.</p>
-                <h2>How We Use Data</h2>
-                <p>Purchase-related information is used only:</p>
-                <ul>
-                  <li>To process and validate the one-time in-app purchase</li>
-                  <li>To provide and restore lifetime access</li>
-                  <li>To prevent purchase fraud and resolve purchase-related support issues</li>
-                  <li>To provide purchase analytics and revenue reporting</li>
-                </ul>
-                <p>The following providers are used:</p>
-                <ul>
-                  <li>Purchase infrastructure and analytics: RevenueCat, Inc. Used for purchase validation, anonymous purchase analytics, entitlement management, fraud prevention, revenue reporting, and purchase restoration.</li>
-                  <li>Payments: Apple Inc. (App Store and StoreKit). Used to process the one-time in-app purchase.</li>
-                  <li>Email support: Google LLC (Gmail). Used only when a user voluntarily contacts us for customer support or a privacy request.</li>
-                  <li>Website hosting: GitHub, Inc. (GitHub Pages). Used to host and deliver the Mirrorly website and this privacy policy.</li>
-                </ul>
-                <p>Additional feature details:</p>
-                <ul>
-                  <li>StoreKit: Purchases are processed by Apple through StoreKit. RevenueCat receives an anonymous app user identifier and purchase information to validate transactions, manage entitlements, restore purchases, prevent fraud, and provide purchase analytics. This information is not used for advertising or cross-app tracking.</li>
-                </ul>
-                <h2>When Data is Shared</h2>
-                <p>Mirrorly sends only the information needed to operate the optional purchase and support features. Purchase information is processed by Apple and RevenueCat. Information sent voluntarily in a support email is processed by Google through Gmail.</p>
-                <p>The following providers are used:</p>
-                <ul>
-                  <li>RevenueCat, Inc.: Receives purchase history, transaction receipt information, technical app and device information, and an anonymous app user identifier for purchase validation, entitlement management, purchase restoration, fraud prevention, purchase analytics, and revenue reporting. Privacy policy: <a href="https://www.revenuecat.com/privacy">https://www.revenuecat.com/privacy</a>.</li>
-                  <li>Apple Inc.: Processes payments and purchase information through the App Store and StoreKit. Privacy policy: <a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a>.</li>
-                  <li>Google LLC: Processes a user's email address and message only if the user voluntarily contacts us through Gmail for support or a privacy request. Privacy policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>.</li>
-                  <li>GitHub, Inc.: Hosts the static Mirrorly website and privacy policy through GitHub Pages and may process standard connection information when the website is accessed. Privacy policy: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement</a>.</li>
-                </ul>
-                <p>Camera images, videos, camera frames, and face-analysis data are never shared and remain on the device.</p>
-                <h2>Payments and Purchases</h2>
-                <p>Mirrorly offers an optional one-time, non-consumable in-app purchase through Apple's StoreKit. Mirrorly does not offer a subscription.</p>
-                <p>Apple processes the payment. RevenueCat validates the transaction, manages the lifetime-access entitlement, and enables purchase restoration. Mirrorly does not receive or store payment card or bank account details.</p>
-                <p>Purchase information may be retained and used as necessary to provide lifetime access, restore the purchase, prevent fraud, handle refunds, comply with legal obligations, and resolve purchase-related support requests.</p>
-                <h2>Sharing</h2>
-                <p>Mirrorly does not include social login, public profiles, comments, forums, or public user content.</p>
-                <p>The app provides Apple's system share sheet so users may voluntarily share the Mirrorly App Store link and a short message through a destination they select. The selected destination's privacy policy applies to information the user chooses to share.</p>
-                <p>Mirrorly does not upload or share camera images, videos, camera frames, face-analysis data, or other user content through the share feature.</p>
-                <h2>Data Retention</h2>
-                <p>Camera images, videos, camera frames, and face-analysis data are not retained. Local preferences remain on the device until the app is deleted or its data is reset.</p>
-                <p>Apple and RevenueCat retain purchase-related information according to their respective policies and as necessary to validate and restore the one-time purchase, prevent fraud, process refunds, comply with legal obligations, and resolve disputes. Support emails are retained only as long as reasonably necessary to answer the request and meet applicable legal obligations.</p>
-                <h2>Security</h2>
-                <p>We use reasonable technical and organizational measures to protect information. However, no method of electronic storage or transmission can be guaranteed to be completely secure.</p>
-                <h2>Your Choices and Rights</h2>
-                <p>The in-app purchase is optional. Camera access is requested only when needed for the mirror feature and can be changed in iOS Settings.</p>
-                <p>Users may request access to, correction of, or deletion of personal information associated with a support interaction by contacting us at <a href="mailto:bashubb.dev@gmail.com">bashubb.dev@gmail.com</a>. Because Mirrorly uses anonymous RevenueCat identifiers and has no user accounts, we may need additional purchase information to locate a purchase-related record, and in some cases we may be unable to connect an anonymous record to a particular person.</p>
-                <p>Users may also manage purchase information through their Apple account and may contact Apple regarding App Store payment records or refund requests.</p>
-                <p>For users in the EEA or UK, applicable law may provide rights to access, correct, delete, restrict, or object to certain processing, and to request a copy of personal data.</p>
-                <p>For users in certain US states, including California, applicable law may provide rights to know, access, correct, delete, or opt out of certain processing of personal information, subject to legal exceptions.</p>
-                <h2>Children's Privacy</h2>
-                <p>Mirrorly is not directed to children, and we do not knowingly collect personal information from children. A parent or guardian may contact us to request deletion if they believe a child has provided personal information.</p>
-                <h2>International Transfers</h2>
-                <p>Service providers may process information outside the user's country or region, including in the United States. Where required, transfers are protected through recognized legal safeguards such as Standard Contractual Clauses.</p>
-                <h2>Third-Party Websites and Services</h2>
-                <p>The Mirrorly website may link to third-party websites, including the Apple App Store, Apple's standard EULA, and the privacy policies of the service providers named above. Those third parties have their own privacy practices.</p>
-                <p>The following provider is used:</p>
-                <ul>
-                  <li>Website hosting: GitHub, Inc. (GitHub Pages). Used for hosting and delivering the static Mirrorly website and privacy policy. Privacy policy: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement</a>.</li>
-                </ul>
-                <p>The website is a static informational site. It does not contain contact forms, user accounts, advertising, behavioral analytics, tracking scripts, comments, forums, or community areas.</p>
-                <h2>Contact Us</h2>
-                <ul>
-                  <li>Email: <a href="mailto:bashubb.dev@gmail.com">bashubb.dev@gmail.com</a></li>
-                </ul>
-</article>
+
+<p>Last updated: August 13, 2026</p>
+<h2>Who We Are</h2>
+<p>This privacy policy covers Mirrorly, an iOS app operated by Hubert Kiełkowski, and the related Mirrorly website.</p>
+<h2>What Data We Collect</h2>
+<p>Mirrorly does not require an account and does not ask users to provide a name, email address, or other profile information inside the app.</p>
+<p>When a user makes or restores the optional one-time in-app purchase, Apple and RevenueCat may process:</p>
+<ul>
+<li>Purchase history and transaction receipt information</li>
+<li>A RevenueCat-generated anonymous app user identifier</li>
+<li>Technical app and device information, such as app version, device type, operating system, locale, and currency</li>
+</ul>
+<p>Mirrorly does not connect the anonymous RevenueCat identifier or purchase history with a user's name, email address, account, or other real-world identity.</p>
+<p>The camera feed and on-device face-analysis signals used by Mirrorly remain on the device. Mirrorly does not capture, store, or upload photos, videos, camera frames, or face-analysis data.</p>
+<h2>How We Use Data</h2>
+<p>Purchase-related information is used only:</p>
+<ul>
+<li>To process and validate the one-time in-app purchase</li>
+<li>To provide and restore lifetime access</li>
+<li>To prevent purchase fraud and resolve purchase-related support issues</li>
+<li>To provide purchase analytics and revenue reporting</li>
+</ul>
+<p>The following providers are used:</p>
+<ul>
+<li>Purchase infrastructure and analytics: RevenueCat, Inc. Used for purchase validation, anonymous purchase analytics, entitlement management, fraud prevention, revenue reporting, and purchase restoration.</li>
+<li>Payments: Apple Inc. (App Store and StoreKit). Used to process the one-time in-app purchase.</li>
+<li>Email support: Google LLC (Gmail). Used only when a user voluntarily contacts us for customer support or a privacy request.</li>
+<li>Website hosting: GitHub, Inc. (GitHub Pages). Used to host and deliver the Mirrorly website and this privacy policy.</li>
+</ul>
+<p>Additional feature details:</p>
+<ul>
+<li>StoreKit: Purchases are processed by Apple through StoreKit. RevenueCat receives an anonymous app user identifier and purchase information to validate transactions, manage entitlements, restore purchases, prevent fraud, and provide purchase analytics. This information is not used for advertising or cross-app tracking.</li>
+</ul>
+<h2>When Data is Shared</h2>
+<p>Mirrorly sends only the information needed to operate the optional purchase and support features. Purchase information is processed by Apple and RevenueCat. Information sent voluntarily in a support email is processed by Google through Gmail.</p>
+<p>The following providers are used:</p>
+<ul>
+<li>RevenueCat, Inc.: Receives purchase history, transaction receipt information, technical app and device information, and an anonymous app user identifier for purchase validation, entitlement management, purchase restoration, fraud prevention, purchase analytics, and revenue reporting. Privacy policy: <a href="https://www.revenuecat.com/privacy">https://www.revenuecat.com/privacy</a>.</li>
+<li>Apple Inc.: Processes payments and purchase information through the App Store and StoreKit. Privacy policy: <a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a>.</li>
+<li>Google LLC: Processes a user's email address and message only if the user voluntarily contacts us through Gmail for support or a privacy request. Privacy policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>.</li>
+<li>GitHub, Inc.: Hosts the static Mirrorly website and privacy policy through GitHub Pages and may process standard connection information when the website is accessed. Privacy policy: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement</a>.</li>
+</ul>
+<p>Camera images, videos, camera frames, and face-analysis data are never shared and remain on the device.</p>
+<h2>Payments and Purchases</h2>
+<p>Mirrorly offers an optional one-time, non-consumable in-app purchase through Apple's StoreKit. Mirrorly does not offer a subscription.</p>
+<p>Apple processes the payment. RevenueCat validates the transaction, manages the lifetime-access entitlement, and enables purchase restoration. Mirrorly does not receive or store payment card or bank account details.</p>
+<p>Purchase information may be retained and used as necessary to provide lifetime access, restore the purchase, prevent fraud, handle refunds, comply with legal obligations, and resolve purchase-related support requests.</p>
+<h2>Sharing</h2>
+<p>Mirrorly does not include social login, public profiles, comments, forums, or public user content.</p>
+<p>The app provides Apple's system share sheet so users may voluntarily share the Mirrorly App Store link and a short message through a destination they select. The selected destination's privacy policy applies to information the user chooses to share.</p>
+<p>Mirrorly does not upload or share camera images, videos, camera frames, face-analysis data, or other user content through the share feature.</p>
+<h2>Data Retention</h2>
+<p>Camera images, videos, camera frames, and face-analysis data are not retained. Local preferences remain on the device until the app is deleted or its data is reset.</p>
+<p>Apple and RevenueCat retain purchase-related information according to their respective policies and as necessary to validate and restore the one-time purchase, prevent fraud, process refunds, comply with legal obligations, and resolve disputes. Support emails are retained only as long as reasonably necessary to answer the request and meet applicable legal obligations.</p>
+<h2>Security</h2>
+<p>We use reasonable technical and organizational measures to protect information. However, no method of electronic storage or transmission can be guaranteed to be completely secure.</p>
+<h2>Your Choices and Rights</h2>
+<p>The in-app purchase is optional. Camera access is requested only when needed for the mirror feature and can be changed in iOS Settings.</p>
+<p>Users may request access to, correction of, or deletion of personal information associated with a support interaction by contacting us at <a href="mailto:bashubb.dev@gmail.com">bashubb.dev@gmail.com</a>. Because Mirrorly uses anonymous RevenueCat identifiers and has no user accounts, we may need additional purchase information to locate a purchase-related record, and in some cases we may be unable to connect an anonymous record to a particular person.</p>
+<p>Users may also manage purchase information through their Apple account and may contact Apple regarding App Store payment records or refund requests.</p>
+<p>For users in the EEA or UK, applicable law may provide rights to access, correct, delete, restrict, or object to certain processing, and to request a copy of personal data.</p>
+<p>For users in certain US states, including California, applicable law may provide rights to know, access, correct, delete, or opt out of certain processing of personal information, subject to legal exceptions.</p>
+<h2>Children's Privacy</h2>
+<p>Mirrorly is not directed to children, and we do not knowingly collect personal information from children. A parent or guardian may contact us to request deletion if they believe a child has provided personal information.</p>
+<h2>International Transfers</h2>
+<p>Service providers may process information outside the user's country or region, including in the United States. Where required, transfers are protected through recognized legal safeguards such as Standard Contractual Clauses.</p>
+<h2>Third-Party Websites and Services</h2>
+<p>The Mirrorly website may link to third-party websites, including the Apple App Store, Apple's standard EULA, and the privacy policies of the service providers named above. Those third parties have their own privacy practices.</p>
+<p>The following provider is used:</p>
+<ul>
+<li>Website hosting: GitHub, Inc. (GitHub Pages). Used for hosting and delivering the static Mirrorly website and privacy policy. Privacy policy: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement</a>.</li>
+</ul>
+<p>The website is a static informational site. It does not contain contact forms, user accounts, advertising, behavioral analytics, tracking scripts, comments, forums, or community areas.</p>
+<h2>Contact Us</h2>
+<ul>
+<li>Email: <a href="mailto:bashubb.dev@gmail.com">bashubb.dev@gmail.com</a></li>
+</ul>
+  </div>
+</section>
 </main>
-<footer class="site-footer">
+
+<footer class="footer">
   <div class="wrap">
-    <div class="footer-grid">
-      <a href="../" class="brand"><img src="../assets/icon-512.png" alt="Mirrorly app icon" width="32" height="32">Mirrorly</a>
-      <nav class="footer-links" aria-label="Footer">
-        <a href="../#guides">Guides</a>
-        <a href="../#faq">FAQ</a>
-        <a href="https://apps.apple.com/app/id6792856754">App Store</a>
-        <a href="./">Privacy Policy</a>
-        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula">Terms of Service</a>
-        <a href="mailto:bashubb.dev@gmail.com">Contact</a>
-      </nav>
-    </div>
-    <p class="footer-note">&copy; 2026 Mirrorly. Check how you look before someone else does.</p>
+    <a class="brand" href="../"><img src="../assets/icon-512.png" alt="" width="40" height="40">Mirrorly</a>
+    <nav aria-label="Footer">
+      <a href="../privacy/">Privacy Policy</a>
+      <a href="../guides/how-to-use-iphone-as-a-mirror.html">Guides</a>
+      <a href="mailto:bashubb.dev@gmail.com">Contact</a>
+      <a href="https://bashubb.com/">More apps by bashubb</a>
+    </nav>
+    <span>© 2026 bashubb</span>
   </div>
 </footer>
+<script src="../assets/landing.js?v=52"></script>
 </body>
 </html>

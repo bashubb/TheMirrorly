@@ -411,3 +411,40 @@ h3 { font-size: 20px; line-height: 28px; letter-spacing: -0.01em; }
 video::-webkit-media-controls-start-playback-button { display: none !important; -webkit-appearance: none; }
 video::-webkit-media-controls-overlay-play-button { display: none !important; }
 video:not([controls])::-webkit-media-controls { display: none !important; }
+
+/* ===== Phones: one rhythm for every section =====
+   64px above and below each section's content; a jump from the menu lands right under the bar,
+   so every section starts the same distance below it. */
+@media (max-width: 720px), (pointer: coarse) and (max-height: 540px) {
+  html { scroll-padding-top: var(--nav-h) !important; }
+  .m-sec, .pad, .tagline-band { padding-block: var(--s-700) !important; }
+}
+@media (pointer: coarse) and (max-height: 540px) and (orientation: landscape) {
+  .m-sec, .pad, .tagline-band { padding-block: var(--s-600) !important; }
+}
+
+/* ===== Subpages (privacy, support): the same bar, type and colours, a readable column ===== */
+.doc { max-width: 720px; }
+.doc-head { padding: calc(var(--nav-h) + var(--s-700)) 0 var(--s-500); }
+.doc-head .hero-title { font-size: 48px; line-height: 1; padding-bottom: 0.16em; }
+.doc-head .eyebrow { display: inline-block; margin-bottom: var(--s-200); }
+.doc-head .lead { margin-top: var(--s-200); }
+.doc-body { padding: 0 0 var(--s-900); }
+.doc-body h2 { margin: var(--s-600) 0 var(--s-100); font-size: 24px; line-height: 32px; letter-spacing: -0.02em; }
+.doc-body h2:first-child { margin-top: 0; }
+.doc-body h3 { margin: var(--s-400) 0 var(--s-75); font-size: 18px; line-height: 28px; }
+.doc-body p, .doc-body li { color: var(--muted); }
+.doc-body p + p, .doc-body ul + p, .doc-body p + ul { margin-top: var(--s-100); }
+.doc-body ul { margin: var(--s-100) 0 0; padding-left: var(--s-300); display: grid; gap: var(--s-75); }
+.doc-body strong { color: var(--text); font-weight: 700; }
+.doc-body a { color: var(--accent-text, var(--text)); text-underline-offset: 3px; }
+.doc-body .faq { max-width: none; margin: var(--s-100) 0 0; }
+.doc-body .faq summary { font-weight: 600; }
+.doc-body .contact { margin-top: var(--s-700); padding: var(--s-400); border-radius: 24px; background: var(--surface); border: 1px solid var(--line); }
+.doc-body .contact p:first-child { color: var(--text); font-size: 18px; line-height: 28px; }
+@media (max-width: 720px) {
+  .doc-head { padding: calc(var(--nav-h) + var(--s-500)) 0 var(--s-400); }
+  .doc-head .hero-title { font-size: 36px; line-height: 40px; }
+  .doc-body { padding-bottom: var(--s-700); }
+  .doc-body .contact { padding: var(--s-300); }
+}
