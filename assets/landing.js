@@ -10,6 +10,34 @@
   const phone = phoneMQ.matches;
   root.classList.toggle("is-phone", phone);
 
+  // A phone on its side: show the portrait page, scaled down to fit the height (a frame of the same page).
+  // Everything stays whole and nothing stretches; small enough to invite turning the phone back.
+  const landMQ = matchMedia("(pointer: coarse) and (orientation: landscape) and (max-height: 540px)");
+  const embedded = window.self !== window.top;
+  const fitHost = landMQ.matches && !embedded;
+  root.classList.toggle("fit-host", fitHost);
+  addEventListener("orientationchange", () => { if (matchMedia("(pointer: coarse)").matches) setTimeout(() => location.reload(), 50); });
+  landMQ.addEventListener("change", () => { if (!embedded) location.reload(); });
+  if (fitHost) {
+    document.querySelectorAll("video").forEach((v) => { v.pause(); v.removeAttribute("autoplay"); v.autoplay = false; v.preload = "none"; v.play = () => Promise.resolve(); });
+    const short = Math.min(screen.width, screen.height), long = Math.max(screen.width, screen.height);
+    const fw = Math.round(short), fh = Math.round(long * 0.86);           // a portrait viewport of this phone, minus Safari's bars
+    const f = document.createElement("iframe");
+    f.className = "fit-frame"; f.title = document.title; f.src = location.href;
+    f.style.width = fw + "px"; f.style.height = fh + "px";
+    const place = () => {
+      const s = innerHeight / fh;
+      f.style.transform = `translate3d(${((innerWidth - fw * s) / 2).toFixed(1)}px, 0, 0) scale(${s.toFixed(4)})`;
+    };
+    place(); addEventListener("resize", place);
+    document.body.append(f);
+  }
+  // inside the frame, pages and the App Store open full size, not inside the small frame
+  if (embedded) document.addEventListener("click", (e) => {
+    const a = e.target.closest && e.target.closest("a[href]");
+    if (a && !a.getAttribute("href").startsWith("#")) a.target = "_top";
+  }, true);
+
   // Island nav + full screen menu
   const burger = document.querySelector(".burger");
   const menu = document.getElementById("menu");
@@ -71,7 +99,7 @@
   });
 
   // crossing between the desktop scenes and the phone layout (resizing a desktop window) starts clean
-  phoneMQ.addEventListener("change", () => location.reload());
+  phoneMQ.addEventListener("change", () => { if (!fitHost) location.reload(); });
   // links to a desktop scene go to its phone version (#how → #how-m) when there is one
   if (phone) document.querySelectorAll('a[href^="#"]').forEach((a) => {
     const id = a.getAttribute("href").slice(1);
@@ -181,7 +209,7 @@
   // comes into view, and holds the page while it is on screen (touch-action: none, so Safari itself can't scroll).
   // A hard swipe or Skip leaves early; when it ends the page scrolls on to the next section by itself.
   document.querySelectorAll("[data-film-intro]").forEach((sec) => {
-    if (!phone) return;
+    if (!phone || fitHost) return;
     const v = sec.querySelector("video"), skip = sec.querySelector(".film-intro-skip");
     const tall = innerHeight >= innerWidth;
     // iOS autoplays only a muted inline video: set it all as properties too, before the source

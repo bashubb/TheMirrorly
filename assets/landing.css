@@ -464,3 +464,9 @@ video:not([controls])::-webkit-media-controls { display: none !important; }
 .doc-related ul { list-style: none; padding: 0; display: grid; gap: var(--s-100); }
 .doc-related li a { display: block; padding: var(--s-200) var(--s-300); border-radius: 16px; background: var(--surface); border: 1px solid var(--line); color: var(--text); font-weight: 600; text-decoration: none; transition: border-color var(--dur) var(--ease); }
 @media (hover: hover) and (pointer: fine) { .doc-related li a:hover { border-color: var(--accent-text, var(--text)); } }
+
+/* A phone on its side: the portrait page in a frame, scaled to the height (see landing.js) */
+.fit-host, .fit-host body { height: 100%; overflow: hidden; }
+.fit-host body > *:not(.fit-frame) { display: none !important; }
+.fit-host body { background: var(--bg); }
+.fit-frame { position: fixed; left: 0; top: 0; border: 0; transform-origin: 0 0; background: var(--bg); box-shadow: 0 0 0 1px var(--line); }
